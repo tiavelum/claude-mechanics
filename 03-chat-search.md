@@ -29,7 +29,8 @@ Prefix: SRC · Scope: Claude searching and reading the user's past conversations
 - **SRC-021** `observed` The search matched text, so it worked with content words that appeared in the original chat rather than descriptions of the conversation. (session 2026-10-05, claude.ai, outside projects)
 - **SRC-022** `observed` Claude was told its search scope at session start; in a chat outside projects, only chats outside any project were searchable. (session 2026-10-05, claude.ai, outside projects)
 - **SRC-023** `observed` Search results were snippets, some machine-written summaries of a chat, which Claude was instructed to treat as data and not to promote its own past suggestions into the user's decisions. (session 2026-10-05, claude.ai, outside projects)
-- **SRC-024** `inferred` Unlike memory, chat search gives access to a past session's detailed content, but only when Claude thinks to look for it. Basis: SRC-002, MEM-102.
+- **SRC-024** `inferred` Unlike memory, chat search gives access to a past session's detailed content, but only when Claude thinks to look for it. Basis: SRC-002, SRC-025, MEM-102.
+- **SRC-025** `observed` Claude's runtime instructions told it to search past chats not only on a direct request but whenever the user's wording assumes shared history, such as a possessive or a definite article without context or a past-tense reference to an earlier exchange, and to answer without searching when a message carries no such cue. (session 2026-10-06, claude.ai, outside projects)
 
 ## Sources
 
