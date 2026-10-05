@@ -16,7 +16,7 @@ Contributing:
 
 - Research happens in sessions of a dedicated Claude project whose instructions are [project-instructions.md](project-instructions.md); Claude Code reads the same file through [CLAUDE.md](CLAUDE.md).
 - A session proposes new or changed statement lines; once reviewed, they are committed to `main`.
-- A full re-check of all chapters is a snapshot: follow *Revising a snapshot* in [conventions.md](conventions.md), which also covers the revisions.md entry and the tag.
+- A full re-check of all chapters is a snapshot, prepared with the [revise-snapshot](.claude/skills/revise-snapshot/SKILL.md) skill as a pull request. Each snapshot is a [GitHub release](https://github.com/tiavelum/claude-mechanics/releases) whose notes say what changed in Claude.
 
 ## Contents
 
@@ -34,8 +34,8 @@ Contributing:
 | [10-scenarios.md](10-scenarios.md) | SCN | What sessions share in common setups |
 | [11-timeline.md](11-timeline.md) | CHG | Dated changes |
 | [open-questions.md](open-questions.md) | OQ | Unsettled points and how to test them |
-| [revisions.md](revisions.md) | | What changed between snapshots |
-| [conventions.md](conventions.md) | | Statement format, labels, revision procedure |
+| [conventions.md](conventions.md) | | Statement format, labels, snapshots and releases |
+| [.claude/skills/revise-snapshot/](.claude/skills/revise-snapshot/SKILL.md) | | Skill and scripts for re-checking and publishing a snapshot |
 
 ## Mental model
 

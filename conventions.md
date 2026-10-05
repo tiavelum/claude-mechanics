@@ -65,13 +65,16 @@ Every chapter starts with its prefix, scope and the date its statements were las
 Prefix: MEM · Scope: ... · Last checked: 2026-10-05
 ```
 
-## Revising a snapshot
+## Changing statements
 
-1. Re-read each source page and re-test each `observed` statement in a fresh session.
-2. Edit statements in place. Change the label when the evidence changes (for example `observed` to `documented` once a page describes it).
-3. Delete statements that are no longer true; never reuse their IDs. Add new facts with the next free ID.
-4. Update *Last checked* in each chapter header.
-5. Add an entry to [revisions.md](revisions.md), headed with the snapshot date, listing in three to seven bullet points what changed in Claude since the previous snapshot. Corrections of earlier mistakes in this repository are listed separately from real changes in Claude.
-6. Tag the commit `vYYYY.MM.DD`. Comparing two snapshots is then `git diff v2026.10.05 v2027.01.15`, for example.
+- Statements are edited in place; the label changes when the evidence changes, for example from `observed` to `documented` once a page describes it.
+- A statement that is no longer true is deleted; its ID stays unused.
+- Changes between snapshots are committed normally and update *Last checked* only for the chapters actually re-checked.
 
-Additions between snapshots are committed normally; they update *Last checked* only for the chapters actually re-checked.
+## Snapshots and releases
+
+- A snapshot is a state of `main` in which every chapter was re-checked. It is prepared on a branch `revision/vYYYY.MM.DD` and reviewed as a pull request before it is merged.
+- A snapshot is tagged `vYYYY.MM.DD` and published as a GitHub release of the same name. The release notes are the record of what changed; there is no change log file in the repository.
+- Release notes separate changes in Claude from corrections of earlier mistakes in this repository, and list what could not be re-checked.
+- Two snapshots are compared with `git diff v2026.10.05 v2027.01.15`, for example, or with GitHub's compare view.
+- The procedure, with its scripts, is [.claude/skills/revise-snapshot/SKILL.md](.claude/skills/revise-snapshot/SKILL.md).
