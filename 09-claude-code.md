@@ -14,7 +14,7 @@ Prefix: CC · Scope: memory, instruction files, settings, sessions and context i
 - **CC-010** `documented` A managed policy CLAUDE.md applies to all users on a machine: `/Library/Application Support/ClaudeCode/CLAUDE.md` on macOS, `/etc/claude-code/CLAUDE.md` on Linux and WSL, `C:\Program Files\ClaudeCode\CLAUDE.md` on Windows. [cc-mem]
 - **CC-011** `documented` `~/.claude/CLAUDE.md` holds the user's personal instructions for all projects. [cc-mem]
 - **CC-012** `documented` `./CLAUDE.md` or `./.claude/CLAUDE.md` holds the project's shared instructions. [cc-mem]
-- **CC-013** `documented` `./CLAUDE.local.md` holds personal project-specific instructions and should be added to `.gitignore`. [cc-mem]
+- **CC-013** `documented` `./CLAUDE.local.md` holds personal project-specific instructions; the documentation advises adding it to `.gitignore`. [cc-mem]
 - **CC-014** `documented` CLAUDE.md and CLAUDE.local.md files in the working directory and every directory above it load at launch. [cc-mem]
 - **CC-015** `documented` All discovered files are concatenated rather than overriding each other, ordered from the filesystem root down, so instructions closer to the working directory are read last. [cc-mem]
 - **CC-016** `documented` Within one directory, CLAUDE.local.md is appended after CLAUDE.md. [cc-mem]

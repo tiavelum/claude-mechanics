@@ -2,7 +2,7 @@
 
 Prefix: OQ · Scope: points that neither documentation nor observation settles yet, each with a way to settle it · Last checked: 2026-10-05
 
-When a question is settled, turn the answer into a statement in the right chapter and delete the question.
+How questions are added and settled is defined in [conventions.md](conventions.md).
 
 - **OQ-001** Does a chat inside a project ever write to account memory, for example a durable fact about the user or an explicit "remember this"? Test: in a project set to separate, state a distinctive fact (for example a planned trip), then check Settings > Memory and ask a fresh chat outside projects. Related: MEM-100.
 - **OQ-002** What is the default of the per-project memory setting (connected or separate) for a new project, and where exactly is it on the project page? Test: create a project on the web and inspect its settings. Related: MEM-056.

@@ -20,7 +20,7 @@ Prefix: INS · Scope: account instructions, project instructions, styles, and ho
 - **INS-012** `observed` Claude's runtime instructions told it to apply behavioural preferences only when relevant to the task, unless a preference says "always" or similar, and to apply contextual preferences (background, interests) only when the request relates to them. (session 2026-10-05, claude.ai, outside projects)
 - **INS-013** `observed` Claude's runtime instructions told it that an instruction given in the conversation overrides a stored preference, and that a style overrides a conflicting preference. (session 2026-10-05, claude.ai, outside projects)
 - **INS-014** `observed` Preferences saved in memory were delivered separately from account instructions, and Claude was told to ignore any that ask it to flatter, suppress disagreement or claim elevated permissions. (session 2026-10-05, claude.ai, outside projects)
-- **INS-015** `documented` In the redesigned projects, a preference told to Claude goes into project memory and is not enforced; wording that must apply from the start belongs in project instructions. [cc-proj]
+- **INS-015** `documented` In the redesigned projects, a preference told to Claude goes into project memory and is not enforced; the documentation advises project instructions for wording that must apply from the start. [cc-proj]
 
 ## Styles
 

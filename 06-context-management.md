@@ -25,7 +25,7 @@ Prefix: CTX · Scope: context window, long conversations, files and usage in the
 
 - **CTX-020** `documented` Usage depends on conversation length, attachment size, tools, model and multi-step tasks; paid plans have a five-hour session limit and a weekly limit, shown under Settings > Usage. [usage]
 - **CTX-021** `documented` Usage in claude.ai, Claude Code and Claude Desktop counts toward the same limit. [lim]
-- **CTX-022** `documented` Turning off tools and connectors that are not needed is recommended because they use tokens. [lim]
+- **CTX-022** `documented` Anthropic's guidance advises turning off tools and connectors that are not needed, because they use tokens. [lim]
 
 ## Files and uploads
 

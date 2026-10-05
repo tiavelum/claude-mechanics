@@ -2,12 +2,21 @@
 
 A dated, sourced snapshot of how Claude works behind the scenes: sessions, memory, chat search, projects, instructions, context and settings, in the Claude app and in Claude Code. Each fact is one short statement labelled as documented, observed, inferred or conflicting, so a later snapshot can be compared line by line to see how Claude has changed.
 
+It records Claude's behaviour as documented by Anthropic and as visible in sessions, not the model's internals and not anyone's own content or projects. It is a research record, not a guide: it describes, and recommends nothing.
+
 ## How to start
 
+Reading:
+
 - Read [10-scenarios.md](10-scenarios.md) for the practical picture of what sessions share, then the chapter you need.
-- To see how trustworthy a statement is, look at its label and source; [conventions.md](conventions.md) defines both.
-- To revise the snapshot later, follow *Revising a snapshot* in [conventions.md](conventions.md), then compare with the previous snapshot tag and summarize the differences in [revisions.md](revisions.md).
-- To add findings from another session, add statements to the matching chapter with the next free ID.
+- Read [conventions.md](conventions.md) before relying on a statement: its label says how it is known, and the chapter's *Last checked* date says when.
+- A statement is true as of its chapter's *Last checked* date only; Claude changes often, so re-check the source before treating it as current.
+
+Contributing:
+
+- Research happens in sessions of a dedicated Claude project whose instructions are [project-instructions.md](project-instructions.md); Claude Code reads the same file through [CLAUDE.md](CLAUDE.md).
+- A session proposes new or changed statement lines; once reviewed, they are committed to `main`.
+- A full re-check of all chapters is a snapshot: follow *Revising a snapshot* in [conventions.md](conventions.md), which also covers the revisions.md entry and the tag.
 
 ## Contents
 
@@ -29,6 +38,8 @@ A dated, sourced snapshot of how Claude works behind the scenes: sessions, memor
 | [conventions.md](conventions.md) | | Statement format, labels, revision procedure |
 
 ## Mental model
+
+"The Claude app" means Claude on the web (claude.ai), desktop and mobile, including Cowork, which is merging into it. "Claude Code" means the terminal, IDE, desktop Code tab and cloud sessions of Claude Code.
 
 Knowledge reaches a Claude session through a few separate channels, each with its own scope:
 
