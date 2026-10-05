@@ -14,7 +14,7 @@ Prefix: CHG · Scope: dated changes to the mechanisms in this knowledge base, as
 - **CHG-010** `documented` 2026-09-09: last day to export legacy memory. [mem]
 - **CHG-011** `documented` 2026-09-16: chat and Cowork merged into one Claude, starting with Pro and Max; Cowork's global instructions were folded into Instructions for Claude in Settings > General. [blog-cw] [one]
 - **CHG-012** `documented` 2026-09-17: redesigned projects (one conversation, parallel cloud threads, shared project memory, Library) released in beta for select Pro and Max Claude Code users. [blog-proj]
-- **CHG-013** `documented` 2026-10-06: new Cowork tasks on Pro and Max run in the cloud; the "Only on your computer" option is removed. [cw-web]
+- **CHG-013** `documented` 2026-10-06: new Cowork tasks on Pro and Max run in the cloud, and their scheduled tasks move to the cloud too; the "Only on your computer" option is removed. [cw-web]
 
 ## Sources
 
