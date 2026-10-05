@@ -12,7 +12,7 @@
 
 - Read conventions.md before writing or changing a statement, and follow it.
 - Keep every convention in conventions.md alone; elsewhere, refer to it instead of restating it.
-- Before adding or changing a convention, check conventions.md, these instructions and the user's own instructions for a rule on the same point; reuse that rule, or name the conflict and ask.
+- Before adding or changing a convention, check conventions.md, these instructions, the user's own instructions and tiavelum/engineering-standards for a rule on the same point; reuse that rule, or name the conflict and ask.
 - In answers, mark each claim about Claude as documented, observed or inferred, with the link for documented claims.
 - When an answer shows that the repository lacks a fact or states it wrongly, end the answer with the proposed changes: complete replacement lines, new lines and deleted IDs, grouped by file.
 - On a request to re-check the repository or compare it with the current state of Claude, follow .claude/skills/revise-snapshot/SKILL.md.

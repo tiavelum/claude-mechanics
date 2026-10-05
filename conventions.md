@@ -1,6 +1,6 @@
 # Conventions
 
-How statements in this knowledge base are written, labelled, sourced and revised. These conventions apply to this repository alone; general rules on language, punctuation, file names, commits and tags come from tiavelum's own instructions and are not repeated here.
+How statements in this knowledge base are written, labelled, sourced and revised. These conventions apply to this repository alone. General rules for any repository come from [tiavelum/engineering-standards](https://github.com/tiavelum/engineering-standards), and rules on writing from tiavelum's own instructions; neither is repeated here.
 
 ## Content
 
@@ -64,6 +64,6 @@ Prefix: MEM · Scope: ... · Last checked: 2026-10-05
 ## Snapshots and releases
 
 - Changes between snapshots are committed normally and update *Last checked* only for the chapters actually re-checked.
-- A snapshot is a state of `main` in which every chapter was re-checked. It is prepared on a branch `revision/vYYYY.MM.DD`, reviewed as a pull request, tagged `vYYYY.MM.DD` and published as a GitHub release of the same name.
+- A snapshot is a state of `main` in which every chapter was re-checked. It is prepared on a branch `docs/snapshot-YYYY-MM-DD`, reviewed as a pull request, tagged `vYYYY.MM.DD` and published as a GitHub release of the same name.
 - The release notes are the record of what changed; there is no change log file in the repository.
 - The procedure and the format of the release notes are in [.claude/skills/revise-snapshot/SKILL.md](.claude/skills/revise-snapshot/SKILL.md).

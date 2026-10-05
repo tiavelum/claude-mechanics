@@ -11,7 +11,7 @@ Follow conventions.md throughout. The scripts are in `scripts/` next to this fil
 
 1. Find the previous snapshot: the newest tag matching `v*` (`git tag --list 'v*' --sort=-creatordate | head -1`).
 2. Set the new snapshot name to `v` plus today's date as `YYYY.MM.DD`.
-3. Create the branch `revision/<snapshot name>` from an up-to-date `main`.
+3. Create the branch `docs/snapshot-YYYY-MM-DD`, with today's date, from an up-to-date `main`.
 4. Run `scripts/check-statements.py`; fix any problem before starting, in a separate commit.
 
 ## 2. Re-check documented and conflicting statements

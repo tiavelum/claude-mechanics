@@ -8,9 +8,7 @@ ROOT = Path(__file__).resolve().parents[4]
 CHAPTER_GLOB = "[0-9][0-9]-*.md"
 LABELS = ("documented", "observed", "inferred", "conflicting")
 
-STATEMENT = re.compile(
-    r"^- \*\*(?P<id>[A-Z]+-\d{3})\*\* `(?P<label>[a-z]+)` (?P<text>.+)$"
-)
+STATEMENT = re.compile(r"^- \*\*(?P<id>[A-Z]+-\d{3})\*\* `(?P<label>[a-z]+)` (?P<text>.+)$")
 LINK_DEF = re.compile(r"^\[(?P<key>[a-z0-9-]+)\]: (?P<url>\S+)\s*$")
 LINK_USE = re.compile(r"(?<!\])\[([a-z0-9-]+)\](?![(:\[])")
 STATEMENT_ID = re.compile(r"\b[A-Z]+-\d{3}\b")
@@ -22,14 +20,18 @@ def chapter_files(ref=None):
         return {p.name: p.read_text() for p in sorted(ROOT.glob(CHAPTER_GLOB))}
     names = subprocess.run(
         ["git", "-C", str(ROOT), "ls-tree", "--name-only", ref],
-        check=True, capture_output=True, text=True,
+        check=True,
+        capture_output=True,
+        text=True,
     ).stdout.split()
     files = {}
     for name in sorted(names):
         if re.fullmatch(r"\d\d-.*\.md", name):
             files[name] = subprocess.run(
                 ["git", "-C", str(ROOT), "show", f"{ref}:{name}"],
-                check=True, capture_output=True, text=True,
+                check=True,
+                capture_output=True,
+                text=True,
             ).stdout
     return files
 
