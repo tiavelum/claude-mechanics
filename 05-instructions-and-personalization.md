@@ -1,6 +1,6 @@
 # 05 Instructions and personalization
 
-Prefix: INS · Scope: account instructions, project instructions, styles, and how Claude weighs them in the Claude app · Last checked: 2026-10-05
+Prefix: INS · Scope: account, project and folder instructions, styles, and how Claude weighs them in the Claude app · Last checked: 2026-10-05
 
 ## Layers
 
@@ -28,9 +28,15 @@ Prefix: INS · Scope: account instructions, project instructions, styles, and ho
 - **INS-021** `documented` A custom style can be created by uploading writing samples or by describing the style. [sty]
 - **INS-022** `documented` A style applies to new messages, edits and retries, and can be switched at any point in a conversation. [sty]
 
+## Folder instructions
+
+- **INS-030** `documented` In Cowork on desktop, folder instructions add project-specific context when the user selects a local folder. [cw-start]
+- **INS-031** `documented` Claude can update folder instructions on its own during a session. [cw-start]
+
 ## Sources
 
 [cc-proj]: https://code.claude.com/docs/en/claude-projects
+[cw-start]: https://support.claude.com/en/articles/13345190-get-started-with-claude-cowork
 [inc]: https://support.claude.com/en/articles/12260368-use-incognito-chats
 [lim]: https://support.claude.com/en/articles/11647753-how-do-usage-and-length-limits-work
 [one]: https://support.claude.com/en/articles/16761823-claude-cowork-and-chat-are-one-claude
