@@ -28,14 +28,13 @@ Follow conventions.md throughout. The scripts are in `scripts/` next to this fil
 
 1. Take the observed statements from the output of `scripts/list-sources.py`.
 2. Check each one against this session and update it with a new session note. If this session cannot show it (wrong surface, inside or outside a project), leave it unchanged and list it as not re-tested.
-3. Change a statement to `documented` where a page now describes it.
 
 ## 4. Settle what follows
 
 1. Re-check every `inferred` and scenario statement whose basis changed.
 2. Re-check each open issue labelled `open-question`; settle the ones the new evidence answers, and open new issues for points that remain unsettled.
 3. Add dated changes found on the release notes page or elsewhere to `11-timeline.md`.
-4. Update *Last checked* in every chapter header that was re-checked.
+4. Update *Last checked* in every chapter header.
 5. Run `scripts/check-statements.py` until it reports no problems.
 
 ## 5. Draft the release notes
@@ -43,11 +42,11 @@ Follow conventions.md throughout. The scripts are in `scripts/` next to this fil
 1. Run `scripts/diff-statements.py <previous snapshot>` for the statement-level change list.
 2. Write the release notes with these sections, in this order:
    - **What changed in Claude**: three to seven bullets, each naming the affected statement IDs.
-   - **Corrections**: mistakes of the previous snapshot that were fixed, one bullet each.
+   - **Corrections**: mistakes of the previous snapshot that were fixed, one bullet each, kept apart from changes in Claude.
    - **Not re-checked**: pages that did not load and observed statements that could not be re-tested.
    - **Open questions**: issues settled by this snapshot, with links, and new issues opened.
    - **Statement changes**: the output of `scripts/diff-statements.py`.
-3. If there is no previous snapshot, write "Initial snapshot" with the statement counts per label instead of the sections on changes, corrections and statement changes.
+3. For the first snapshot, replace the sections on changes, corrections and statement changes with "Initial snapshot" and the statement counts per label.
 
 ## 6. Open the pull request
 
