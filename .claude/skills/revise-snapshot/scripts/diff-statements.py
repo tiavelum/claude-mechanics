@@ -19,7 +19,8 @@ added = sorted(new.keys() - old.keys())
 deleted = sorted(old.keys() - new.keys())
 relabelled = sorted(i for i in old.keys() & new.keys() if old[i]["label"] != new[i]["label"])
 reworded = sorted(
-    i for i in old.keys() & new.keys()
+    i
+    for i in old.keys() & new.keys()
     if old[i]["label"] == new[i]["label"] and old[i]["text"] != new[i]["text"]
 )
 
@@ -33,5 +34,13 @@ def section(title, ids, render):
 
 section("Added", added, lambda i: f"- {i} `{new[i]['label']}` {new[i]['text']}")
 section("Deleted", deleted, lambda i: f"- {i} `{old[i]['label']}` {old[i]['text']}")
-section("Relabelled", relabelled, lambda i: f"- {i} `{old[i]['label']}` to `{new[i]['label']}`: {new[i]['text']}")
-section("Reworded", reworded, lambda i: f"- {i}\n  - before: {old[i]['text']}\n  - after: {new[i]['text']}")
+section(
+    "Relabelled",
+    relabelled,
+    lambda i: f"- {i} `{old[i]['label']}` to `{new[i]['label']}`: {new[i]['text']}",
+)
+section(
+    "Reworded",
+    reworded,
+    lambda i: f"- {i}\n  - before: {old[i]['text']}\n  - after: {new[i]['text']}",
+)

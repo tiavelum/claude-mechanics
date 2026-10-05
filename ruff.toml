@@ -1,0 +1,23 @@
+# Formatter and linter configuration for the scripts of the revise-snapshot skill.
+# Rules are selected deliberately; each family carries its reason.
+
+line-length = 100
+target-version = "py310"
+
+[format]
+quote-style = "double"
+indent-style = "space"
+
+[lint]
+select = [
+  "E",    # pycodestyle errors: the formatter cannot fix all of them
+  "W",    # pycodestyle warnings
+  "F",    # pyflakes: unused names, undefined names, shadowing
+  "I",    # import order, so it is never discussed in review
+  "N",    # naming
+  "UP",   # syntax superseded by the target version
+  "B",    # bugbear: likely mistakes rather than style
+  "SIM",  # constructs with a simpler equivalent
+  "PTH",  # pathlib over os.path, since the scripts already use Path
+  "RUF",  # ruff's own checks
+]
