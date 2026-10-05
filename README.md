@@ -33,7 +33,6 @@ Contributing:
 | [09-claude-code.md](09-claude-code.md) | CC | CLAUDE.md, auto memory, settings, sessions, compaction |
 | [10-scenarios.md](10-scenarios.md) | SCN | What sessions share in common setups |
 | [11-timeline.md](11-timeline.md) | CHG | Dated changes |
-| [open-questions.md](open-questions.md) | OQ | Unsettled points and how to test them |
 | [conventions.md](conventions.md) | | Statement format, labels, snapshots and releases |
 | [.claude/skills/revise-snapshot/](.claude/skills/revise-snapshot/SKILL.md) | | Skill and scripts for re-checking and publishing a snapshot |
 
@@ -51,4 +50,4 @@ Knowledge reaches a Claude session through a few separate channels, each with it
 
 Projects in the Claude app are the main boundary: they decide which memory a chat writes to and which chats search can reach. Claude Code keeps its own, file-based mechanisms and does not share memory with the Claude app.
 
-The labels matter as much as the statements. `documented` comes from Anthropic's pages, `observed` from what one live session showed, and `inferred` is reasoning that still needs a test; [open-questions.md](open-questions.md) lists those tests.
+The labels matter as much as the statements. `documented` comes from Anthropic's pages, `observed` from what one live session showed, and `inferred` is reasoning that still needs a test; the [open questions](https://github.com/tiavelum/claude-mechanics/issues?q=label%3Aopen-question) are GitHub issues that list those tests.

@@ -54,8 +54,8 @@ An `observed` statement describes one session at one point in time. It is weaker
 
 ## Open questions
 
-- A point that neither documentation nor observation settles goes into [open-questions.md](open-questions.md), with a test that would settle it and the IDs of related statements.
-- When a question is settled, its answer becomes a statement in the right chapter and the question is deleted; its ID stays unused.
+- A point that neither documentation nor observation settles is a GitHub issue labelled `open-question`, stating the question, a test that would settle it, and the IDs of related statements.
+- When a question is settled, its answer becomes a statement in the right chapter, and the issue is closed with a reference to that commit.
 
 ## Chapter header
 

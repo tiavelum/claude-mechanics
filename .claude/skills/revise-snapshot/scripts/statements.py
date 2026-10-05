@@ -11,7 +11,6 @@ LABELS = ("documented", "observed", "inferred", "conflicting")
 STATEMENT = re.compile(
     r"^- \*\*(?P<id>[A-Z]+-\d{3})\*\* `(?P<label>[a-z]+)` (?P<text>.+)$"
 )
-QUESTION = re.compile(r"^- \*\*(?P<id>OQ-\d{3})\*\* (?P<text>.+)$")
 LINK_DEF = re.compile(r"^\[(?P<key>[a-z0-9-]+)\]: (?P<url>\S+)\s*$")
 LINK_USE = re.compile(r"(?<!\])\[([a-z0-9-]+)\](?![(:\[])")
 STATEMENT_ID = re.compile(r"\b[A-Z]+-\d{3}\b")

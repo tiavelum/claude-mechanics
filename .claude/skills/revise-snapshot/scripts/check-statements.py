@@ -7,16 +7,15 @@ Exits with status 1 and lists every problem found.
 import re
 import sys
 
-from statements import LABELS, LINK_USE, QUESTION, ROOT, STATEMENT, STATEMENT_ID, chapter_files, parse
+from statements import LABELS, LINK_USE, STATEMENT, STATEMENT_ID, chapter_files, parse
 
 problems = []
 known_ids = set()
 files = chapter_files()
-files_with_questions = dict(files, **{"open-questions.md": (ROOT / "open-questions.md").read_text()})
 
-for name, text in files_with_questions.items():
+for name, text in files.items():
     for line in text.splitlines():
-        m = STATEMENT.match(line) or QUESTION.match(line)
+        m = STATEMENT.match(line)
         if m:
             if m["id"] in known_ids:
                 problems.append(f"{name}: duplicate ID {m['id']}")

@@ -33,7 +33,7 @@ Follow conventions.md throughout. The scripts are in `scripts/` next to this fil
 ## 4. Settle what follows
 
 1. Re-check every `inferred` and scenario statement whose basis changed.
-2. Re-check each open question; settle the ones the new evidence answers.
+2. Re-check each open issue labelled `open-question`; settle the ones the new evidence answers, and open new issues for points that remain unsettled.
 3. Add dated changes found on the release notes page or elsewhere to `11-timeline.md`.
 4. Update *Last checked* in every chapter header that was re-checked.
 5. Run `scripts/check-statements.py` until it reports no problems.
@@ -45,13 +45,14 @@ Follow conventions.md throughout. The scripts are in `scripts/` next to this fil
    - **What changed in Claude**: three to seven bullets, each naming the affected statement IDs.
    - **Corrections**: mistakes of the previous snapshot that were fixed, one bullet each.
    - **Not re-checked**: pages that did not load and observed statements that could not be re-tested.
+   - **Open questions**: issues settled by this snapshot, with links, and new issues opened.
    - **Statement changes**: the output of `scripts/diff-statements.py`.
-3. If there is no previous snapshot, write "Initial snapshot" with the statement counts per label instead of the first, second and fourth sections.
+3. If there is no previous snapshot, write "Initial snapshot" with the statement counts per label instead of the sections on changes, corrections and statement changes.
 
 ## 6. Open the pull request
 
 1. Commit the changes on the revision branch and push it.
-2. Open a pull request into `main` titled `Snapshot <snapshot name>`, with the release notes as its description.
+2. Open a pull request into `main` titled `Snapshot <snapshot name>`, with the release notes as its description and `Closes #<number>` for each settled issue.
 3. Tell the user that the changed documents can be reviewed and commented in the pull request, and stop until they have reviewed it.
 4. Apply requested changes on the same branch, re-run step 5, and update the pull request description.
 
