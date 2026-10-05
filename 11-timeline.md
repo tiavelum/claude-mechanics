@@ -9,6 +9,7 @@ Prefix: CHG · Scope: dated changes to the mechanisms in this knowledge base, as
 - **CHG-005** `documented` 2026-01-12: Cowork launched on Claude Desktop for Max on macOS. [rn]
 - **CHG-006** `documented` 2026-03-02: memory from chat history opened to all users, including Free. [rn]
 - **CHG-007** `documented` 2026-07-07: Cowork available on web and mobile, with sessions saved to the account. [rn]
+- **CHG-014** `documented` 2026-07-09: monthly recap introduced in Settings > Reflect, in beta on Free, Pro and Max on the web and Claude Desktop, requiring memory to be on. [rn]
 - **CHG-008** `documented` 2026-07-10: memory redesigned from a summary updated every 24 hours into individual entries saved while chatting. [rn] [mem]
 - **CHG-009** `documented` 2026-08-25: one memory across chat and cloud Cowork, a Topics list in Settings > Memory, and an opt-in for sensitive topics. [rn] [blog-mem26]
 - **CHG-010** `documented` 2026-09-09: last day to export legacy memory. [mem]
