@@ -8,12 +8,15 @@ Prefix: SET · Scope: account, project, per-chat and organization settings in th
 - **SET-002** `documented` Settings > Memory > "Search and reference chats" turns chat search on or off. [mem]
 - **SET-003** `documented` Settings > Memory > "Include sensitive topics in memory" lets Claude store sensitive topics from then on. [mem]
 - **SET-004** `documented` Settings > Memory lists everything remembered under Topics, editable one by one. [mem]
-- **SET-005** `documented` Settings > Memory > "Start import" adds pasted memory from another assistant. [imp]
+- **SET-005** `documented` Settings > Memory > "Start import" adds pasted memory from another assistant; memory import is offered on Free, Pro, Max and Team, on the web and Claude Desktop. [imp]
 - **SET-006** `documented` Settings > General > "Instructions for Claude" holds the account-wide instructions. [one]
 - **SET-007** `documented` Settings > General > "Only on your computer" for Cowork tasks is removed from 2026-10-06 for Pro and Max. [cw-web]
 - **SET-008** `documented` Settings > Privacy holds the data export, on the web and in Claude Desktop. [exp]
 - **SET-009** `documented` Settings > Usage shows the session and weekly usage limits. [usage]
 - **SET-010** `documented` In the legacy memory experience, memory and chat search were in Settings > Capabilities instead of Settings > Memory. [mem]
+- **SET-011** `documented` Settings > Reflect shows a monthly recap of how the account has used Claude; it is in beta on Free, Pro and Max on the web and Claude Desktop, and is not available on Team, Enterprise or Claude Mobile. [recap] [rn]
+- **SET-012** `documented` The monthly recap is built from the same chat history as memory and appears only while memory is on; it has no toggle of its own, so turning memory off hides it. [recap] [rn]
+- **SET-013** `documented` In the legacy memory experience, pausing or resetting memory also hides the monthly recap. [mem]
 
 ## Per-project settings
 
@@ -52,6 +55,8 @@ Prefix: SET · Scope: account, project, per-chat and organization settings in th
 [mem]: https://support.claude.com/en/articles/11817273-use-claude-s-chat-search-and-memory-to-build-on-previous-context
 [one]: https://support.claude.com/en/articles/16761823-claude-cowork-and-chat-are-one-claude
 [proj]: https://support.claude.com/en/articles/9519177-how-can-i-create-and-manage-projects
+[recap]: https://support.claude.com/en/articles/15672559-see-your-monthly-recap
+[rn]: https://support.claude.com/en/articles/12138966-release-notes
 [sty]: https://support.anthropic.com/en/articles/10181068-configuring-and-using-styles
 [usage]: https://support.claude.com/en/articles/9797557-usage-limit-best-practices
 [use-skills]: https://support.claude.com/en/articles/12512180-use-skills-in-claude

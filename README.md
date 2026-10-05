@@ -26,7 +26,7 @@ Contributing:
 | [02-memory.md](02-memory.md) | MEM | Account and project memory, controls, incognito, retention |
 | [03-chat-search.md](03-chat-search.md) | SRC | Searching past conversations |
 | [04-projects.md](04-projects.md) | PRJ | Project structure, knowledge and RAG, moving chats, sharing |
-| [05-instructions-and-personalization.md](05-instructions-and-personalization.md) | INS | Account and project instructions, styles, precedence |
+| [05-instructions-and-personalization.md](05-instructions-and-personalization.md) | INS | Account, project and folder instructions, styles, precedence |
 | [06-context-management.md](06-context-management.md) | CTX | Context windows, long chats, usage, uploads |
 | [07-skills-connectors-artifacts.md](07-skills-connectors-artifacts.md) | EXT | Extensions that outlive a session |
 | [08-settings.md](08-settings.md) | SET | Settings that change memory, search or context |
