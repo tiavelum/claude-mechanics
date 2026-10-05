@@ -14,6 +14,7 @@ Prefix: SES · Scope: what a session is in the Claude app (web, desktop, mobile)
 - **SES-005** `documented` Cowork's former "Global instructions" are now part of "Instructions for Claude" in Settings > General. [one]
 - **SES-030** `documented` In the merged experience, Claude Desktop keeps the folder Cowork saved its work to (Storage folder in Settings), and folders the user gave Cowork access to are listed under Trusted folders. [one]
 - **SES-031** `documented` The Claude Code documentation describes the Claude Desktop app with three tabs: Chat for conversations, Cowork for Dispatch and longer agentic work, and Code for software development; in the merged experience the Code tab stays where it was. [cc-desk] [one]
+- **SES-053** `observed` On a Max account whose message box offered no "Chat" and "Cowork" options, Claude Desktop showed no Chat or Cowork tab either: a switch at the top of the window chose between conversations and Code, and the sidebar listed Dispatch under "More", marked beta, with a Dispatch section listing one conversation. (session 2026-10-06, Claude Desktop on macOS, outside projects, Max plan)
 
 ## Limits of the merged experience
 
@@ -46,7 +47,11 @@ Prefix: SES · Scope: what a session is in the Claude app (web, desktop, mobile)
 ## Reaching the user's computer
 
 - **SES-023** `documented` A cloud session reaches the user's computer, for example a local file or the browser, only through the Claude Desktop app on that computer over an Anthropic-brokered connection; it reads and writes local files only in folders the user connected, and each local tool call is checked against the user's permissions. [cw-arch] [cw-web]
-- **SES-013** `documented` Local files, local connectors, the browser and computer use are reachable from a cloud session only while Claude Desktop is open on the user's computer, and local files only if the session was started on desktop; with the app closed, the session keeps running but cannot reach local files. [cw-web] [one]
+- **SES-013** `documented` Local files, local connectors, the browser and computer use are reachable from a cloud session only while Claude Desktop is open on the user's computer; with the app closed, the session keeps running but cannot reach local files. [cw-web] [one]
+- **SES-057** `observed` Contrary to [cw-web], which allows local files only to a cloud session started on desktop, a conversation started on claude.ai in a web browser, with Claude Desktop open on the user's Mac, read a file in a folder there after the user approved a prompt shown in the web page; the prompt said Claude could read and change the folder's files for this session and that files it uses leave the device. (session 2026-10-06, claude.ai in a web browser, outside projects, Max plan)
+- **SES-054** `observed` A conversation started on claude.ai in a web browser, while Claude Desktop was open on the user's Mac, opened a page in Claude Desktop's built-in browser after a site approval. (session 2026-10-06, claude.ai in a web browser, outside projects, Max plan)
+- **SES-055** `observed` Folders on the user's computer are connected per conversation: a folder added in one Claude Desktop conversation appeared in that conversation's "Used in this session" panel and could be listed there, also after the conversation was opened on the web, while two other conversations of the account had none; the device tools' description says an approved folder becomes readable and writable for that session only. (session 2026-10-06, Claude Desktop and claude.ai, outside projects, Max plan)
+- **SES-056** `observed` Without a connected folder, a session's device tools still returned the names of the top-level folders in the user's home folder, marking Desktop, Documents and Downloads as needing a grant before they could be listed. (session 2026-10-06, claude.ai, outside projects)
 - **SES-044** `documented` Local connectors and plugins that include local MCP servers work only through Claude Desktop; local MCP servers do not run in cloud sessions. [cw-web] [cw-arch]
 - **SES-045** `documented` When a cloud task needs a file from the user's computer, Claude fetches a copy of just that file, and the work on it is processed on Anthropic's servers instead of staying on the computer. [cw-web] [cw-arch] [cw-safe]
 - **SES-046** `documented` Browser traffic of a session, through the built-in browser or Claude in Chrome, comes from the user's computer, even when the session is steered from web or mobile. [cw-org]
@@ -59,8 +64,8 @@ Prefix: SES · Scope: what a session is in the Claude app (web, desktop, mobile)
 
 ## Session state
 
-- **SES-020** `observed` A chat in the merged experience ran in a private Linux workspace in Anthropic's cloud, with file tools and a shell. (session 2026-10-05, claude.ai, outside projects)
-- **SES-021** `observed` Files and installed packages in that workspace persisted across turns of the same session and were not shared with any other session. (session 2026-10-05, claude.ai, outside projects)
+- **SES-020** `observed` A chat in the merged experience ran in a private Linux workspace in Anthropic's cloud, with file tools and a shell. (session 2026-10-06, claude.ai, outside projects)
+- **SES-021** `observed` Files and installed packages in that workspace persisted across turns of the same session and were not shared with any other session. (session 2026-10-06, claude.ai, outside projects)
 - **SES-022** `documented` More involved tasks keep running in the cloud after the user closes the laptop or leaves the page, and a session can be opened from another surface, including Claude Mobile, to follow progress, answer Claude's questions or redirect the work. [one] [cw-web]
 - **SES-050** `documented` Cowork uses the same agentic architecture as Claude Code, without a terminal. [cw-start]
 - **SES-024** `observed` A Claude app conversation ran on a Claude Code harness: its runtime instructions said so, and the workspace held the conversation as a Claude Code transcript, a JSONL file under `~/.claude/projects/` with folders for subagent transcripts and large tool results, most of whose entries name the entry point `remote_cowork`. (session 2026-10-06, claude.ai, outside projects)
