@@ -50,7 +50,7 @@ Follow conventions.md throughout. The scripts are in `scripts/` next to this fil
 
 ## 6. Open the pull request
 
-1. Commit the changes on the revision branch and push it.
+1. Commit the changes on the snapshot branch and push it.
 2. Open a pull request into `main` titled `Snapshot <snapshot name>`, with the release notes as its description and `Closes #<number>` for each settled issue.
 3. Tell the user that the changed documents can be reviewed and commented in the pull request, and stop until they have reviewed it.
 4. Apply requested changes on the same branch, re-run step 5, and update the pull request description.
