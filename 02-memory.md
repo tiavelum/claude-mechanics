@@ -111,7 +111,6 @@ Prefix: MEM · Scope: memory in the Claude app (account memory, project memory, 
 ## Inferences
 
 - **MEM-100** `inferred` A chat inside a project writes to that project's memory and not to account memory. Basis: MEM-050, MEM-051.
-- **MEM-101** `inferred` When a chat is moved into a project, memory entries it already created stay where they were written. Basis: MEM-061.
 - **MEM-102** `inferred` Memory carries a short distillate of facts, not a session's detailed know-how. Basis: MEM-002, MEM-010.
 
 ## Claude Desktop on 3P
