@@ -152,6 +152,7 @@ Prefix: CC · Scope: memory, instruction files, settings, sessions and context i
 
 ## Subagents
 
+- **CC-228** `documented` Subagents work within a single session; for separate sessions that exchange messages, the documentation points to cross-session messaging, and for sessions Claude spawns and supervises, to agent teams. [cc-sub] [cc-teams]
 - **CC-090** `documented` A subagent runs in its own isolated context window and returns only a summary to the main conversation. [cc-sub]
 - **CC-091** `documented` A fork inherits the full parent conversation, unlike other subagents. [cc-sub]
 - **CC-092** `documented` A subagent can keep its own auto memory through a `memory` field: `~/.claude/agent-memory/<name>/` (user), `.claude/agent-memory/<name>/` (project) or `.claude/agent-memory-local/<name>/` (local); its system prompt then includes the first 200 lines or 25 KB of that `MEMORY.md`. [cc-sub]
@@ -239,6 +240,24 @@ Prefix: CC · Scope: memory, instruction files, settings, sessions and context i
 - **CC-215** `documented` Remote Control is available on Pro, Max, Team and Enterprise plans, does not work with API keys, and on Team and Enterprise needs an Owner to turn it on in the Claude Code admin settings. [cc-rc]
 - **CC-216** `documented` The `disableRemoteControl` setting turns Remote Control off entirely, and organizations with Zero Data Retention or the HIPAA configuration cannot enable it. [cc-rc]
 
+## Sessions working together
+
+- **CC-230** `documented` With cross-session messaging, Claude can send a message from one of the user's Claude Code sessions to another, on its own or when asked; a message is plain text that Claude writes, never the sender's conversation history or files. [cc-msg]
+- **CC-231** `documented` Cross-session messaging needs Claude Code v2.1.224 or later on macOS, Linux and WSL 2 and v2.1.234 or later on native Windows, and is on without setup once a session meets the requirements. [cc-msg]
+- **CC-232** `documented` A session can reach its subagents, its own agent-team teammates and the user's other sessions on the same machine, background sessions included; while it is connected to Remote Control, it can also reach the user's cloud sessions and Remote Control sessions on other machines. [cc-msg]
+- **CC-233** `documented` A message to a session on the same machine travels over a per-session socket, or a named pipe on native Windows, and never through Anthropic servers; a message to a session on another machine or in the cloud travels through Anthropic servers. [cc-msg]
+- **CC-234** `documented` A message sent beyond the machine from a session that is not connected to Remote Control arrives without a reply address, so the receiving Claude cannot answer it. [cc-msg]
+- **CC-235** `documented` The receiving Claude reads a message between tool calls during an active turn, so a running tool is never interrupted; an idle session starts a new turn with the message. [cc-msg]
+- **CC-236** `documented` Claude Code tells the receiving Claude that a message came from another session, not from the user: it cannot answer a permission prompt, the receiving Claude is instructed not to change permission settings, CLAUDE.md or other configuration because another session asked, and commands in its text are not run. [cc-msg]
+- **CC-237** `documented` `crossSessionInbound` set to `accept`, `hold` or `refuse` decides what a session does with incoming messages; with no value set, delivery depends on whether the sending and the receiving session bypass permission prompts. [cc-msg]
+- **CC-238** `documented` A delivered message counts toward usage like a prompt the user types. [cc-msg]
+- **CC-239** `documented` Agent teams are experimental and off by default, turned on with `CLAUDE_CODE_EXPERIMENTAL_AGENT_TEAMS=1`; one session leads, and the teammates are separate Claude Code instances, each with its own context window, that message each other directly and share a task list. [cc-teams]
+- **CC-240** `documented` A teammate starts with the same project context as a regular session, such as CLAUDE.md, MCP servers and skills, plus the lead's spawn prompt, but not the lead's conversation history. [cc-teams]
+- **CC-241** `documented` Teammates start with the lead's permission mode, except `dontAsk`, and their permission prompts appear in the lead's session. [cc-teams]
+- **CC-242** `documented` A session has exactly one team, scoped to that session: a team cannot be shared across sessions, teammates cannot start teams of their own, and `/resume` and `/rewind` do not restore in-process teammates. [cc-teams]
+- **CC-243** `documented` A team's config under `~/.claude/teams/` is removed when the session ends, while its task list under `~/.claude/tasks/` stays on the machine, is never uploaded and is kept for resumed sessions. [cc-teams]
+- **CC-244** `documented` In a git repository, a background session moves into its own worktree under `.claude/worktrees/` before editing files, so parallel sessions read the same checkout but each writes to its own; outside a git repository, background sessions write to the working directory and are not isolated from each other. [cc-agents]
+
 ## Sources
 
 [art]: https://support.claude.com/en/articles/17153992-what-are-artifacts-and-how-do-i-use-them
@@ -257,6 +276,7 @@ Prefix: CC · Scope: memory, instruction files, settings, sessions and context i
 [cc-mcp]: https://code.claude.com/docs/en/mcp
 [cc-mem]: https://code.claude.com/docs/en/memory
 [cc-model]: https://code.claude.com/docs/en/model-config
+[cc-msg]: https://code.claude.com/docs/en/cross-session-messaging
 [cc-over]: https://code.claude.com/docs/en/overview
 [cc-perm]: https://code.claude.com/docs/en/permissions
 [cc-plug]: https://code.claude.com/docs/en/plugins/install
@@ -267,6 +287,7 @@ Prefix: CC · Scope: memory, instruction files, settings, sessions and context i
 [cc-skills]: https://code.claude.com/docs/en/skills
 [cc-styles]: https://code.claude.com/docs/en/output-styles
 [cc-sub]: https://code.claude.com/docs/en/sub-agents
+[cc-teams]: https://code.claude.com/docs/en/agent-teams
 [cc-web]: https://code.claude.com/docs/en/claude-code-on-the-web
 [cc-wt]: https://code.claude.com/docs/en/worktrees
 [ctx]: https://support.claude.com/en/articles/8606394-how-large-is-the-context-window-on-paid-claude-plans
