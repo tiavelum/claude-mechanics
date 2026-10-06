@@ -18,6 +18,8 @@ Prefix: EXT · Scope: extensions that persist beyond a single session in the Cla
 - **EXT-032** `documented` A custom skill a user uploads is not visible to colleagues until it is shared; admins can see its name and sharing status, but not its files. [use-skills]
 - **EXT-006** `documented` On Team and Enterprise, an owner can provision skills to everyone in the organization: they appear in every member's skills list, start on unless the owner sets them to start off, and a member can turn one off but not delete it. [skills] [skills-org]
 - **EXT-033** `documented` On Team and Enterprise, where the organization allows sharing, a user can share a skill they created with specific colleagues, and on Enterprise with a group; a shared skill is view-only, stays off until the recipient turns it on, and gives the recipient the owner's updated version at the next use. [use-skills] [skills-org]
+- **EXT-065** `documented` On Team and Enterprise, users can submit a skill or plugin they built to the organization library; the Publishing setting in Organization settings > Plugins & skills, on the Policy tab, is "Requires review" (an owner approves each submission and each later version), "Open" (published without review) or "Off" (no "Publish to org" button). [skills-org]
+- **EXT-066** `documented` Publishing starts as "Open" on Team, or "Off" where sharing with the organization was off, and as "Off" on Enterprise, or "Open" where sharing with the organization was on; an organization that has not chosen a setting switches to "Requires review" on 2026-10-02. [skills-org]
 - **EXT-036** `documented` Skills enabled in the Claude settings are also available in the Claude add-ins for Excel, PowerPoint, Word and Outlook. [use-skills]
 - **EXT-007** `documented` Skills, connectors and plugins are saved to the account and available in chat on web, desktop and mobile; those added from the Claude Code command line stay on that machine. [ext]
 - **EXT-037** `observed` In a cloud session, Anthropic's built-in skills were on a read-only file system, while the account's own, organization and plugin skills were in a writable synced folder, `~/.claude/skills/synced/`; the session's instructions said a skill is created or changed through a proposal card that the user saves. (session 2026-10-06, claude.ai, outside projects)
@@ -32,6 +34,7 @@ Prefix: EXT · Scope: extensions that persist beyond a single session in the Cla
 - **EXT-012** `documented` A connector's tools can be set, per group of tools or per tool, to Always allow, Needs approval or Blocked; when Claude asks to use a tool, Allow once continues and Always allow skips the prompt for that tool from then on. [conn]
 - **EXT-013** `documented` On Team and Enterprise, an owner adds a connector for the organization, which makes it available without granting access: each member signs in with their own account, unless the connector uses a shared credential such as an API key. [conn] [conn-use] [custom-conn]
 - **EXT-018** `documented` On Team and Enterprise, an owner can limit a connector's actions for the whole organization through its tool permissions, and members cannot override that limit. [conn-use]
+- **EXT-067** `documented` On Enterprise, a custom role sets every connector, each connector or each of its tools to Always allow, Needs approval or Blocked, for members whose role is set to "Custom"; across a member's roles the most permissive grant applies, and the organization-wide tool policy is a ceiling that no role can widen. [roles]
 - **EXT-017** `documented` Custom connectors using remote MCP are available on Free, Pro, Max, Team and Enterprise in Claude, Cowork and Claude Desktop; a Free account can have one. [custom-conn] [conn-use]
 - **EXT-014** `documented` Claude reaches a custom connector's remote MCP server from Anthropic's cloud, from every Claude client including Claude Desktop, Cowork and the mobile apps, so the server must be reachable over the public internet. [custom-conn] [conn-use]
 
@@ -46,7 +49,8 @@ Prefix: EXT · Scope: extensions that persist beyond a single session in the Cla
 ## Artifacts
 
 - **EXT-025** `documented` The help center describes an artifact as something Claude makes for the user to show others, such as a design, a deck, a document, a dashboard or a small interactive tool. [art]
-- **EXT-026** `documented` Artifacts are available on Free, Pro, Max, Team and Enterprise; templates, connected apps and data storage need Pro, Max, Team or Enterprise. [art]
+- **EXT-026** `documented` Artifacts are available on Free, Pro, Max, Team and Enterprise; connected apps and data storage need Pro, Max, Team or Enterprise. [art]
+- **EXT-068** `conflicting` Which plans the templates Claude Design, Claude Slides and Claude Docs reach: the artifacts article puts them in beta on paid plans only, on by default on Pro, Max and Team and off on Enterprise until an owner turns each on, and the merger announcement also names them beta on paid plans, while the release notes entry of 2026-09-16 makes them available on every plan, Free included. [art] [blog-cw] [rn]
 - **EXT-027** `documented` Artifacts need "Cloud code execution and file creation", turned on in Settings > Capabilities on Free, Pro and Max and in Organization settings > Capabilities on Team and Enterprise. [art]
 - **EXT-038** `conflicting` For the switch in Settings > Capabilities on Free, Pro and Max, the artifacts article uses the name "Cloud code execution and file creation", while the skills and file creation articles and the skills overview call it "Code execution and file creation". [art] [use-skills] [files] [skills-doc]
 - **EXT-020** `documented` Every artifact the user makes is saved to the Artifacts tab in the Claude sidebar, which can be reached from any conversation. [art]
@@ -67,6 +71,7 @@ Prefix: EXT · Scope: extensions that persist beyond a single session in the Cla
 ## Sources
 
 [art]: https://support.claude.com/en/articles/17153992-what-are-artifacts-and-how-do-i-use-them
+[blog-cw]: https://claude.com/blog/cowork-is-now-claude
 [cc-skills]: https://code.claude.com/docs/en/skills
 [conn]: https://claude.com/docs/connectors/getting-started
 [conn-use]: https://support.claude.com/en/articles/11176164-use-connectors-to-extend-claude-s-capabilities
@@ -75,6 +80,8 @@ Prefix: EXT · Scope: extensions that persist beyond a single session in the Cla
 [files]: https://support.claude.com/en/articles/12111783-create-and-edit-files-with-claude
 [plugins]: https://support.claude.com/en/articles/13837440-use-plugins-in-claude
 [pub]: https://support.claude.com/en/articles/9547008-share-artifacts
+[rn]: https://support.claude.com/en/articles/12138966-release-notes
+[roles]: https://support.claude.com/en/articles/13930452-manage-custom-roles-on-enterprise-plans
 [skills]: https://support.claude.com/en/articles/12512176-what-are-skills
 [skills-doc]: https://claude.com/docs/skills/overview
 [skills-org]: https://support.claude.com/en/articles/13119606-provision-and-manage-skills-for-your-organization
