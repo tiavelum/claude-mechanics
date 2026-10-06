@@ -33,7 +33,6 @@ Prefix: SET · Scope: account, project, per-chat and organization settings in th
 ## Capabilities that change context behaviour
 
 - **SET-040** `documented` Code execution must be enabled for automatic context management of long conversations. [ctx]
-- **SET-041** `documented` Skills require "Code execution and file creation" to be enabled (on Team and Enterprise: "Cloud code execution and file creation"). [use-skills]
 
 ## Organization settings (Team and Enterprise)
 
@@ -59,4 +58,3 @@ Prefix: SET · Scope: account, project, per-chat and organization settings in th
 [rn]: https://support.claude.com/en/articles/12138966-release-notes
 [sty]: https://support.anthropic.com/en/articles/10181068-configuring-and-using-styles
 [usage]: https://support.claude.com/en/articles/9797557-usage-limit-best-practices
-[use-skills]: https://support.claude.com/en/articles/12512180-use-skills-in-claude
