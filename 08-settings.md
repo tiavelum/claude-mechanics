@@ -37,7 +37,7 @@ Prefix: SET · Scope: account, project, per-chat and organization settings in th
 ## Organization settings (Team and Enterprise)
 
 - **SET-050** `documented` Owners enable memory for the organization in Organization settings > Capabilities; turning it off deletes all members' memory. [mem]
-- **SET-051** `documented` Admins can turn off project sharing for the organization. [proj]
+- **SET-051** `documented` Project sharing for a Team or Enterprise organization is turned on or off under Organization settings > Data and privacy, in the Sharing section, and on Enterprise also per role under Organization settings > Roles. [share-org]
 
 ## Claude's own reach
 
@@ -56,5 +56,6 @@ Prefix: SET · Scope: account, project, per-chat and organization settings in th
 [proj]: https://support.claude.com/en/articles/9519177-how-can-i-create-and-manage-projects
 [recap]: https://support.claude.com/en/articles/15672559-see-your-monthly-recap
 [rn]: https://support.claude.com/en/articles/12138966-release-notes
+[share-org]: https://support.claude.com/en/articles/9927533-control-project-sharing-for-your-organization
 [sty]: https://support.anthropic.com/en/articles/10181068-configuring-and-using-styles
 [usage]: https://support.claude.com/en/articles/9797557-usage-limit-best-practices
