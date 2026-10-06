@@ -220,6 +220,7 @@ Prefix: CC · Scope: memory, instruction files, settings, sessions and context i
 ## Cloud sessions
 
 - **CC-190** `documented` Cloud sessions are available on Pro, Max and Team plans, and for Enterprise users with premium seats or Chat + Claude Code seats. [cc-web]
+- **CC-247** `documented` The Enterprise plan article gives Enterprise a single seat type that includes Claude Code and Cowork, and says organizations on Chat and Chat + Claude Code seats, or on Standard and Premium seats, cannot keep those seats past their next contract renewal; the cloud sessions page still names only premium seats and Chat + Claude Code seats for Enterprise. [ent] [cc-web]
 - **CC-191** `documented` `claude --cloud` creates a new cloud session for the current repository, one repository at a time; the cloud VM clones the current directory's GitHub remote at the current branch rather than the local checkout, unless Claude Code uploads the local repository as a bundle. [cc-web]
 - **CC-192** `documented` Teleporting fetches and checks out the cloud session's branch and loads its full conversation history into the terminal; the terminal gets its own copy, and new local work does not appear in the cloud session. [cc-web]
 - **CC-193** `documented` A cloud session starts from a fresh clone of the repository: what is committed is available, what is installed or configured only on the user's machine is not. [cc-cloud-env]
@@ -239,6 +240,8 @@ Prefix: CC · Scope: memory, instruction files, settings, sessions and context i
 - **CC-214** `documented` While Remote Control is connected, the session transcript, including messages, Claude's responses and tool activity, is stored on Anthropic servers. [cc-rc]
 - **CC-215** `documented` Remote Control is available on Pro, Max, Team and Enterprise plans, does not work with API keys, and on Team and Enterprise needs an Owner to turn it on in the Claude Code admin settings. [cc-rc]
 - **CC-216** `documented` The `disableRemoteControl` setting turns Remote Control off entirely, and organizations with Zero Data Retention or the HIPAA configuration cannot enable it. [cc-rc]
+- **CC-245** `documented` Trusted Devices (beta), available on Pro, Max, Team and Enterprise and off by default, lets a Remote Control session be viewed or steered from claude.ai, the mobile apps or Claude Desktop only from an enrolled device and with a sign-in no older than 18 hours, renewed with a biometric or passkey check; on Team and Enterprise an Owner turns it on in Organization settings > Capabilities > Remote sessions, and on Pro and Max the user turns it on in their own settings. [cc-rc]
+- **CC-246** `documented` Trusted Devices covers Remote Control in Claude Code and Cowork but not regular chat, Claude Code in the terminal or API use; the machine running Claude Code gets its credential when the developer signs in to the CLI. [cc-rc]
 
 ## Sessions working together
 
@@ -292,3 +295,4 @@ Prefix: CC · Scope: memory, instruction files, settings, sessions and context i
 [cc-wt]: https://code.claude.com/docs/en/worktrees
 [ctx]: https://support.claude.com/en/articles/8606394-how-large-is-the-context-window-on-paid-claude-plans
 [cw-proj]: https://support.claude.com/en/articles/14116274-organize-your-tasks-with-projects-in-claude-cowork
+[ent]: https://support.claude.com/en/articles/9797531-what-is-the-enterprise-plan
