@@ -126,7 +126,7 @@ Prefix: MEM · Scope: memory in the Claude app (account memory, project memory, 
 [blog-mem26]: https://claude.com/blog/claudes-memory-works-everywhere-and-you-decide-whats-in-it
 [cc-proj]: https://code.claude.com/docs/en/claude-projects
 [cw-proj]: https://support.claude.com/en/articles/14116274-organize-your-tasks-with-projects-in-claude-cowork
-[imp]: https://support.claude.com/en/articles/12123587-importing-and-exporting-your-memory-from-claude
+[imp]: https://support.claude.com/en/articles/12123587-import-and-export-your-memory-from-claude
 [inc]: https://support.claude.com/en/articles/12260368-use-incognito-chats
 [mem]: https://support.claude.com/en/articles/11817273-use-claude-s-chat-search-and-memory-to-build-on-previous-context
 [one]: https://support.claude.com/en/articles/16761823-claude-cowork-and-chat-are-one-claude
