@@ -1,6 +1,6 @@
 # 01 Surfaces and sessions
 
-Prefix: SES · Scope: what a session is in the Claude app (web, desktop, mobile), how chat and Cowork relate, where sessions run · Last checked: 2026-10-06
+Prefix: SES · Scope: what a session is in the Claude app (web, desktop, mobile), how chat and Cowork relate, where sessions run, and which Claude products and surfaces exist, on which plans and platforms · Last checked: 2026-10-06
 
 ## Chat and Cowork
 

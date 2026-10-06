@@ -1,6 +1,6 @@
 # 06 Context management
 
-Prefix: CTX · Scope: context window, long conversations, files and usage in the Claude app · Last checked: 2026-10-06
+Prefix: CTX · Scope: context window, long conversations, files, usage and what each plan includes in the Claude app · Last checked: 2026-10-06
 
 ## Context window
 

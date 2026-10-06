@@ -1,6 +1,6 @@
 # 07 Skills, connectors and artifacts
 
-Prefix: EXT · Scope: extensions that persist beyond a single session in the Claude app, and how they enter context · Last checked: 2026-10-06
+Prefix: EXT · Scope: extensions that persist beyond a single session in the Claude app (skills, connectors, plugins, artifacts), how they enter context, and how an organization provisions and controls them · Last checked: 2026-10-06
 
 ## Skills
 

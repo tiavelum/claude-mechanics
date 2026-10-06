@@ -1,8 +1,14 @@
 # Claude mechanics
 
-A dated, sourced snapshot of how Claude works behind the scenes: sessions, memory, chat search, projects, instructions, context and settings, in the Claude app and in Claude Code. Each fact is one short statement labelled as documented, observed, inferred or conflicting, so a later snapshot can be compared line by line to see how Claude has changed.
+A dated, sourced snapshot of how Claude works behind the scenes, for people and Claude sessions that need to look it up: sessions, memory, chat search, projects, instructions, context and settings, in the Claude app and in Claude Code. Each fact is one short statement labelled as documented, observed, inferred or conflicting.
 
-It records Claude's behaviour as documented by Anthropic and as visible in sessions, not the model's internals and not anyone's own content or projects. It is a research record, not a guide: it describes, and recommends nothing.
+## What it is for
+
+- Looking up how a mechanism works, with the link to Anthropic's page for each documented fact.
+- Pointing a Claude session at a chapter, so that it answers from a checked record, not from a web search.
+- Seeing how Claude has changed: two snapshots differ line by line.
+
+It records Claude's behaviour as documented by Anthropic and as visible in sessions, not the model's internals and not anyone's own content or projects. It describes, and recommends nothing.
 
 ## How to start
 
@@ -22,17 +28,23 @@ Contributing:
 
 | File | Prefix | Covers |
 | :- | :- | :- |
-| [01-surfaces-and-sessions.md](01-surfaces-and-sessions.md) | SES | Chat and Cowork, where sessions run, session state |
+| [01-surfaces-and-sessions.md](01-surfaces-and-sessions.md) | SES | Chat and Cowork, where sessions run, session state, products and where they are available |
 | [02-memory.md](02-memory.md) | MEM | Account and project memory, controls, incognito, retention |
 | [03-chat-search.md](03-chat-search.md) | SRC | Searching past conversations |
 | [04-projects.md](04-projects.md) | PRJ | Project structure, knowledge and RAG, moving chats, sharing |
-| [05-instructions-and-personalization.md](05-instructions-and-personalization.md) | INS | Account, project and folder instructions, styles, precedence |
-| [06-context-management.md](06-context-management.md) | CTX | Context windows, long chats, usage, uploads |
-| [07-skills-connectors-artifacts.md](07-skills-connectors-artifacts.md) | EXT | Extensions that outlive a session |
-| [08-settings.md](08-settings.md) | SET | Settings that change memory, search or context |
-| [09-claude-code.md](09-claude-code.md) | CC | CLAUDE.md, auto memory, settings, sessions, compaction |
+| [05-instructions-and-personalization.md](05-instructions-and-personalization.md) | INS | Account, organization, project and folder instructions, styles, published system prompts, precedence |
+| [06-context-management.md](06-context-management.md) | CTX | Context windows, long chats, usage, uploads, what each plan includes |
+| [07-skills-connectors-artifacts.md](07-skills-connectors-artifacts.md) | EXT | Extensions that outlive a session, and how an organization controls them |
+| [08-settings.md](08-settings.md) | SET | Account, project, per-chat and organization settings |
+| [09-claude-code.md](09-claude-code.md) | CC | CLAUDE.md, auto memory, settings, sessions and their environments, compaction |
 | [10-scenarios.md](10-scenarios.md) | SCN | What sessions share in common setups |
 | [11-timeline.md](11-timeline.md) | CHG | Dated changes |
+| [12-models-effort-thinking.md](12-models-effort-thinking.md) | MOD | Model lineup, identifiers, specifications, thinking, effort, choosing a model, safeguards, pricing |
+| [13-steering-scheduling-sharing.md](13-steering-scheduling-sharing.md) | WRK | Steering a running session, approvals, notifications, scheduled tasks, managing and sharing chats |
+| [14-built-in-tools.md](14-built-in-tools.md) | TOOL | Web search, Research, code execution and file creation, browsers, computer use |
+| [15-data-and-retention.md](15-data-and-retention.md) | DAT | Model training, retention and deletion, location data, feedback |
+| [16-claude-code-permissions-and-automation.md](16-claude-code-permissions-and-automation.md) | CCA | Agentic loop, permissions and hooks, checkpoints, subagents, skills, scheduled work, prompt caching, costs |
+| [17-api-and-agent-sdk.md](17-api-and-agent-sdk.md) | API | Requests, context management, prompt caching, tools, the memory tool, Agent SDK |
 | [conventions.md](conventions.md) | | Statement format, labels, snapshots and releases |
 | [.claude/skills/revise-snapshot/](.claude/skills/revise-snapshot/SKILL.md) | | Skill and scripts for re-checking and publishing a snapshot |
 | [.github/workflows/check-statements.yml](.github/workflows/check-statements.yml) | | Runs the statement check and the linter on every pull request |

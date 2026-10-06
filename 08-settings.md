@@ -1,6 +1,6 @@
 # 08 Settings
 
-Prefix: SET · Scope: account, project, per-chat and organization settings in the Claude app that affect memory, search, instructions or context · Last checked: 2026-10-06
+Prefix: SET · Scope: account, project, per-chat and organization settings in the Claude app, including roles and account administration · Last checked: 2026-10-06
 
 ## Account settings
 

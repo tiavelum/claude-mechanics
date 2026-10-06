@@ -1,6 +1,6 @@
 # 05 Instructions and personalization
 
-Prefix: INS · Scope: account, project and folder instructions, styles, and how Claude weighs them in the Claude app · Last checked: 2026-10-06
+Prefix: INS · Scope: account, organization, project and folder instructions, styles, Anthropic's published system prompts, and how Claude weighs instructions and other content in the Claude app · Last checked: 2026-10-06
 
 ## Layers
 

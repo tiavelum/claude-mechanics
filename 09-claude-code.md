@@ -1,6 +1,6 @@
 # 09 Claude Code
 
-Prefix: CC · Scope: memory, instruction files, settings, sessions and context in Claude Code (terminal, desktop Code tab, IDE, cloud sessions), and how it relates to the Claude app · Last checked: 2026-10-06
+Prefix: CC · Scope: memory, instruction files, settings, sessions and their environments (worktrees, cloud environments, Remote Control), and context in Claude Code (terminal, desktop Code tab, IDE, cloud sessions), and how it relates to the Claude app · Last checked: 2026-10-06
 
 ## Memory model
 
