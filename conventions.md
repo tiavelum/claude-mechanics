@@ -31,7 +31,7 @@ Statements are edited in place. A statement that is no longer true is deleted, a
 
 | Label | Meaning | Source required |
 | :- | :- | :- |
-| `documented` | Stated in official Anthropic documentation (support.claude.com, support.anthropic.com, privacy.claude.com, claude.com, code.claude.com, docs.claude.com, anthropic.com). | Link to the page. |
+| `documented` | Stated in official Anthropic documentation (support.claude.com, support.anthropic.com, privacy.claude.com, claude.com, code.claude.com, docs.claude.com, platform.claude.com, anthropic.com). | Link to the page. |
 | `observed` | Seen in a live session: context injected into the conversation, tool behaviour, or Claude's own runtime instructions. Not found in public documentation. | Session note. |
 | `inferred` | A conclusion drawn from other statements; stated nowhere. | `Basis:` the statement IDs it rests on. |
 | `conflicting` | Official sources contradict each other. | Links to all conflicting pages. |
