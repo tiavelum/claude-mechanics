@@ -41,6 +41,7 @@ Prefix: SES · Scope: what a session is in the Claude app (web, desktop, mobile)
 - **SES-017** `documented` Past Cowork work is carried into Claude Code by downloading a local task's transcript from the note at its top, or the whole Cowork history from a notice in the app; projects and scheduled tasks do not carry over to Claude Code. [cw-web]
 - **SES-018** `documented` On Team and Enterprise, the organization setting "Run Cowork in the cloud" in Organization settings > Cowork decides whether sessions can run in the cloud; it is on by default on Team and off by default on Enterprise, where an owner also grants the capability to a group through custom roles. [cw-org]
 - **SES-019** `documented` Cowork is available on desktop, web, mobile and in the Claude in Chrome side panel, where opening the panel starts a Cowork session directly. [cw-web] [cw-start]
+- **SES-058** `documented` Cowork is available on the paid plans only: in Claude Desktop for macOS and for Windows on Pro, Max, Team and Enterprise, and on the web and Claude Mobile on Pro, Max and Team, and on Enterprise where an admin has enabled it. [cw-start]
 - **SES-043** `documented` Dispatch is one persistent conversation, reachable from phone and desktop, that runs its tasks on the user's desktop computer, which must be awake with Claude Desktop open. [dispatch]
 - **SES-014** `documented` Memory is shared between chat and Cowork only when Cowork runs in the cloud; Cowork sessions that run locally do not use memory. [mem]
 
@@ -48,6 +49,7 @@ Prefix: SES · Scope: what a session is in the Claude app (web, desktop, mobile)
 
 - **SES-023** `documented` A cloud session reaches the user's computer, for example a local file or the browser, only through the Claude Desktop app on that computer over an Anthropic-brokered connection; it reads and writes local files only in folders the user connected, and each local tool call is checked against the user's permissions. [cw-arch] [cw-web]
 - **SES-013** `documented` Local files, local connectors, the browser and computer use are reachable from a cloud session only while Claude Desktop is open on the user's computer; with the app closed, the session keeps running but cannot reach local files. [cw-web] [one]
+- **SES-059** `documented` Computer use is in beta on Pro and Max, in Cowork and Claude Code in Claude Desktop for macOS and Windows; Team and Enterprise do not have it, it is turned on with "Enable computer use" in the desktop app's settings, and Claude asks before accessing each application. [cu] [cw-web]
 - **SES-057** `observed` Contrary to [cw-web], which allows local files only to a cloud session started on desktop, a conversation started on claude.ai in a web browser, with Claude Desktop open on the user's Mac, read a file in a folder there after the user approved a prompt shown in the web page; the prompt said Claude could read and change the folder's files for this session and that files it uses leave the device. (session 2026-10-06, claude.ai in a web browser, outside projects, Max plan)
 - **SES-054** `observed` A conversation started on claude.ai in a web browser, while Claude Desktop was open on the user's Mac, opened a page in Claude Desktop's built-in browser after a site approval. (session 2026-10-06, claude.ai in a web browser, outside projects, Max plan)
 - **SES-055** `observed` Folders on the user's computer are connected per conversation: a folder added in one Claude Desktop conversation appeared in that conversation's "Used in this session" panel and could be listed there, also after the conversation was opened on the web, while two other conversations of the account had none; the device tools' description says an approved folder becomes readable and writable for that session only. (session 2026-10-06, Claude Desktop and claude.ai, outside projects, Max plan)
@@ -81,6 +83,7 @@ Prefix: SES · Scope: what a session is in the Claude app (web, desktop, mobile)
 
 [blog-cw]: https://claude.com/blog/cowork-is-now-claude
 [cc-desk]: https://code.claude.com/docs/en/desktop
+[cu]: https://support.claude.com/en/articles/14128542-let-claude-use-your-computer-in-cowork
 [cw-arch]: https://support.claude.com/en/articles/14479288-claude-cowork-architecture-overview
 [cw-org]: https://support.claude.com/en/articles/13455879-use-claude-cowork-on-team-and-enterprise-plans
 [cw-proj]: https://support.claude.com/en/articles/14116274-organize-your-tasks-with-projects-in-claude-cowork
