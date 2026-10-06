@@ -47,7 +47,6 @@ Prefix: MEM · Scope: memory in the Claude app (account memory, project memory, 
 - **MEM-041** `documented` Incognito chats neither use existing memory nor are saved to chat history or memory, and chat search never pulls from them. [inc] [mem]
 - **MEM-042** `documented` An incognito chat is started with the ghost icon in a new chat outside a project and is marked by a black border and an "Incognito chat" label; it is not available inside projects. [inc]
 - **MEM-043** `documented` An incognito chat cannot be saved or reopened after it is closed. [inc]
-- **MEM-044** `documented` Profile settings such as instructions and styles still apply in incognito chats. [inc]
 - **MEM-045** `documented` Incognito chats are not used for model training; on consumer plans this holds even with model improvement turned on. [inc] [priv]
 - **MEM-046** `documented` On Team and Enterprise, incognito chats are included in organizational data exports and follow the organization's retention policy. [inc] [mem]
 - **MEM-048** `documented` Incognito chats are included in the Compliance API, which Enterprise plans offer. [inc]
