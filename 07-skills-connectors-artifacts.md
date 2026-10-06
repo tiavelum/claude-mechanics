@@ -10,7 +10,7 @@ Prefix: EXT · Scope: extensions that persist beyond a single session in the Cla
 - **EXT-035** `documented` Claude loads a skill that is turned on when the task matches its description, and the user can pick a skill directly by typing / in the message box. [skills-doc]
 - **EXT-004** `documented` Skills need code execution: on Free, Pro and Max the user turns on "Code execution and file creation" in Settings > Capabilities, on Team and Enterprise an owner turns on both "Cloud code execution and file creation" and "Skills", and with code execution off no skills are available. [use-skills] [skills-org]
 - **EXT-008** `conflicting` The help center's skills articles make skills available on Free, Pro, Max, Team and Enterprise, while the skills overview in the Claude documentation lists only Pro, Max, Team and Enterprise. [skills] [use-skills] [skills-doc]
-- **EXT-009** `conflicting` For Team and Enterprise, the help center's skills articles place the code execution and Skills switches in Organization settings > Plugins & skills, on the Policy tab, while the skills overview places code execution in Organization settings > Capabilities. [use-skills] [skills-org] [skills-doc]
+- **EXT-009** `conflicting` For Team and Enterprise, the help center's skills articles place the code execution and Skills switches in Organization settings > Plugins & skills, on the Policy tab, while the skills overview and the file creation article place code execution in Organization settings > Capabilities. [use-skills] [skills-org] [skills-doc] [files]
 - **EXT-030** `documented` On Team plans, skills are on by default at the organization level. [use-skills]
 - **EXT-031** `documented` Anthropic provides built-in skills for Excel, Word, PowerPoint and PDF files, which Claude uses on its own when they are relevant and code execution and file creation is on. [skills] [use-skills]
 - **EXT-005** `documented` Custom skills are uploaded as a ZIP file under Customize > Skills, where each skill can be turned on or off. [use-skills]
@@ -47,6 +47,7 @@ Prefix: EXT · Scope: extensions that persist beyond a single session in the Cla
 - **EXT-025** `documented` The help center describes an artifact as something Claude makes for the user to show others, such as a design, a deck, a document, a dashboard or a small interactive tool. [art]
 - **EXT-026** `documented` Artifacts are available on Free, Pro, Max, Team and Enterprise; templates, connected apps and data storage need Pro, Max, Team or Enterprise. [art]
 - **EXT-027** `documented` Artifacts need "Cloud code execution and file creation", turned on in Settings > Capabilities on Free, Pro and Max and in Organization settings > Capabilities on Team and Enterprise. [art]
+- **EXT-038** `conflicting` For the switch in Settings > Capabilities on Free, Pro and Max, the artifacts article uses the name "Cloud code execution and file creation", while the skills and file creation articles and the skills overview call it "Code execution and file creation". [art] [use-skills] [files] [skills-doc]
 - **EXT-020** `documented` Every artifact the user makes is saved to the Artifacts tab in the Claude sidebar, which can be reached from any conversation. [art]
 - **EXT-028** `documented` Artifacts start private to the user who made them. [art] [pub]
 - **EXT-029** `documented` Legacy artifacts, made in a chat before 2026-09-16, keep working and can still be published and shared, but no new ones can be made. [art]
@@ -69,6 +70,7 @@ Prefix: EXT · Scope: extensions that persist beyond a single session in the Cla
 [conn-use]: https://support.claude.com/en/articles/11176164-use-connectors-to-extend-claude-s-capabilities
 [custom-conn]: https://support.claude.com/en/articles/11175166-get-started-with-custom-connectors-using-remote-mcp
 [ext]: https://claude.com/docs/extend/overview
+[files]: https://support.claude.com/en/articles/12111783-create-and-edit-files-with-claude
 [plugins]: https://support.claude.com/en/articles/13837440-use-plugins-in-claude
 [pub]: https://support.claude.com/en/articles/9547008-share-artifacts
 [skills]: https://support.claude.com/en/articles/12512176-what-are-skills
