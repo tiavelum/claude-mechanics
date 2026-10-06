@@ -41,7 +41,7 @@ Prefix: SET · Scope: account, project, per-chat and organization settings in th
 
 - **SET-050** `documented` Owners and Primary Owners turn memory on for the organization in Organization settings > Capabilities; turning it off deletes all members' memory. [mem]
 - **SET-051** `documented` Project sharing for a Team or Enterprise organization is turned on or off under Organization settings > Data and privacy, in the Sharing section, and on Enterprise also per role under Organization settings > Roles. [share-org]
-- **SET-052** `documented` Only the Primary Owner of a Team or Enterprise organization can export the organization's data, from Organization settings > Data and privacy on the web or in Claude Desktop. [exp-org] [exp]
+- **SET-052** `conflicting` Both export articles say only the Primary Owner of a Team or Enterprise organization can export its data, from Organization settings > Data and privacy on the web or in Claude Desktop, while the incognito article says organizational exports are available to account Owners. [exp-org] [exp] [inc]
 
 ## What Claude is told about settings
 
