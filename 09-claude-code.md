@@ -199,6 +199,17 @@ Prefix: CC · Scope: memory, instruction files, settings, sessions and context i
 - **CC-118** `documented` The desktop app and the CLI read the same configuration files, including CLAUDE.md and CLAUDE.local.md and the MCP servers in `~/.claude.json` or `.mcp.json`. [cc-desk]
 - **CC-119** `documented` When the desktop app picks up a CLI session with `/resume`, it continues the same session rather than a copy, so `claude --resume` in the terminal still finds it. [cc-desk]
 
+## Artifacts
+
+- **CC-220** `documented` Claude Code can publish artifacts on Pro, Max, Team and Enterprise, only from a session signed in to a claude.ai account; sessions using an API key, a gateway token or a cloud-provider credential cannot publish. [cc-art] [art]
+- **CC-221** `documented` An artifact published from Claude Code is a live page at a private URL on claude.ai that stays private until shared and updates in place each time Claude publishes again to the same URL; each publish becomes a version. [cc-art] [art]
+- **CC-222** `documented` Another session updates an existing artifact only when it is given the artifact's URL or the artifact is attached with `/artifacts`; otherwise it creates a new artifact. [cc-art]
+- **CC-223** `documented` `/artifacts` lists every artifact the user owns and every artifact shared with them, read from the claude.ai account, so it works in a new session and after `/clear`; it needs v2.1.208 or later. [cc-art]
+- **CC-224** `documented` Artifacts published from Claude Code are listed in the user's gallery at claude.ai/code/artifacts. [cc-art]
+- **CC-225** `documented` A published artifact can call only connectors of the claude.ai account, each through the viewer's own connection; local MCP servers configured in Claude Code can supply data while the page is built, but the published page cannot call them. [cc-art]
+- **CC-226** `documented` From Claude Code, Claude can start an artifact from the Slides, Design or Docs templates of the claude.ai account, with `/slides` and `/design` from v2.1.265; Claude Docs reaches Claude Code as a claude.ai connector. [cc-art] [art]
+- **CC-227** `documented` A user turns artifacts off for their own sessions with `"enableArtifact": false` in settings, `CLAUDE_CODE_DISABLE_ARTIFACT=1` or `Artifact` in `permissions.deny`; a project's settings can turn them off but not back on. [cc-art]
+
 ## Desktop app
 
 - **CC-200** `documented` In the desktop app's Code tab, each conversation is a session with its own history and project folder, independent of other sessions, and several can run in parallel. [cc-desk]
@@ -230,7 +241,9 @@ Prefix: CC · Scope: memory, instruction files, settings, sessions and context i
 
 ## Sources
 
+[art]: https://support.claude.com/en/articles/17153992-what-are-artifacts-and-how-do-i-use-them
 [cc-agents]: https://code.claude.com/docs/en/agent-view
+[cc-art]: https://code.claude.com/docs/en/artifacts
 [cc-cache]: https://code.claude.com/docs/en/prompt-caching
 [cc-cloud-env]: https://code.claude.com/docs/en/cloud-environments
 [cc-costs]: https://code.claude.com/docs/en/costs
