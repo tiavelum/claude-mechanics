@@ -20,7 +20,8 @@ Prefix: EXT · Scope: extensions that persist beyond a single session in the Cla
 - **EXT-033** `documented` On Team and Enterprise, where the organization allows sharing, a user can share a skill they created with specific colleagues, and on Enterprise with a group; a shared skill is view-only, stays off until the recipient turns it on, and gives the recipient the owner's updated version at the next use. [use-skills] [skills-org]
 - **EXT-036** `documented` Skills enabled in the Claude settings are also available in the Claude add-ins for Excel, PowerPoint, Word and Outlook. [use-skills]
 - **EXT-007** `documented` Skills, connectors and plugins are saved to the account and available in chat on web, desktop and mobile; those added from the Claude Code command line stay on that machine. [ext]
-- **EXT-037** `observed` In a cloud session, Anthropic's built-in skills were on a read-only file system, while the account's own, organization and plugin skills were in a writable synced folder; the session's instructions said a skill is created or changed through a proposal card that the user saves. (session 2026-10-06, claude.ai, outside projects)
+- **EXT-037** `observed` In a cloud session, Anthropic's built-in skills were on a read-only file system, while the account's own, organization and plugin skills were in a writable synced folder, `~/.claude/skills/synced/`; the session's instructions said a skill is created or changed through a proposal card that the user saves. (session 2026-10-06, claude.ai, outside projects)
+- **EXT-039** `documented` Cowork and cloud sessions load the skills enabled for the claude.ai account, synced at session start; synced skills are only downloaded, never uploaded, so an edit to a file under `~/.claude/skills/synced/` is not saved to the account and a later sync can overwrite or remove it. [cc-skills]
 
 ## Connectors
 
@@ -66,6 +67,7 @@ Prefix: EXT · Scope: extensions that persist beyond a single session in the Cla
 ## Sources
 
 [art]: https://support.claude.com/en/articles/17153992-what-are-artifacts-and-how-do-i-use-them
+[cc-skills]: https://code.claude.com/docs/en/skills
 [conn]: https://claude.com/docs/connectors/getting-started
 [conn-use]: https://support.claude.com/en/articles/11176164-use-connectors-to-extend-claude-s-capabilities
 [custom-conn]: https://support.claude.com/en/articles/11175166-get-started-with-custom-connectors-using-remote-mcp
