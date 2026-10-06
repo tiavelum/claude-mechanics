@@ -8,6 +8,7 @@ Prefix: MEM · Scope: memory in the Claude app (account memory, project memory, 
 - **MEM-002** `documented` Memory is saved as a set of individual topics while you chat, not as summaries written after a conversation ends. [mem]
 - **MEM-003** `documented` Claude saves memories on its own; the user can also say "remember this" to save something directly. [mem]
 - **MEM-004** `documented` Memory is on by default for Free, Pro and Max on web, Claude Desktop and Claude Mobile. [mem]
+- **MEM-113** `conflicting` The memory article and the release notes, which date memory for free users to 2026-03-02, make memory available on Free, while the usage article names memory and project summaries only for the paid plans: Pro, Max, Team and Enterprise. [mem] [rn] [usage]
 - **MEM-005** `documented` On Team and Enterprise, owners decide whether memory is available, and it stays off for each member until the member turns it on. [mem]
 - **MEM-006** `documented` Everything Claude remembers is listed under Topics in Settings > Memory, where each topic can be read, edited or deleted. [mem]
 - **MEM-007** `documented` An edit to a topic applies to every conversation from then on. [mem]
@@ -133,3 +134,5 @@ Prefix: MEM · Scope: memory in the Claude app (account memory, project memory, 
 [priv]: https://privacy.claude.com/en/articles/10023548-how-long-do-you-store-my-data
 [priv-org]: https://privacy.claude.com/en/articles/7996866-how-long-do-you-store-my-organization-s-data
 [proj]: https://support.claude.com/en/articles/9519177-how-can-i-create-and-manage-projects
+[rn]: https://support.claude.com/en/articles/12138966-release-notes
+[usage]: https://support.claude.com/en/articles/9797557-usage-limit-best-practices
