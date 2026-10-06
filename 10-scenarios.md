@@ -21,7 +21,7 @@ Prefix: SCN · Scope: what two or more sessions share in common setups; each sce
 - **SCN-020** `documented` Two local Claude Code sessions in the same repository, including different worktrees, share one auto memory directory and the repository's CLAUDE.md files. [cc-mem]
 - **SCN-021** `documented` Two local Claude Code sessions in different repositories share only user-level and machine-wide configuration, such as `~/.claude/CLAUDE.md`, `~/.claude/rules/`, user settings, personal skills and the managed policy CLAUDE.md. [cc-mem] [cc-set]
 - **SCN-022** `documented` A local Claude Code session and a cloud session on the same repository share committed files such as CLAUDE.md, but not auto memory. [cc-mem]
-- **SCN-023** `inferred` A Claude Code session and a Claude app chat share no memory; the only documented bridges are skills and plugins enabled on the claude.ai account, artifacts, and files in a shared repository. Basis: CC-102, CC-114, EXT-021.
+- **SCN-023** `inferred` A Claude Code session and a Claude app chat share no memory; the documented bridges are skills, plugins and connectors enabled on the claude.ai account, artifacts, and files in a shared repository. Basis: CC-102, CC-107, CC-114, CC-126, EXT-021.
 
 ## Sources
 

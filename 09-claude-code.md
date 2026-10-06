@@ -175,6 +175,7 @@ Prefix: CC · Scope: memory, instruction files, settings, sessions and context i
 - **CC-107** `documented` When a claude.ai subscription login is the active authentication, MCP servers added in claude.ai (connectors) are available in Claude Code. [cc-mcp]
 - **CC-108** `documented` `disableClaudeAiConnectors` turns off the claude.ai connectors Claude Code fetches itself; it does not act on connectors that a cloud host or the desktop app delivers. [cc-mcp]
 - **CC-109** `documented` When an MCP server is defined in several places, Claude Code connects once, using the whole entry from the highest-precedence source: local scope, project scope, user scope, plugin-provided servers, then claude.ai connectors. [cc-mcp]
+- **CC-126** `documented` In terminal sessions signed in with a claude.ai account, Claude Code syncs every plugin turned on for the account or by the organization, listed under the ID `<name>@synced`; this needs Claude Code v2.1.273 or later, and plugins installed in Claude Code are not added to the account. [cc-plug]
 
 ## Output styles
 
