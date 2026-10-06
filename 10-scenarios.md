@@ -1,6 +1,6 @@
 # 10 Scenarios
 
-Prefix: SCN · Scope: what two or more sessions share in common setups; each scenario combines statements from chapters 01 to 09 · Last checked: 2026-10-06
+Prefix: SCN · Scope: what two or more sessions share in common setups; each scenario combines statements from other chapters · Last checked: 2026-10-06
 
 ## Claude app
 
