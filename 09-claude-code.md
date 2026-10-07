@@ -131,7 +131,7 @@ Prefix: CC · Scope: memory, instruction files, settings, sessions and their env
 - **CC-164** `documented` CLAUDE.md loads in full at session start and costs context on every request. [cc-ext]
 - **CC-165** `documented` Near the context limit, Claude Code first clears older tool outputs and then summarizes the conversation if needed; requests and key code snippets are kept, while detailed early instructions may be lost. [cc-how]
 - **CC-166** `documented` The summary that compaction writes keeps the requests and their intent, key technical concepts, the files examined or changed with important snippets, errors and their fixes, pending tasks and the current work; full tool outputs and intermediate reasoning are dropped. [cc-ctx]
-- **CC-167** `documented` After compaction the system prompt and output style still apply, the project-root CLAUDE.md, unscoped rules and auto memory are re-injected from disk, and Claude Code reads a fresh git status snapshot. [cc-ctx]
+- **CC-167** `documented` After compaction the system prompt and output style still apply; the project-root CLAUDE.md, unscoped rules, auto memory and the plan Claude wrote in plan mode are re-injected from disk; and Claude Code reads a fresh git status snapshot. [cc-ctx]
 - **CC-168** `documented` Immediately after compaction, Claude Code reads again up to five files that Claude had read or edited, the most recently modified first; one larger than 5,000 tokens returns only as a reference to its path. [cc-ctx]
 - **CC-169** `documented` After compaction Claude Code adds back the latest invocation of every invoked skill, cut to its first 5,000 tokens, within a shared budget of 25,000 tokens that it fills starting with the skill invoked last, so skills invoked earlier can drop out. [cc-ctx] [cc-skills]
 - **CC-170** `documented` The listing of skill descriptions is not re-injected after `/compact`; only skills that were invoked are kept. [cc-ctx]
@@ -152,6 +152,8 @@ Prefix: CC · Scope: memory, instruction files, settings, sessions and their env
 - **CC-185** `documented` On paid plans, Fable 5.1, Fable 5, Opus 5.5, Opus 5, Opus 4.8, Opus 4.7, Opus 4.6, Sonnet 5.5, Sonnet 5 and Sonnet 4.6 have a 1M-token context window in Claude Code. [ctx]
 - **CC-186** `documented` Opus 4.6 and Sonnet 4.6 reach the 1M-token window only through a separate 1M variant chosen with `/model`, which needs usage credits for Opus 4.6 on Pro and for Sonnet 4.6 on every plan except usage-based Enterprise. [ctx]
 - **CC-187** `documented` Each time Claude uses tools, Claude Code sends a further request that carries the full conversation together with that round of tool results. [cc-costs]
+- **CC-188** `documented` Background commands and background subagents go on running through compaction, and Claude Code tells Claude afterwards which of them are still active, so that it does not launch them a second time. [cc-ctx]
+- **CC-189** `documented` On compaction, Claude Code runs the SessionStart hooks whose matcher is the `compact` source and puts their output into the compacted context. [cc-ctx]
 
 ## Subagents
 
