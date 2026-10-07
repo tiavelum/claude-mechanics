@@ -1,40 +1,41 @@
 # 02 Memory
 
-Prefix: MEM · Scope: memory in the Claude app (account memory, project memory, per-chat controls, incognito, retention) · Last checked: 2026-10-05
+Prefix: MEM · Scope: memory in the Claude app (account memory, project memory, per-chat controls, incognito, retention) · Last checked: 2026-10-07
 
 ## Account memory
 
-- **MEM-001** `documented` Chats outside projects share one account-level memory; each project has its own separate memory space and project summary. [mem]
+- **MEM-001** `documented` Chats outside projects share one account-level memory; every project keeps a memory space and a project summary of its own. [mem]
 - **MEM-002** `documented` Memory is saved as a set of individual topics while you chat, not as summaries written after a conversation ends. [mem]
 - **MEM-003** `documented` Claude saves memories on its own; the user can also say "remember this" to save something directly. [mem]
-- **MEM-004** `documented` Memory is on by default for Free, Pro and Max on web, Claude Desktop and Claude Mobile. [mem]
+- **MEM-004** `documented` For Free, Pro and Max, memory starts switched on by default on the web, in Claude Desktop and in Claude Mobile. [mem]
 - **MEM-113** `conflicting` The memory article and the release notes, which date memory for free users to 2026-03-02, make memory available on Free, while the usage article names memory and project summaries only for the paid plans: Pro, Max, Team and Enterprise. [mem] [rn] [usage]
 - **MEM-005** `documented` On Team and Enterprise, owners decide whether memory is available, and it stays off for each member until the member turns it on. [mem]
-- **MEM-006** `documented` Everything Claude remembers is listed under Topics in Settings > Memory, where each topic can be read, edited or deleted. [mem]
+- **MEM-006** `documented` Settings > Memory lists everything Claude remembers under Topics; each topic can be opened to read, edit or delete it. [mem]
 - **MEM-007** `documented` An edit to a topic applies to every conversation from then on. [mem]
-- **MEM-008** `documented` The user can tell Claude in a chat what to remember, change or forget, and the update applies to the next conversation. [mem]
+- **MEM-008** `documented` In a chat, the user can tell Claude what to remember, change or forget, and the next conversation reflects the update. [mem]
 - **MEM-009** `documented` What Claude remembers from chats is available in cloud Cowork tasks, and what comes up in a cloud Cowork task carries back to chat. [mem]
-- **MEM-010** `documented` Memory covers role, projects and professional context; people and places in work and life; communication preferences and working style; technical preferences; project details and ongoing work. [mem]
-- **MEM-011** `documented` In the merged Claude experience, memory from Cowork tasks that ran only on the user's computer stays with those tasks. [one]
+- **MEM-010** `documented` Memory covers role, projects and professional context; people and places in work and life; how the user communicates and works; technical preferences; project details and ongoing work. [mem]
+- **MEM-011** `documented` In the merged Claude experience, Cowork tasks that ran only on the user's computer keep their memory to themselves. [one]
 - **MEM-012** `documented` Settings > Memory also offers a "Tell Claude what to change or remove" box for adding information to memory. [imp]
+- **MEM-013** `documented` The import article says the new memory experience is available on every plan: Free, Pro, Max, Team and Enterprise. [imp]
 
 ## Sensitive and never-stored content
 
-- **MEM-020** `documented` By default, Claude does not store topics such as health, race, ethnicity, religious beliefs, politics and gender identity. [mem]
-- **MEM-021** `documented` The setting "Include sensitive topics in memory" in Settings > Memory lets Claude store those topics from then on; nothing from before is saved retroactively. [mem]
+- **MEM-020** `documented` By default, topics such as health, race, ethnicity, religious beliefs, politics and gender identity are kept out of memory. [mem]
+- **MEM-021** `documented` Turning on "Include sensitive topics in memory", found in Settings > Memory, lets Claude store those topics from then on; nothing from before is saved retroactively. [mem]
 - **MEM-022** `documented` With that setting on, a notice appears above the message box each time a sensitive topic is saved; declining it, or turning the setting off later, removes the sensitive items already saved. [mem]
-- **MEM-023** `documented` Some information is never saved, even on request: government ID numbers, criminal history, financial account numbers and immigration status. [mem]
+- **MEM-023** `documented` Even on request, Claude never saves immigration status, criminal history, government ID numbers or financial account numbers. [mem]
 - **MEM-024** `documented` The August 2026 memory announcement also names content that violates the Acceptable Use Policy as never saved. [blog-mem26]
 - **MEM-025** `documented` Claude tells the user when it cannot save something for these reasons. [mem]
-- **MEM-026** `documented` The sensitive-topics setting can also be turned on from a one-time notice that Claude shows in chat the first time it declines to save a memory because it touched a sensitive topic. [mem]
+- **MEM-026** `documented` The sensitive-topics setting can also be switched on from a notice, shown once in chat, the first time Claude refuses to save a memory because it touched a sensitive topic. [mem]
 - **MEM-027** `documented` On an older version of Claude for iOS or Android, the sensitive-topic notice does not appear and Claude does not save the sensitive topic. [mem]
 
 ## Controls
 
 - **MEM-030** `documented` Memory is turned on or off in Settings > Memory with "Generate memory from chats". [mem]
 - **MEM-031** `documented` "Pause memory" keeps existing memory, including sensitive topics if that setting is on, but stops Claude from using it or creating new memories; conversations held while paused are not added later. [mem]
-- **MEM-032** `documented` "Reset memory" permanently deletes all memories, including project memories, and cannot be undone. [mem]
-- **MEM-033** `documented` Memory can be turned off for a single chat or task from the "+" menu, only before the first message, on the web, Claude Desktop and the latest Claude Mobile; the setting cannot be changed afterwards. [mem]
+- **MEM-032** `documented` "Reset memory" deletes every memory, project memories included, permanently and irreversibly. [mem]
+- **MEM-033** `documented` From the "+" menu, memory can be switched off for one chat or task, only before the first message, on the web, in Claude Desktop and in the latest Claude Mobile; the setting cannot be changed afterwards. [mem]
 - **MEM-034** `documented` A chat with memory off neither uses memory, nor searches past chats, nor saves anything to memory. [mem]
 - **MEM-035** `documented` Unlike an incognito chat, a chat with memory off stays in chat history, and chat search from other conversations can still find it. [mem]
 - **MEM-036** `documented` A chat with memory off started inside a project uses neither the account memory nor the project's memory. [mem] [proj]
@@ -44,13 +45,13 @@ Prefix: MEM · Scope: memory in the Claude app (account memory, project memory, 
 
 ## Incognito chats
 
-- **MEM-040** `documented` Incognito chats are available on Free, Pro, Max, Team and Enterprise. [inc]
+- **MEM-040** `documented` All plans offer incognito chats: Free, Pro, Max, Team and Enterprise. [inc]
 - **MEM-041** `documented` Incognito chats neither use existing memory nor are saved to chat history or memory, and chat search never pulls from them. [inc] [mem]
 - **MEM-042** `documented` An incognito chat is started with the ghost icon in a new chat outside a project and is marked by a black border and an "Incognito chat" label; it is not available inside projects. [inc]
 - **MEM-043** `documented` An incognito chat cannot be saved or reopened after it is closed. [inc]
 - **MEM-045** `documented` Incognito chats are not used for model training; on consumer plans this holds even with model improvement turned on. [inc] [priv]
-- **MEM-046** `documented` On Team and Enterprise, incognito chats are included in organizational data exports and follow the organization's retention policy. [inc] [mem]
-- **MEM-048** `documented` Incognito chats are included in the Compliance API, which Enterprise plans offer. [inc]
+- **MEM-046** `documented` On Team and Enterprise, organizational data exports include incognito chats, which also follow the organization's retention policy. [inc] [mem]
+- **MEM-048** `documented` The Compliance API, offered on Enterprise plans, covers incognito chats. [inc]
 - **MEM-049** `documented` Incognito chats are left out of the monthly recap. [inc]
 
 ## Project memory
@@ -59,7 +60,7 @@ Prefix: MEM · Scope: memory in the Claude app (account memory, project memory, 
 - **MEM-051** `documented` For Team and Enterprise plans using memory, the projects article presents moving chats into and out of projects as the way to manage what memory includes; a chat removed from a project is included in non-project memory instead. [proj]
 - **MEM-052** `documented` In Cowork projects, Claude remembers context from a project's tasks and applies it to later tasks in the same project; this memory is scoped to the project and does not carry over to others. [cw-proj]
 - **MEM-053** `documented` Anthropic presents separate project memory as a guardrail that keeps unrelated or confidential details apart. [blog-mem]
-- **MEM-054** `documented` In the redesigned projects (beta), project memory is a set of files that Claude writes itself, with a `MEMORY.md` index that each cloud thread reads at start; the user changes it by asking Claude, in the project conversation or any cloud thread, to remember or forget something, and can read, edit and delete the files in Project settings > Memory. [cc-proj]
+- **MEM-054** `documented` In the redesigned projects (beta), project memory is a set of files that Claude writes itself, with a `MEMORY.md` index that each cloud thread reads at start; the user changes it by asking Claude to remember or forget something, either in the project conversation or in any cloud thread, and can open, edit or delete each file under Project settings > Memory. [cc-proj]
 - **MEM-059** `documented` A redesigned project's memory is separate from the `CLAUDE.md` files of the project's repositories, which each cloud thread still reads from its own clone. [cc-proj]
 - **MEM-055** `documented` In the redesigned projects, a thread running on the user's own computer gets the project instructions but not the project's memory files. [cc-proj]
 - **MEM-056** `observed` Claude's runtime instructions describe a per-project memory setting, on the project's own page on the web, that either connects the project's memory (project chats can draw on account memory, chats outside can see the project's memory) or keeps it separate in both directions. No public page describing it was found. (session 2026-10-05, claude.ai, outside projects)
@@ -69,12 +70,13 @@ Prefix: MEM · Scope: memory in the Claude app (account memory, project memory, 
 ## Retention
 
 - **MEM-060** `documented` Memory is retained under the same policies as chat data. [mem]
-- **MEM-061** `documented` When a conversation expires or is deleted, the memory entries made from it are not removed; individual memories can be deleted at any time. [mem]
-- **MEM-062** `documented` In the legacy memory experience, which a small number of Team and Enterprise organizations still use, memory is updated within 24 hours when a conversation is created, changed or deleted, and deleted conversations are removed from the memory synthesis; the current experience does not state this. [mem]
-- **MEM-063** `documented` All memory data is included in data exports. [mem]
+- **MEM-061** `documented` Memory entries made from a conversation stay when it expires or is deleted; individual memories can be deleted at any time. [mem]
+- **MEM-062** `documented` In the legacy memory experience, which a few Team and Enterprise organizations keep using, memory catches up within 24 hours after a conversation is created, changed or deleted, and deleted conversations drop out of the memory synthesis; for the current experience, the article names no such delay. [mem]
+- **MEM-063** `documented` Data exports contain all memory data. [mem]
 - **MEM-067** `conflicting` How long incognito chats are kept: the incognito article says 30 days by default or longer under an organization's retention setting, the memory article says at least 30 days for safety, and the Privacy Center says incognito chats in commercial products are deleted within 30 days unless flagged for a Usage Policy violation. [inc] [mem] [priv-org]
-- **MEM-068** `documented` Memory entries generated from eligible chats before customer data retention was applied are not removed by it; users can still delete individual memories. [mem]
-- **MEM-069** `documented` On Team and Enterprise, memory entries are stored with encryption at rest. [mem]
+- **MEM-068** `documented` Customer data retention does not remove memory entries that eligible chats generated before it was applied; users can still delete individual memories. [mem]
+- **MEM-069** `documented` On Team and Enterprise, memory entries are encrypted at rest. [mem]
+- **MEM-077** `documented` For the current experience, the memory article says memory keeps up with changes to conversations as they happen. [mem]
 
 ## Import and export
 
@@ -82,18 +84,20 @@ Prefix: MEM · Scope: memory in the Claude app (account memory, project memory, 
 - **MEM-065** `documented` Memory can be exported by asking Claude to write out its memories of the user word for word. [imp]
 - **MEM-066** `documented` Legacy memory could be exported from Settings > Memory until 2026-09-09. [mem]
 - **MEM-080** `documented` Memory import is available on Free, Pro, Max and Team, on the web and Claude Desktop. [imp]
-- **MEM-081** `documented` The import article says memory is designed to focus on work-related topics, so Claude may not keep imported personal details unrelated to work. [imp]
+- **MEM-081** `documented` The import article says memory is built to focus on work topics, so Claude may not keep imported personal details unrelated to work. [imp]
 - **MEM-082** `conflicting` Where memory is viewed in the current experience: the memory article lists it under Topics in Settings > Memory, while the import article's section for the current experience sends the user to Settings > Capabilities > "View and edit your memory". [mem] [imp]
+- **MEM-083** `documented` In the current experience, imported memory shows up shortly after the import finishes; in the legacy experience, it can take up to 24 hours. [imp]
+- **MEM-084** `documented` The import article warns that Claude may not always succeed in incorporating imported memories. [imp]
 
 ## Organization controls
 
-- **MEM-070** `documented` Owners and Primary Owners turn memory on for the organization in Organization settings > Capabilities; members then manage their own memory settings. [mem]
+- **MEM-070** `documented` Owners and Primary Owners switch memory on for their organization under Organization settings > Capabilities; after that, members manage their own memory settings. [mem]
 - **MEM-071** `documented` Enabling memory for an organization does not enable sensitive topics, and even where the organization allows them, nothing sensitive is saved until each member opts in. [mem]
 - **MEM-072** `documented` Owners cannot view or edit a member's individual memories. [mem]
-- **MEM-073** `documented` When an owner turns memory off for the organization, all members' memory entries are deleted immediately. [mem]
-- **MEM-074** `documented` Memory is not available to organizations with HIPAA, public-sector or custom data retention agreements. [mem]
+- **MEM-073** `documented` If an owner switches memory off for the organization, every member's memory entries are deleted at once. [mem]
+- **MEM-074** `documented` Memory is unavailable to an organization that has a HIPAA agreement, a public-sector agreement or a custom data retention agreement. [mem]
 - **MEM-075** `documented` Turning organization memory on or off is audit-logged; individual memory edits are not. [mem]
-- **MEM-076** `documented` On Team and Enterprise, standard conversation access logging applies to memory entries, and memory entries are included in standard conversation history exports. [mem]
+- **MEM-076** `documented` On Team and Enterprise, memory entries fall under standard conversation access logging and are part of standard conversation history exports. [mem]
 
 ## How memory reaches a session
 
@@ -116,14 +120,14 @@ Prefix: MEM · Scope: memory in the Claude app (account memory, project memory, 
 ## Claude Desktop on 3P
 
 - **MEM-110** `documented` In Claude Desktop on 3P (third-party deployments), Cowork memory is a set of short Markdown files on the device that Claude reads at the start of later sessions and that never leave the device. [3p-data]
-- **MEM-111** `documented` In Claude Desktop on 3P, each project keeps its own memory files, and Cowork sessions inside a project read and update the project's memory instead of the general memory files. [3p-data]
-- **MEM-112** `documented` In Claude Desktop on 3P, a Chat conversation inside a project can read the project's memory, unless memory was paused when it started, but cannot change it; Chat conversations outside projects use no memory. [3p-data]
+- **MEM-111** `documented` In Claude Desktop on 3P, every project has memory files of its own, and Cowork sessions in a project read and update those instead of the general memory files. [3p-data]
+- **MEM-112** `documented` In Claude Desktop on 3P, a Chat conversation within a project may read, but not change, that project's memory, except when memory was paused at its start; outside projects, Chat conversations use no memory. [3p-data]
 
 ## Sources
 
 [3p-data]: https://claude.com/docs/third-party/claude-desktop/data-storage
-[blog-mem]: https://claude.com/blog/memory
-[blog-mem26]: https://claude.com/blog/claudes-memory-works-everywhere-and-you-decide-whats-in-it
+[blog-mem]: https://claude.com/resources/articles/memory
+[blog-mem26]: https://claude.com/resources/articles/claudes-memory-works-everywhere-and-you-decide-whats-in-it
 [cc-proj]: https://code.claude.com/docs/en/claude-projects
 [cw-proj]: https://support.claude.com/en/articles/14116274-organize-your-tasks-with-projects-in-claude-cowork
 [imp]: https://support.claude.com/en/articles/12123587-import-and-export-your-memory-from-claude
