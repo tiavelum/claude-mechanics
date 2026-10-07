@@ -183,7 +183,7 @@ Prefix: CC · Scope: memory, instruction files, settings, sessions and their env
 
 ## Output styles
 
-- **CC-130** `documented` Output styles are instruction sets that fix Claude's role, tone and response format for every reply in a session; apart from Default, the built-in styles are Proactive, Concise, Explanatory and Learning. [cc-styles]
+- **CC-130** `documented` Output styles are sets of instructions that determine how Claude behaves, sounds and formats its answers throughout a session; apart from Default, the built-in styles are Proactive, Concise, Explanatory and Learning. [cc-styles]
 - **CC-131** `documented` Each request carries the instructions of the active output style; a custom style drops Claude Code's built-in software engineering instructions unless `keep-coding-instructions` is `true`. [cc-styles]
 - **CC-132** `documented` Custom output styles are Markdown files in `~/.claude/output-styles` (user), `.claude/output-styles` (project) or `.claude/output-styles` inside the managed settings directory. [cc-styles]
 - **CC-133** `documented` Choosing a style with `/output-style` or a menu saves it to `.claude/settings.local.json`; the `outputStyle` field in a settings file also sets it. [cc-styles]
@@ -240,7 +240,7 @@ Prefix: CC · Scope: memory, instruction files, settings, sessions and their env
 - **CC-248** `documented` In an Anthropic-hosted environment each cloud session gets a new VM with Ubuntu 24.04 on x86_64, whatever the user's own system, holding a clone of the repository and preinstalled common toolchains. [cc-cloud-env]
 - **CC-249** `documented` A cloud environment has one network access level: **None** (no outbound connections over the session network), **Trusted** (the default allowlist, such as package registries, GitHub and cloud SDKs), **Full** (any domain) or **Custom** (the user's own allowlist, optionally with the defaults). [cc-cloud-env]
 - **CC-250** `documented` Cloud sessions in Anthropic-hosted environments run within approximate ceilings of 4 vCPUs, 16 GB of RAM and 30 GB of disk, which may change over time. [cc-cloud-env]
-- **CC-251** `documented` Each cloud session runs inside a cloud environment, a saved configuration of network access, environment variables and setup script; a user who has none gets a **Default** environment with **Trusted** access during onboarding. [cc-web]
+- **CC-251** `documented` Each cloud session runs inside a cloud environment, a saved configuration of network access, environment variables and setup script; a user who has none gets a **Default** environment with **Trusted** access set up during onboarding, which on some plans the user is asked to create. [cc-web]
 - **CC-252** `documented` Cloud sessions reach GitHub through the Claude GitHub App, which covers public repositories and private ones it is installed on, or through `/web-setup`, which hands the local `gh` token to the Claude account and covers what that token can reach. [cc-web]
 - **CC-253** `documented` Anthropic-hosted environments restrict network access by default and let it be turned off, yet even without it Claude Code keeps talking to the Anthropic API, which the documentation notes may let data leave the VM. [cc-web]
 
@@ -276,7 +276,7 @@ Prefix: CC · Scope: memory, instruction files, settings, sessions and their env
 - **CC-241** `documented` A teammate starts in the permission mode of the lead, unless that mode is `dontAsk`, and its permission prompts show up in the lead's session. [cc-teams]
 - **CC-242** `documented` Each session has one team, which belongs to that session alone: no team is shared across sessions, teammates cannot start teams of their own, and neither `/resume` nor `/rewind` brings in-process teammates back. [cc-teams]
 - **CC-243** `documented` A team's config under `~/.claude/teams/` is removed when the session ends, while its task list under `~/.claude/tasks/` stays on the machine, is never uploaded and is kept for resumed sessions. [cc-teams]
-- **CC-244** `documented` In a git repository, a background session dispatched from agent view or started with `claude --bg` moves into a worktree of its own under `.claude/worktrees/` before it edits files, so parallel sessions all read one checkout while each writes to its own; outside a git repository, background sessions write to the working directory and are not isolated from each other. [cc-agents]
+- **CC-244** `documented` By default, in a git repository, a background session dispatched from agent view or started with `claude --bg` moves into a worktree of its own under `.claude/worktrees/` before it edits files, so parallel sessions all read one checkout while each writes to its own; outside a git repository, background sessions write to the working directory and are not isolated from each other; the documentation lists cases where a session skips its worktree, such as one that was moved to the background or that already sits in a linked worktree. [cc-agents]
 
 ## Sources
 
