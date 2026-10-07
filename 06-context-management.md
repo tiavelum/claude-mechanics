@@ -50,6 +50,7 @@ Prefix: CTX · Scope: context window, long conversations, files, usage and what 
 - **CTX-029** `documented` From 2026-10-01 to 2026-10-15, on Pro, Max and Team, creating or editing an artifact makes the next 10 messages of that chat, up to 15 steps per reply, use 50% less of the five-hour session limit, and cloud Cowork tasks get a similar discount; it does not cover the weekly limit or, among others, Claude Code, local Cowork tasks and usage credits. [promo]
 - **CTX-049** `documented` The Pro plan allows more per-session usage than Free, which the pricing page puts at five times Free's per-session usage or more. [pro] [price]
 - **CTX-056** `documented` On Team plans, the weekly reset day and time do not move with when the member starts using Claude or when the subscription began, and Settings > Usage shows the next reset. [team]
+- **CTX-061** `documented` Anthropic's Opus 5.5 announcement says that, in addition to the model's lower prices, it is increasing the five-hour usage limits on Pro, Max, Team and seat-based Enterprise plans. [news-opus55]
 
 ## Beyond the limits
 
@@ -92,6 +93,7 @@ Prefix: CTX · Scope: context window, long conversations, files, usage and what 
 [err]: https://support.claude.com/en/articles/12466728-troubleshoot-claude-error-messages
 [lim]: https://support.claude.com/en/articles/11647753-how-do-usage-and-length-limits-work
 [max]: https://support.claude.com/en/articles/11049741-what-is-the-max-plan
+[news-opus55]: https://www.anthropic.com/claude-opus-5-5
 [one]: https://support.claude.com/en/articles/16761823-claude-cowork-and-chat-are-one-claude
 [price]: https://claude.com/pricing
 [pro]: https://support.claude.com/en/articles/8325606-what-is-the-pro-plan
