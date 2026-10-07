@@ -49,7 +49,7 @@ Prefix: SET · Scope: account, project, per-chat and organization settings in th
 ## Account administration
 
 - **SET-070** `documented` On the web, an account is deleted from Settings > Account with the "Delete account" button. [del]
-- **SET-071** `documented` Members of Claude for Work or Claude for Enterprise organizations, and Console users, cannot delete their own account; the Privacy Center sends them to the account's Primary Owner, an Owner or their account manager. [del-org]
+- **SET-071** `documented` Members of Claude for Work or Claude for Enterprise organizations, and Console users, must ask the account's Primary Owner, an Owner or their account manager to have their account deleted. [del-org]
 - **SET-072** `documented` When a personal account is moved into a Team or Enterprise workspace, the memory that Claude holds from chats and projects moves with it, unless the organization has turned memory off. [migrate]
 - **SET-073** `documented` Moving a personal account's content into a Team or Enterprise workspace cannot be reversed: the moved content cannot return to a personal account. [migrate]
 
