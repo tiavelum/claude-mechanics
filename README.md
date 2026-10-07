@@ -1,6 +1,6 @@
 # Claude mechanics
 
-A dated, sourced snapshot of how Claude works behind the scenes, for people and Claude sessions that need to look it up: sessions, memory, chat search, projects, instructions, context and settings, in the Claude app and in Claude Code. Each fact is one short statement labelled as documented, observed, inferred or conflicting.
+A dated, sourced snapshot of how Claude works behind the scenes, for people and Claude sessions that need to look it up: sessions, memory, chat search, projects, instructions, context, settings, extensions, models, built-in tools, data handling and retention, in the Claude app, in Claude Code and in the API and Agent SDK. Each fact is one short statement labelled as documented, observed, inferred or conflicting.
 
 ## What it is for
 
