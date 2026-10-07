@@ -76,7 +76,7 @@ Prefix: PRJ · Scope: projects in the Claude app (structure, knowledge, moving c
 - **PRJ-060** `documented` Archived projects stay accessible, including their conversations, and are listed separately. [proj]
 - **PRJ-061** `documented` An archived project must be unarchived before it can be deleted. [proj]
 - **PRJ-062** `conflicting` What archiving a Cowork project does: the Cowork projects article says its metadata is removed from the interface but not from the computer, while the Cowork guide says archiving deletes its metadata, including its name, instructions, links and memory; both say files and folders on the computer are not touched. [cw-proj] [cw-guide]
-- **PRJ-063** `documented` Archiving a redesigned project removes it from the sidebar and archives its threads, stopping any that were running, and its routines do not run while it is archived; after the project is unarchived, its threads stay archived until each is unarchived. [cc-proj]
+- **PRJ-063** `documented` Archiving a redesigned project hides it from the sidebar and archives its threads, stopping any that were running, and its routines do not run while it is archived; after the project is unarchived, its threads stay archived until each is unarchived. [cc-proj]
 - **PRJ-064** `documented` Deleting a redesigned project permanently removes it with its threads, memory and files and turns off its routines; branches and pull requests its threads pushed to GitHub are not affected. [cc-proj]
 
 ## Redesigned projects (beta)
