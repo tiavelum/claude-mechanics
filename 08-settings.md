@@ -33,14 +33,13 @@ Prefix: SET · Scope: account, project, per-chat and organization settings in th
 
 ## Capabilities that change context behaviour
 
-- **SET-040** `documented` On paid plans, automatic context management of long conversations works only while code execution is enabled. [ctx]
 - **SET-042** `documented` On Free, Pro and Max, "Code execution and file creation" is on by default and is switched in Settings > Capabilities, on the web, in Claude Desktop and in Claude Mobile. [files]
 - **SET-043** `documented` On Team, and in new Enterprise organizations, code execution and file creation is on by default for the organization, and an owner can turn it off for everyone. [files]
 
 ## Organization settings (Team and Enterprise)
 
 - **SET-050** `documented` Owners and Primary Owners switch organization memory on in Organization settings > Capabilities; turning it off deletes all members' memory. [mem]
-- **SET-051** `documented` Project sharing for a Team or Enterprise organization is turned on or off in the Sharing section of Organization settings > Data and privacy, and on Enterprise also per role under Organization settings > Roles. [share-org]
+- **SET-051** `documented` The project sharing switches sit in the Sharing section of Organization settings > Data and privacy; on Enterprise, the per-role switch is the Share projects toggle on a role's Capabilities tab under Organization settings > Roles. [share-org]
 - **SET-052** `conflicting` Both export articles say only the Primary Owner of a Team or Enterprise organization can export its data, in Claude Desktop or on the web under Organization settings > Data and privacy, while the incognito article says organizational exports are available to account Owners. [exp-org] [exp] [inc]
 - **SET-053** `documented` On Team and Enterprise, Cowork is on by default, and an Owner or Primary Owner can switch it off for all members with the "Enable for your organization" toggle in Organization settings > Cowork. [cw-org]
 - **SET-054** `documented` In an organization that has enabled HIPAA, Cowork starts off, and an Owner switches it on in Organization settings > Cowork. [cw-org]
@@ -62,7 +61,6 @@ Prefix: SET · Scope: account, project, per-chat and organization settings in th
 ## Sources
 
 [conn]: https://claude.com/docs/connectors/getting-started
-[ctx]: https://support.claude.com/en/articles/8606394-how-large-is-the-context-window-on-paid-claude-plans
 [cw-org]: https://support.claude.com/en/articles/13455879-use-claude-cowork-on-team-and-enterprise-plans
 [cw-web]: https://support.claude.com/en/articles/15520349-use-claude-cowork-on-web-desktop-and-mobile
 [del]: https://support.claude.com/en/articles/9028421-delete-your-claude-account
