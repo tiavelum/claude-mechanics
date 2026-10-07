@@ -1,6 +1,6 @@
 # 06 Context management
 
-Prefix: CTX · Scope: context window, long conversations, files, usage and what each plan includes in the Claude app · Last checked: 2026-10-06
+Prefix: CTX · Scope: context window, long conversations, files, usage and what each plan includes in the Claude app · Last checked: 2026-10-07
 
 ## Context window
 
@@ -15,12 +15,13 @@ Prefix: CTX · Scope: context window, long conversations, files, usage and what 
 ## Long conversations
 
 - **CTX-010** `documented` For paid users with code execution enabled, Claude manages conversation context automatically by summarizing earlier messages when a conversation approaches the limit, so that most conversations can continue indefinitely. [ctx]
-- **CTX-011** `documented` Code execution must be enabled for automatic context management to work. [ctx]
+- **CTX-011** `documented` Automatic context management works only while code execution is turned on. [ctx]
 - **CTX-012** `documented` After summarizing, Claude can still refer to the full chat history. [ctx] [lim]
 - **CTX-013** `documented` While context is managed, Claude may show that it is "organizing its thoughts". [ctx]
 - **CTX-014** `documented` Conversations long enough to trigger context management use more of the plan's usage. [lim]
 - **CTX-015** `documented` A very large first message can still exceed the context limit; the error suggests fewer or smaller files or a new conversation. [lim] [err]
 - **CTX-018** `documented` The documentation advises starting a new conversation or using projects when a length limit is reached, and starting a new conversation when a long chat nears the usage limit. [lim]
+- **CTX-019** `documented` The API documentation on context windows notes that chat interfaces such as claude.ai may also run the window first-in, first-out, on a rolling basis. [api-ctx]
 
 ## What enters the context
 
@@ -41,38 +42,46 @@ Prefix: CTX · Scope: context window, long conversations, files, usage and what 
 - **CTX-021** `documented` Usage in claude.ai, Claude Code and Claude Desktop counts toward the same limit. [lim]
 - **CTX-022** `documented` Anthropic's guidance advises turning off tools and connectors that are not needed, because they use many tokens, and also lists removing unused project files, turning off extended thinking and choosing a lower effort level among the ways to save context and usage. [lim]
 - **CTX-023** `documented` Pro, Max, Team and seat-based Enterprise plans have a five-hour session limit and weekly limits, shown under Settings > Usage, with a separate weekly limit for Fable where the plan includes it; usage-based Enterprise plans have no usage limits and are billed for every token at API rates. [usage] [ent]
-- **CTX-024** `documented` On Pro and Max, the session limit resets every five hours, Max 5x and Max 20x give five and twenty times Pro's per-session allowance, and a weekly limit across all models resets at a fixed time assigned to the account, regardless of when the user starts using Claude; Anthropic may also limit usage in other ways, such as weekly and monthly caps. [pro] [max]
+- **CTX-024** `documented` On Pro and Max, the session limit resets every five hours, Max 5x and Max 20x give five and twenty times Pro's per-session allowance, and a weekly limit across all models resets at a fixed time assigned to the account, regardless of when the user starts using Claude; Anthropic may also restrict usage by other means, weekly and monthly caps among them. [pro] [max]
 - **CTX-025** `documented` On the Free plan, a session-based usage limit resets every five hours, the number of messages varies with demand, and other limits may apply. [start]
-- **CTX-026** `documented` On Team plans, usage limits apply to each member separately; a Standard seat has 1.25 times and a Premium seat 6.25 times the Pro plan's per-session allowance, each with a weekly limit across all models that resets at a fixed time assigned to the account. [team]
+- **CTX-026** `documented` On Team plans, usage limits apply to each member separately; a Standard seat has 1.25 times and a Premium seat 6.25 times what a Pro plan allows per session, each with a weekly limit across all models that resets at a fixed time assigned to the account. [team]
 - **CTX-027** `documented` Claude warns when the five-hour session limit is near and, once it is reached, blocks further use with a message that gives the reset time; with usage credits on, the message says that work continues on usage credits. [err]
-- **CTX-028** `documented` In the new Claude experience, everything the user does counts toward the plan's usage limits, longer agentic tasks that search the web, run code or create files generally use more than a quick question, and during the rollout usage may be measured slightly differently for accounts with and without it. [one]
+- **CTX-028** `documented` In the new Claude experience, all of the user's activity counts toward the plan's usage limits, long agentic tasks that run code, search the web or create files usually cost more than a short question, and while it rolls out, accounts with and without it may be metered slightly differently. [one]
 - **CTX-029** `documented` From 2026-10-01 to 2026-10-15, on Pro, Max and Team, creating or editing an artifact makes the next 10 messages of that chat, up to 15 steps per reply, use 50% less of the five-hour session limit, and cloud Cowork tasks get a similar discount; it does not cover the weekly limit or, among others, Claude Code, local Cowork tasks and usage credits. [promo]
+- **CTX-049** `documented` The Pro plan allows more per-session usage than Free, which the pricing page puts at five times Free's per-session usage or more. [pro] [price]
+- **CTX-056** `documented` On Team plans, the weekly reset day and time do not move with when the member starts using Claude or when the subscription began, and Settings > Usage shows the next reset. [team]
 
 ## Beyond the limits
 
-- **CTX-050** `documented` When a usage limit is reached, the user can wait for it to reset, move to a higher plan or, on paid plans, turn on usage credits. [lim] [price]
-- **CTX-051** `documented` On Pro, Max 5x and Max 20x, usage credits let the user keep working after reaching the plan's limits, billed at standard API rates separately from the subscription; they apply to both Claude conversations and Claude Code. [credits]
+- **CTX-050** `documented` When a usage limit is reached, the user can wait for the reset, upgrade to a higher plan or, on a paid plan, switch on usage credits. [lim] [price]
+- **CTX-051** `documented` On Pro, Max 5x and Max 20x, usage credits let the user keep working after reaching the plan's limits, billed at standard API rates separately from the subscription; they cover Claude conversations and Claude Code alike. [credits]
 - **CTX-052** `documented` Pro and Max users turn on and prepay usage credits under Settings > Usage, which those who subscribed through a mobile app must open on the web, and can set a monthly spend limit and auto-reload; at most $2,000 is redeemed per day. [credits]
 - **CTX-053** `documented` On Team and seat-based Enterprise plans, an Owner or Primary Owner turns on usage credits under Organization settings > Usage and can set spend limits for the organization and individual members; usage-based Enterprise plans have no included allowance, so usage credits do not apply. [credits-org]
 - **CTX-054** `documented` A limit reset, given occasionally to eligible plans, sets either the five-hour session limit or the weekly limit back to full at once; it cannot be undone, and weekly limits still reset at their usual time. [reset]
-- **CTX-055** `documented` A limit reset is used from Settings > Usage on the web or in Claude Desktop, or from the message shown at a limit, but not in Claude Mobile or Claude Code; because limits are shared across the account, the reset applies there too. [reset]
+- **CTX-055** `documented` A limit reset is used from Settings > Usage, in a browser or in Claude Desktop, or from the message shown at a limit, but not in Claude Mobile or Claude Code; because limits are shared across the account, the reset applies there too. [reset]
+- **CTX-057** `documented` On Team and seat-based Enterprise plans, usage credits let members on any seat type carry on with Claude, Cowork and Claude Code once their seat's included usage is used up. [team] [credits-org]
+- **CTX-058** `documented` With Research, usage credits come into play only after the plan's included limits are exceeded, and Research can use tokens faster because it runs several searches. [credits]
 
 ## Files and uploads
 
 - **CTX-030** `documented` In chat, a file can be up to 500 MB, with up to 20 files per chat. [up]
 - **CTX-031** `documented` In chat, images can be up to 8000 x 8000 pixels. [up]
 - **CTX-032** `documented` PDFs are limited to 1000 pages, and a longer one is refused with an "Uploaded file is too large" error; Claude analyzes text and visuals for PDFs of up to 100 pages and text only beyond that. [up]
-- **CTX-033** `documented` In projects, a file can be up to 30 MB, with an unlimited number of files, and only their text is extracted, except for multimodal PDFs. [up]
+- **CTX-033** `documented` In projects, a file can be up to 30 MB, with an unlimited number of files as long as their total content fits in the context window, and only their text is extracted, except for multimodal PDFs. [up]
 - **CTX-034** `documented` For document types other than PDF, Claude extracts text only, so embedded images are not processed. [up]
-- **CTX-035** `documented` Uploading XLSX files requires code execution and file creation to be enabled. [up]
-- **CTX-036** `documented` Uploads can be the document types PDF, DOCX, CSV, TXT, HTML, ODT, RTF, EPUB, JSON and XLSX and the image formats JPEG, PNG, GIF and WebP. [up]
-- **CTX-037** `documented` In redesigned projects, the Library tab takes up to 100 files and 2 GB in one pick, with a single file up to 480 MB, while the New project dialog skips files over 30 MB. [cc-proj]
-- **CTX-038** `documented` A folder added to a redesigned project arrives as a copy of its first 100 files up to 200 MB, without files over 30 MB, hidden files or `node_modules`; a project holds at most 10 folders and Google Drive folders combined, and single files do not count toward that limit. [cc-proj]
+- **CTX-035** `documented` XLSX uploads work only with code execution and file creation turned on. [up]
+- **CTX-036** `documented` Uploads can be the document types PDF, DOCX, TXT, CSV, HTML, JSON, ODT, RTF, EPUB and XLSX and the image formats JPEG, PNG, GIF and WebP. [up]
+- **CTX-037** `documented` In redesigned projects, one pick in the Library tab takes at most 100 files totalling 2 GB, each file at most 480 MB, while the New project dialog leaves out files larger than 30 MB. [cc-proj]
+- **CTX-038** `documented` A folder added to a redesigned project arrives as a copy limited to its first 100 files and 200 MB, leaving out files over 30 MB, hidden files and `node_modules`; a project can hold up to 10 folders, plain and Google Drive folders counted together, and single files do not count toward that cap. [cc-proj]
 - **CTX-039** `documented` Uploads to a redesigned project are copies, so a change made on the computer afterwards reaches the project only when the file is uploaded again and replaced. [cc-proj]
-- **CTX-046** `documented` In a Cowork project, files dragged in are copied into the project's first folder and folders are mounted as further project folders; Claude reads single files of up to 50 MB. [cw-guide]
+- **CTX-046** `documented` Dragging items into a Cowork project copies single files into the project's first folder and mounts folders as additional project folders; Claude reads single files up to 50 MB. [cw-guide]
+- **CTX-059** `documented` The API's vision documentation allows up to 20 images per message on claude.ai. [api-vision]
+- **CTX-060** `documented` The API's vision documentation gives 10 MB as the maximum size of one image on claude.ai. [api-vision]
 
 ## Sources
 
+[api-ctx]: https://platform.claude.com/docs/en/build-with-claude/context-windows
+[api-vision]: https://platform.claude.com/docs/en/build-with-claude/vision
 [cc-proj]: https://code.claude.com/docs/en/claude-projects
 [conn-use]: https://support.claude.com/en/articles/11176164-use-connectors-to-extend-claude-s-capabilities
 [credits]: https://support.claude.com/en/articles/12429409-manage-usage-credits-for-paid-claude-plans
