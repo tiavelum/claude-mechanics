@@ -44,7 +44,7 @@ Prefix: SES · Scope: what a session is in the Claude app (web, desktop, mobile)
 - **SES-019** `documented` Cowork can be used on desktop, web and mobile, and also from the side panel of Claude in Chrome, where opening the panel starts a Cowork session directly. [cw-web] [cw-start]
 - **SES-058** `documented` Cowork is available on the paid plans only: in Claude Desktop for macOS and for Windows on Pro, Max, Team and Enterprise, and on the web and Claude Mobile on Pro, Max and Team, and on Enterprise where an admin has enabled it. [cw-start]
 - **SES-043** `documented` Dispatch is one persistent conversation, reachable from phone and desktop, that runs its tasks on the user's desktop computer, which must be awake with Claude Desktop open. [dispatch]
-- **SES-062** `documented` Dispatch is offered on Pro and Max only: the Claude Code documentation says it is not available on Team or Enterprise, and the Dispatch article calls it a limited beta that only some Pro and Max plans have. [cc-desk] [dispatch]
+- **SES-062** `documented` Dispatch requires a Pro or Max plan: the Claude Code documentation says it is not available on Team or Enterprise, and the Dispatch article calls it a limited beta that only some Pro and Max plans have. [cc-desk] [dispatch]
 - **SES-063** `documented` A task sent to Dispatch becomes a Claude Code session when the user asks for one or when Dispatch judges it to be development work, such as fixing bugs or running tests; research, documents and spreadsheets stay in Cowork. [cc-desk] [dispatch]
 - **SES-014** `documented` Memory is shared between chat and Cowork only when Cowork runs in the cloud; local Cowork sessions do not use memory. [mem]
 
