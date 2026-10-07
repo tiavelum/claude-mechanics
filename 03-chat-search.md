@@ -1,16 +1,16 @@
 # 03 Chat search
 
-Prefix: SRC · Scope: Claude searching and reading the user's past conversations in the Claude app · Last checked: 2026-10-05
+Prefix: SRC · Scope: Claude searching and reading the user's past conversations in the Claude app · Last checked: 2026-10-07
 
 ## What it is
 
-- **SRC-001** `documented` Searching past chats is available on Pro, Max, Team and Enterprise, on web, Claude Desktop and Claude Mobile. [mem]
+- **SRC-001** `documented` Searching past chats is offered on the Pro, Max, Team and Enterprise plans, on web, Claude Desktop and Claude Mobile. [mem]
 - **SRC-002** `documented` Chat search uses retrieval-augmented generation (RAG), runs when the user asks about previous conversations, and appears as a tool call in the chat. [mem]
 - **SRC-003** `documented` Chat search covers all chats outside projects; inside a project, it is limited to that project's chats. [mem]
 - **SRC-004** `documented` Chat search is enabled by default once rolled out to an account. [mem]
 - **SRC-005** `documented` When Claude references past chats through search, the user sees citations that link back to the original chats, along with an option to delete specific conversations. [mem]
 - **SRC-006** `documented` Chat search is separate from memory: it can be turned off on its own with "Search and reference chats" in Settings > Memory. [mem]
-- **SRC-007** `documented` On Enterprise plans, data retention policies apply to chat search. [mem]
+- **SRC-007** `documented` On Enterprise plans, chat search is subject to the organization's data retention policies. [mem]
 
 ## What it does not reach
 
@@ -21,7 +21,7 @@ Prefix: SRC · Scope: Claude searching and reading the user's past conversations
 - **SRC-014** `documented` Chat search is unavailable to Enterprise organizations that use customer-managed encryption keys. [mem]
 - **SRC-015** `inferred` Within its search scope, an already saved chat can be kept out of chat search only by deleting it; citations offer that option. Basis: SRC-003, SRC-005, SRC-012, SRC-016.
 - **SRC-016** `documented` To the question whether a specific past chat can be excluded from searches, the documentation answers with incognito chats, which are not saved to chat history, and names no way for a chat that is already saved. [mem]
-- **SRC-017** `documented` In Claude Desktop on 3P (third-party deployments), Claude cannot search past chats from a Chat conversation: it has no tools for listing or reading other sessions' transcripts, and conversation content is not indexed. [3p-data]
+- **SRC-017** `documented` In Claude Desktop on 3P (third-party deployments), Claude cannot search past chats from a Chat conversation: it has no tools to list or read the transcripts of other sessions, and conversation content is not indexed. [3p-data]
 
 ## How it behaves in a session
 
