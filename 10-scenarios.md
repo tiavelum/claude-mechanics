@@ -14,13 +14,13 @@ Prefix: SCN · Scope: what two or more sessions share in common setups; each sce
 - **SCN-008** `documented` An incognito chat, which can be started only outside projects: no memory read or written, not saved to history, never found by chat search; Claude can still access profile information such as custom styles and personal preferences. [inc] [mem]
 - **SCN-009** `documented` Memory paused: existing memory is kept but unused, and conversations held while paused are never added. [mem]
 - **SCN-010** `documented` Memory reset: all account and project memories are deleted permanently. [mem]
-- **SCN-011** `documented` A chat and a cloud Cowork task share account memory, in both directions; a Cowork task that runs only on the user's computer is left out of it: the memory article says local Cowork sessions use no memory, and the merger article says memory from tasks that ran only on the computer stays with those tasks. [mem] [one]
+- **SCN-011** `documented` A chat and a cloud Cowork task share account memory, in both directions; a Cowork task that runs only on the user's computer is left out of it. [mem]
 - **SCN-012** `documented` On Team and Enterprise, two members chatting in a project shared between them: both chats use the project's instructions and knowledge, and each member's chats stay private to that member unless shared. [proj] [vis]
 - **SCN-013** `inferred` Two conversations linked to the same computer: a folder the user connects in one is not reachable from the other until it is connected there too; once it is connected in both, both read and write the same files. Basis: SES-023, SES-055.
 - **SCN-014** `documented` In Claude Desktop on 3P, Cowork sessions and Chat conversations in the same project share the project's memory files: Cowork sessions read and update them, while a Chat conversation reads them, unless memory was paused when it started, but cannot change them; Chat conversations outside projects use no memory, and no Chat conversation can search the others. [3p-data]
 - **SCN-015** `inferred` On Pro and Max since 2026-10-06, new Cowork tasks and new scheduled tasks run in the cloud and so share account memory with chats; Cowork sessions without account memory remain only for tasks started on the computer before that date, until they finish, and for scheduled tasks that already ran there. Basis: SES-011, SES-012, SES-014, SES-060.
 - **SCN-016** `inferred` On Team and Enterprise, where chat and Cowork are still separate, a member's chats share account memory with that member's Cowork sessions only where the organization lets Cowork run in the cloud, which is on by default on Team and off by default on Enterprise. Basis: SES-008, SES-014, SES-018.
-- **SCN-017** `inferred` Two cloud Cowork sessions of one account: each runs in a sandbox of its own and sees none of the other's files or state, while both load the account's instructions, the skills enabled for the account and its connected connectors, and share account memory. Basis: SES-035, INS-001, EXT-039, EXT-010, MEM-009.
+- **SCN-017** `inferred` Two cloud Cowork sessions of one account: each runs in a sandbox of its own and sees none of the other's files or state, while both load the account's instructions, the skills enabled for the account and its connected connectors, and share account memory. Basis: SES-035, INS-002, EXT-039, EXT-017, MEM-009.
 - **SCN-018** `inferred` Two Cowork tasks in the same Cowork project share that project's instructions, context and memory, and what the project's memory holds does not reach tasks in other Cowork projects. Basis: PRJ-005, MEM-052.
 - **SCN-019** `inferred` A scheduled task and the conversation that created it: every run is a Cowork session of its own that starts from the instructions stored with the task, not from the transcript of the conversation that set it up. Basis: WRK-060, WRK-064, SES-048, SES-025.
 
@@ -51,8 +51,8 @@ Prefix: SCN · Scope: what two or more sessions share in common setups; each sce
 ## API and Agent SDK
 
 - **SCN-040** `inferred` An Agent SDK session and a Claude Code session in the same repository on one machine share the auto memory directory, which the SDK session loads whatever its `settingSources` contain. Basis: API-191, API-196, CC-042, CC-043.
-- **SCN-041** `inferred` Two Managed Agents sessions on the same agent and environment share the agent's definition and the environment's configuration but no sandbox files or context; information passes between them only through a memory store attached to both. Basis: API-164, API-165, API-166, API-171, API-173.
-- **SCN-042** `inferred` Two API requests reuse one cache entry only if they belong to the same organization and, on the Claude API, Microsoft Foundry and Claude Platform on AWS, to the same workspace, and only for a prefix that is identical up to the cached block. Basis: API-092, API-085.
+- **SCN-041** `inferred` Two Managed Agents sessions on the same agent and environment share the agent's definition and the environment's configuration but no sandbox files or context; by default information passes between them through a memory store attached to both. Basis: API-164, API-165, API-166, API-171, API-173.
+- **SCN-042** `inferred` Two sessions that send requests with the same prompt prefix reuse one cache entry only if the requests belong to the same organization and, on the Claude API, Microsoft Foundry and Claude Platform on AWS, to the same workspace, and only for a prefix that is identical up to the cached block. Basis: API-092, API-085.
 
 ## Sources
 
@@ -66,7 +66,6 @@ Prefix: SCN · Scope: what two or more sessions share in common setups; each sce
 [inc]: https://support.claude.com/en/articles/12260368-use-incognito-chats
 [lim]: https://support.claude.com/en/articles/11647753-how-do-usage-and-length-limits-work
 [mem]: https://support.claude.com/en/articles/11817273-use-claude-s-chat-search-and-memory-to-build-on-previous-context
-[one]: https://support.claude.com/en/articles/16761823-claude-cowork-and-chat-are-one-claude
 [proj]: https://support.claude.com/en/articles/9519177-how-can-i-create-and-manage-projects
 [reset]: https://support.claude.com/en/articles/17007452-what-is-a-limit-reset
 [vis]: https://support.claude.com/en/articles/9519189-manage-project-visibility-and-sharing
