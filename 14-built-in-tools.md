@@ -90,7 +90,7 @@ Prefix: TOOL · Scope: tools built into the Claude app: web search, Research, co
 - **TOOL-106** `documented` In the side panel, Claude reads the tab the user is on with no extra setup and without Claude Desktop. [chrome] [cw-web]
 - **TOOL-107** `documented` "Switch back to classic" in the side panel's three-dot menu returns to the classic side panel. [chrome]
 - **TOOL-108** `documented` Only the classic side panel can record a workflow, a series of steps the user records for Claude to learn and repeat. [chrome]
-- **TOOL-109** `documented` The Claude in Chrome article has the user connect the extension to Claude Desktop under Settings > Connectors, with "Configure" next to Claude in Chrome. [chrome]
+- **TOOL-109** `documented` The Claude in Chrome article has the user connect the extension to Claude Desktop under Settings > Connectors, by choosing "Configure" for Claude in Chrome. [chrome]
 - **TOOL-118** `documented` Once Claude in Chrome is connected in Claude Desktop, it appears in the Connectors menu of chats, where it is off by default and has to be turned on in each conversation. [chrome]
 - **TOOL-110** `documented` The extension asks for Chrome permissions such as `debugger`, through which Claude clicks, types and takes screenshots, `tabGroups`, which keeps the tabs Claude opens in a group of their own colour, and `nativeMessaging`, which the article says will let the extension work with Claude Desktop or Claude Code once Anthropic enables that. [chrome]
 - **TOOL-111** `documented` Claude can act in several tabs at once: tabs the user drags into Claude's tab group become visible to it and open to its actions. [chrome]
@@ -116,7 +116,7 @@ Prefix: TOOL · Scope: tools built into the Claude app: web search, Research, co
 ## Organization controls for the browsers
 
 - **TOOL-130** `documented` On Team and Enterprise, an Owner or Primary Owner decides in Organization settings > Cowork whether the organization has the built-in browser. [browser-org] [cw-org]
-- **TOOL-136** `documented` While an organization has the built-in browser turned off, its users cannot open it and Claude cannot use it. [browser-org] [cw-org]
+- **TOOL-136** `documented` While an organization has the built-in browser turned off, its users have no way to open it and Claude has no way to use it. [browser-org] [cw-org]
 - **TOOL-137** `documented` The organization setting for the built-in browser leaves Claude in Chrome and the browser in Claude Code unaffected. [browser-org]
 - **TOOL-131** `documented` The built-in browser is on by default on Team, and on Enterprise since 2026-09-10 unless an owner had turned it off. [cw-org] [browser-org]
 - **TOOL-132** `documented` Where an organization has enabled HIPAA, the built-in browser remains off until an Owner switches it on; once the HIPAA configuration covers Claude Code and Cowork in local mode, it is unavailable and no setting enables it. [browser-org] [cw-org]
