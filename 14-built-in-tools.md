@@ -29,6 +29,7 @@ Prefix: TOOL · Scope: tools built into the Claude app: web search, Research, co
 ## Code execution and file creation
 
 - **TOOL-030** `documented` With code execution and file creation, Claude writes and runs code, for example Python or JavaScript, in a private, sandboxed computing environment: an isolated container, kept apart from the user's own systems. [files]
+- **TOOL-155** `documented` The file creation article makes code execution and file creation available on every plan, Free, Pro, Max, Team and Enterprise, in Claude Mobile, Claude Desktop and Claude on the web. [files]
 - **TOOL-031** `documented` File creation covers Word (.docx), Excel (.xlsx), PowerPoint (.pptx) and PDF files, which the user can download or save straight to Google Drive. [files]
 - **TOOL-032** `documented` With code execution and file creation, Claude can also do data analysis: it writes Python scripts, builds machine learning models, works through uploaded data files such as CSV or TSV and draws charts as PNG images. [files]
 - **TOOL-033** `documented` Files in the user's projects can be reached from Claude's computing environment while they also stay in context. [files]

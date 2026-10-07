@@ -102,6 +102,7 @@ Prefix: PRJ · Scope: projects in the Claude app (structure, knowledge, moving c
 - **PRJ-077** `documented` Running several threads in parallel uses plan usage faster. [what-proj]
 - **PRJ-089** `documented` Redesigned projects count against the same plan limits as other Claude Code sessions; a thread that reaches a limit waits and resumes by itself once the limit resets, except a thread started by a routine, whose turn stops with a limit error. [cc-proj]
 - **PRJ-090** `documented` Redesigned projects are limited to 200 new threads per day across a user's projects; a limit on parallel threads that the user asks for is a preference Claude keeps, not an enforced cap. [cc-proj]
+- **PRJ-094** `documented` According to the Claude Code documentation, projects in chat and Cowork, the earlier version, hold conversations and reference files together but have neither threads nor a coordinating conversation. [cc-proj]
 
 ## Sources
 
