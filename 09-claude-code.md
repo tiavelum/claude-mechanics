@@ -215,6 +215,9 @@ Prefix: CC · Scope: memory, instruction files, settings, sessions and their env
 - **CC-225** `documented` A published artifact can call only connectors of the claude.ai account, each through the viewer's own connection; local MCP servers configured in Claude Code can supply data while the page is built, but the published page cannot call them. [cc-art]
 - **CC-226** `documented` From Claude Code, Claude can start an artifact from the Slides, Design or Docs templates of the claude.ai account, with `/slides` and `/design` from v2.1.265; Claude Docs is available to Claude Code as a claude.ai connector. [cc-art] [art]
 - **CC-227** `documented` A user turns artifacts off for their own sessions with `"enableArtifact": false` in settings, `CLAUDE_CODE_DISABLE_ARTIFACT=1` or `Artifact` in `permissions.deny`; a project's settings can turn them off but not back on. [cc-art]
+- **CC-258** `documented` From v2.1.228, Claude Code watches each artifact its session published, and a comment that an editor sends to Claude reaches the session at once; where the permission mode allows posting without asking, Claude replies or edits the artifact on its own, otherwise it waits for the user, and in plan mode it pauses. [cc-art]
+- **CC-259** `documented` Claude Code stops replying on its own to an artifact after 60 sent comments or thread activations on it within an hour; `/tasks` lists each watched artifact, and a watch Claude Code started itself can end after several hours without activity. [cc-art]
+- **CC-260** `documented` A published artifact can offer viewers a file it generates only through the downloads capability, which claude.ai enables per account and Claude declares when publishing, because the viewer blocks downloads the page starts itself. [cc-art]
 
 ## Desktop app
 
