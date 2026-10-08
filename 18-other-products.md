@@ -34,9 +34,36 @@ Prefix: PRD · Scope: Claude products outside the Claude app and Claude Code (Cl
 - **PRD-028** `documented` Admins have no page or export of the individual messages people send Claude Tag; an Owner's Activity page lists scheduled work, memory files and network events. [tag-how]
 - **PRD-029** `documented` An artifact published from a Claude Tag session can be opened by anyone with access to the source channel, has no share setting, and is updated by asking Claude in the thread or by a comment on the page. [tag-sec]
 
+## Claude for Microsoft 365
+
+- **PRD-030** `documented` Claude for Microsoft 365 is a set of add-ins for Excel, PowerPoint, Word and Outlook in which Claude reads and edits the file or email that is open; every add-in runs in the browser view that Office provides and is served from `pivot.claude.ai`. [m365] [m365-store]
+- **PRD-031** `documented` Claude for Excel is generally available on Pro, Max, Team and Enterprise, and Claude for Outlook is in beta on the same plans; use of an add-in is tied to the user's Claude account and draws on its usage limits. [m365-xl] [m365-ol]
+- **PRD-032** `documented` A user installs an add-in from Microsoft AppSource and signs in with a Claude account; an organization deploys it through the Microsoft 365 Admin Center or a custom manifest, and Claude for Outlook also needs a one-time, tenant-wide Microsoft Graph consent from a Global Administrator or an Entra application of the organization's own. [m365-xl] [m365-ol]
+- **PRD-033** `documented` An organization can run the add-ins without Claude accounts through Amazon Bedrock, Google Cloud Vertex AI, Azure AI Foundry or an LLM gateway, in which case the models come from that platform, working across apps is not supported, and connectors and skills may be missing. [m365-xl] [m365-across] [m365-cs]
+- **PRD-034** `documented` Connectors enabled in the Claude settings are offered in every add-in under the + button, and a skill can be invoked directly by typing `/`, which lists only the skills relevant to the open app. [m365-cs]
+- **PRD-035** `documented` Claude for Excel has an Instructions field in its settings that applies to every conversation in Excel and is separate from the instructions set in PowerPoint or Word. [m365-xl]
+- **PRD-036** `documented` The add-ins share conversation state, so Claude can read from one open file or email and write to another; this needs "Let Claude work across files" in each add-in on each device, on by default on Pro and Max and off on Team and Enterprise, where an owner also controls "Let Claude work across apps" under Organization settings > Office agents. [m365-across]
+- **PRD-037** `documented` Working across apps reaches only files and emails that are open: Claude cannot create, open, close or switch files from an add-in. [m365-across]
+- **PRD-038** `documented` Chat history of the add-ins is kept only in the browser storage of the user's device, not on Anthropic's servers and not synced between devices; it is separate per user, organization and Office app, limited to the 50 most recent conversations of each, and on Office on the web may be evicted by the browser at any time. [m365-store]
+- **PRD-039** `documented` The add-ins also keep uploaded skills, connector registrations and the sign-in credential, unencrypted, in the device's browser storage; uploaded skills and connector registrations belong to the storage rather than to a user, so people sharing an operating system account share them. [m365-store]
+- **PRD-040** `documented` In Claude for Excel, long conversations are compacted into new conversations automatically, and the model list is a subset of the Claude models chosen for Office work, further limited by the organization's model access settings. [m365-xl]
+- **PRD-041** `documented` Inputs and outputs of the add-ins are deleted from Anthropic's backend within 30 days, except in the cases of the privacy policy; the add-ins do not inherit an organization's custom retention settings and are not part of Enterprise audit logs or data exports. [m365-across] [m365-xl]
+- **PRD-042** `conflicting` Whether add-in sessions reach the Compliance API: the Claude docs say that, for Enterprise organizations with the Compliance API enabled, Excel, Outlook and other add-in sessions are included, in public beta, while the help-center article on Claude for Outlook says Outlook is not included. [m365-across] [m365-ol] [m365-ol-help]
+- **PRD-043** `documented` Enterprise organizations can send the add-ins' full audit telemetry, prompt content and tool inputs and outputs included, to an OpenTelemetry collector of their own, which Pro, Max and Team cannot; the telemetry sent to Anthropic is filtered to counts, durations and error categories. [m365-ent] [m365-store] [m365-ol]
+- **PRD-044** `documented` Claude for Outlook reads the open item through Office.js and the wider mailbox and calendar through Microsoft Graph calls made in the browser, whose token is not sent to Anthropic; it does not request permission to send mail, so drafts and invites land unsent, and it learns the user's tone from the sent folder. [m365-ol]
+- **PRD-045** `documented` For add-ins signed in with Claude accounts, the Enterprise Analytics API reports usage per user and per surface, and Team and Enterprise admins can export spend per seat and surface as CSV from the usage analytics dashboard. [m365-ent]
+
 ## Sources
 
 [cc-tag]: https://code.claude.com/docs/en/claude-tag
+[m365]: https://claude.com/docs/office-agents/overview
+[m365-across]: https://claude.com/docs/office-agents/work-across-apps
+[m365-cs]: https://claude.com/docs/office-agents/connectors-and-skills
+[m365-ent]: https://claude.com/docs/office-agents/enterprise-readiness
+[m365-ol]: https://claude.com/docs/office-agents/outlook
+[m365-ol-help]: https://support.claude.com/en/articles/14855664-use-claude-for-outlook
+[m365-store]: https://claude.com/docs/office-agents/data-storage
+[m365-xl]: https://claude.com/docs/office-agents/excel
 [tag]: https://claude.com/docs/claude-tag
 [tag-cc]: https://claude.com/docs/claude-tag/concepts/for-claude-code-users
 [tag-cust]: https://claude.com/docs/claude-tag/admins/customize
