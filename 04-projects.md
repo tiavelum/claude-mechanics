@@ -7,6 +7,7 @@ Prefix: PRJ · Scope: projects in the Claude app (structure, knowledge, moving c
 - **PRJ-001** `documented` A project is a self-contained workspace with its own chat history and knowledge base. [what-proj]
 - **PRJ-002** `documented` Projects are available on all plans; Free users can create at most five. [proj]
 - **PRJ-003** `documented` A project has a name and a description, which Claude does not have access to. [proj]
+- **PRJ-095** `observed` Contrary to [proj], which gives Claude no access to a project's description, a Claude Code cloud session attached to a claude.ai project had the project's description in its context. (session 2026-10-07, Claude Code cloud session, in a project)
 - **PRJ-004** `documented` In the merged experience, a project holds files, instructions and context for related work in one place and can be used from any conversation. [one]
 - **PRJ-009** `documented` Projects can be used on web, desktop and mobile alike; a chat or a Cowork session can be started from a project, and Claude then draws on the project's knowledge. [cw-web]
 

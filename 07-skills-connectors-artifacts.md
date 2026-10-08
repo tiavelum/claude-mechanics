@@ -27,6 +27,7 @@ Prefix: EXT · Scope: extensions that persist beyond a single session in the Cla
 - **EXT-007** `documented` Skills, connectors and plugins are saved to the account and available in chat on web, desktop and mobile; those added through the Claude Code CLI remain local to that machine. [ext]
 - **EXT-037** `observed` In a cloud session, Anthropic's built-in skills were on a read-only file system, while the account's own, organization and plugin skills were in a writable synced folder, `~/.claude/skills/synced/`; the session's instructions said a skill is created or changed through a proposal card that the user saves. (session 2026-10-06, claude.ai, outside projects)
 - **EXT-039** `documented` Cowork and cloud sessions load the skills enabled for the claude.ai account, synced at session start; synced skills are only downloaded, never uploaded, so an edit to a file under `~/.claude/skills/synced/` is not saved to the account and may be overwritten or removed by a later sync. [cc-skills]
+- **EXT-095** `observed` Changes to the account's skills reached cloud sessions of the Claude app that were already running: a skill replaced in the account was replaced in a running session's skill folder, two skills uploaded about half an hour after another session started appeared in its list, and in a third session a skill removed from the account disappeared from the list while two uploaded ones appeared. (session 2026-10-07, Claude app, cloud session)
 
 ## Connectors
 

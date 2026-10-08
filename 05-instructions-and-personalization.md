@@ -26,6 +26,12 @@ Prefix: INS · Scope: account, organization, project and folder instructions, st
 - **INS-018** `documented` A user's own instructions keep applying to whatever the organization instructions leave open. [org-ins]
 - **INS-019** `documented` The organization instructions article says this precedence rests on prompt-level instructions, so behaviour may vary in rare cases of direct contradiction, and advises testing the instructions. [org-ins]
 
+## During a session
+
+- **INS-059** `observed` In cloud sessions of the Claude app, Claude was told to end commit messages with a `Co-Authored-By` line naming the model and a `Claude-Session` line with the session's link, and pull request descriptions with a "Generated with Claude Code" line and the link, and that the user's own instructions about these lines take precedence; a session of 2026-10-06 was given the commit lines as well. (session 2026-10-08, Claude app, in a project, Opus 5.5)
+- **INS-060** `observed` A running cloud session of the Claude app kept the Instructions for Claude it started with after the field was changed, and a session started before a change still held the old rule hours later. (session 2026-10-07, Claude app, cloud session)
+- **INS-061** `observed` After the instructions field of a claude.ai project was changed, the next turn of a running session in the project carried a system reminder that the session context had been re-read, holding the new instructions; a chat in a project on 2026-10-07 likewise had a changed project instructions field by its next message. (session 2026-10-08, Claude app, in a project, Opus 5.5)
+
 ## Styles
 
 - **INS-023** `documented` The personalization article describes Instructions for Claude, project instructions and skills, and advises skills for adjusting the tone and format of Claude's responses; it does not mention styles. [pers]
