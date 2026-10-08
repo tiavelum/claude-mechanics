@@ -30,7 +30,7 @@ Prefix: CHG · Scope: dated changes to the mechanisms in this knowledge base, as
 - **CHG-029** `documented` 2026-02-12: Enterprise plans can be bought on the website without Sales; a self-serve Enterprise plan has a single seat type that includes Claude, Claude Code and Cowork. [rn]
 - **CHG-050** `documented` 2026-02-17: Sonnet 4.6 released. [rn]
 - **CHG-051** `documented` 2026-02-19: Sonnet 3.7 and Haiku 3.5 retired on the Anthropic-operated platforms. [api-deprec]
-- **CHG-089** `documented` 2026-02-20: Claude Code Security opened as a limited research preview for Enterprise and Team, built into Claude Code on the web. [news-sec]
+- **CHG-089** `documented` 2026-02-20: Claude Code Security, the product now called Claude Security, opened as a limited research preview for Enterprise and Team, built into Claude Code on the web. [news-sec] [sec-beta]
 - **CHG-030** `documented` 2026-02-24: a plugin marketplace and admin controls for plugins in Cowork on Team and Enterprise. [rn]
 - **CHG-031** `documented` 2026-02-25: recurring and on-demand scheduled tasks in Cowork, and a Customize section in Claude Desktop that brings skills, plugins and connectors together. [rn]
 - **CHG-006** `documented` 2026-03-02: memory from chat history opened to all users, including Free. [rn]
@@ -43,6 +43,7 @@ Prefix: CHG · Scope: dated changes to the mechanisms in this knowledge base, as
 - **CHG-085** `documented` 2026-04-17: Anthropic Labs launched Claude Design as a research preview for Pro, Max, Team and Enterprise, powered by Opus 4.7 and off by default on Enterprise. [design-news]
 - **CHG-054** `documented` 2026-04-20: Haiku 3 retired on the Anthropic-operated platforms. [api-deprec]
 - **CHG-055** `documented` 2026-04-30: the 1M-token beta for Sonnet 4.5 and Sonnet 4 ended; the beta header `context-1m-2025-08-07` stopped having an effect, and requests beyond their 200K window return an error. [api-rn]
+- **CHG-093** `documented` 2026-04-30: Claude Code Security, renamed Claude Security, entered public beta for Enterprise, run from the claude.ai sidebar or at claude.ai/security and on Opus 4.7 at the time, with Team and Max announced to follow. [sec-beta]
 - **CHG-021** `documented` 2026-05-06: the five-hour rate limits of Claude Code were doubled on Pro, Max, Team and seat-based Enterprise, and the peak-hours limit reduction on Claude Code removed for Pro and Max. [news-limits]
 - **CHG-056** `documented` 2026-05-19: Claude Managed Agents began saving any tool output over 100K characters, from the agent toolset or an MCP tool, as a file in the sandbox and giving the model a shortened preview with the file's path. [api-rn]
 - **CHG-036** `documented` 2026-05-28: Enterprise custom roles gained connector permissions, which decide the connectors, and the individual tools on them, available to each role. [rn]
@@ -125,6 +126,7 @@ Prefix: CHG · Scope: dated changes to the mechanisms in this knowledge base, as
 [rn]: https://support.claude.com/en/articles/12138966-release-notes
 [sci-log]: https://claude.com/docs/claude-science/changelog
 [sci-news]: https://www.anthropic.com/news/claude-science-ai-workbench
+[sec-beta]: https://claude.com/resources/articles/claude-security-public-beta
 [skills-org]: https://support.claude.com/en/articles/13119606-provision-and-manage-skills-for-your-organization
 [sp-opus55]: https://platform.claude.com/docs/en/release-notes/system-prompts/claude-opus-5-5
 [sp-sonnet55]: https://platform.claude.com/docs/en/release-notes/system-prompts/claude-sonnet-5-5
