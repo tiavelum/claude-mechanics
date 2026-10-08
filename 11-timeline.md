@@ -3,6 +3,7 @@
 Prefix: CHG · Scope: dated changes to the mechanisms in this knowledge base, as documented by Anthropic · Last checked: 2026-10-07
 
 - **CHG-017** `documented` 2024-06-25: projects launched on claude.ai for Pro and Team, each with its own knowledge and custom instructions. [blog-proj24]
+- **CHG-090** `documented` 2025-07-15: Enterprise audit logs began recording the start and completion of data exports. [audit]
 - **CHG-018** `documented` 2025-08-01: project permissions and sharing enabled for Team and Enterprise. [rn]
 - **CHG-001** `documented` 2025-08-11: chat search released for Max, Team and Enterprise. [rn]
 - **CHG-019** `documented` 2025-08-20: extra usage introduced for Team and Enterprise, letting users buy more usage to keep using Claude and Claude Code after reaching their usage limit. [rn]
@@ -62,6 +63,7 @@ Prefix: CHG · Scope: dated changes to the mechanisms in this knowledge base, as
 - **CHG-014** `documented` 2026-07-09: monthly recap introduced in Settings > Reflect, in beta on Free, Pro and Max on the web and Claude Desktop, requiring memory to be on. [rn]
 - **CHG-067** `documented` 2026-07-09: Settings > Time and focus introduced, with optional break reminders and quiet hours, in beta on Free, Pro and Max. [rn] [focus]
 - **CHG-008** `documented` 2026-07-10: memory redesigned from a summary updated every 24 hours into individual entries saved while chatting. [rn] [mem]
+- **CHG-091** `documented` 2026-07-11: the "Member analytics" toggle of usage-based Enterprise organizations became on by default, so members see their own usage in Settings > Usage. [analytics]
 - **CHG-068** `documented` 2026-07-24: Opus 5 released. [rn]
 - **CHG-084** `documented` 2026-08-03: Claude in Slack switched over to Claude Tag, which runs in Slack channels under its own identity. [tag-help]
 - **CHG-069** `documented` 2026-08-05: Opus 4.1 retired on the Anthropic-operated platforms. [api-deprec]
@@ -94,9 +96,11 @@ Prefix: CHG · Scope: dated changes to the mechanisms in this knowledge base, as
 
 ## Sources
 
+[analytics]: https://support.claude.com/en/articles/12883420-view-usage-analytics-for-team-and-enterprise-plans
 [api-deprec]: https://platform.claude.com/docs/en/about-claude/model-deprecations
 [api-rn]: https://platform.claude.com/docs/en/release-notes/overview
 [art]: https://support.claude.com/en/articles/17153992-what-are-artifacts-and-how-do-i-use-them
+[audit]: https://support.claude.com/en/articles/9970975-access-audit-logs
 [blog-cw]: https://claude.com/resources/articles/cowork-is-now-claude
 [blog-mem]: https://claude.com/resources/articles/memory
 [blog-mem26]: https://claude.com/resources/articles/claudes-memory-works-everywhere-and-you-decide-whats-in-it

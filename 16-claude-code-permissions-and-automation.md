@@ -151,6 +151,8 @@ Prefix: CCA · Scope: how Claude Code acts: the agentic loop and steering, permi
 - **CCA-229** `documented` On Pro, Max, Team and Enterprise plans, `/usage` shows plan usage bars and a breakdown of recent usage by skills, subagents, plugins, MCP servers and scheduled tasks, computed approximately from session history on that machine, so use on other devices or on claude.ai is not included. [cc-costs]
 - **CCA-230** `documented` From v2.1.234, when a session limit stops Claude mid-task in an interactive session signed in with a subscription, Claude Code waits in the open session and continues the task after the reset, re-arming the wait at most twice in a row; it does not offer the wait in background sessions or `-p` runs, and does not start it on its own for a reset more than 24 hours away. [cc-int]
 - **CCA-231** `documented` A scheduled task fires on its interval even while the session is idle, sending the full context each time, which adds to usage. [cc-costs]
+- **CCA-232** `documented` On Team and Enterprise plans, a member's Claude Code usage draws on the seat's allowance, which resets in a five-hour and a weekly window and is shared with chat and Cowork; on the Console and on cloud providers, usage is billed per token to the organization, and each developer is metered by the sign-in method used. [cc-costs]
+- **CCA-233** `documented` The first Claude Code sign-in with a Console account creates a workspace named "Claude Code", which tracks Claude Code spend, cannot hold API keys of its own and can be given a workspace spend limit and a workspace rate limit. [cc-costs]
 
 ## Runs without a person at the terminal
 

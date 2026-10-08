@@ -33,9 +33,9 @@ Contributing:
 | [03-chat-search.md](03-chat-search.md) | SRC | Searching past conversations |
 | [04-projects.md](04-projects.md) | PRJ | Project structure, knowledge and RAG, moving chats, sharing |
 | [05-instructions-and-personalization.md](05-instructions-and-personalization.md) | INS | Account, organization, project and folder instructions, styles, published system prompts, precedence |
-| [06-context-management.md](06-context-management.md) | CTX | Context windows, long chats, usage, uploads, what each plan includes |
+| [06-context-management.md](06-context-management.md) | CTX | Context windows, long chats, usage, spend limits and usage analytics, uploads, what each plan includes |
 | [07-skills-connectors-artifacts.md](07-skills-connectors-artifacts.md) | EXT | Extensions that outlive a session, and how an organization controls them |
-| [08-settings.md](08-settings.md) | SET | Account, project, per-chat and organization settings |
+| [08-settings.md](08-settings.md) | SET | Account, project, per-chat and organization settings, identity and access, audit logs |
 | [09-claude-code.md](09-claude-code.md) | CC | CLAUDE.md, auto memory, settings, sessions and their environments, compaction |
 | [10-scenarios.md](10-scenarios.md) | SCN | What sessions share in common setups |
 | [11-timeline.md](11-timeline.md) | CHG | Dated changes |
