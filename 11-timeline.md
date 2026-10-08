@@ -95,11 +95,13 @@ Prefix: CHG · Scope: dated changes to the mechanisms in this knowledge base, as
 - **CHG-041** `documented` 2026-10-02: on Team and Enterprise, an organization that has not chosen a Publishing setting for skills and plugins that users submit to the organization library switches to "Requires review", in which an owner approves each submission before it is published. [skills-org]
 - **CHG-083** `documented` 2026-10-02: Enterprise organizations that have not set skill and plugin security scanning get it switched on by default where it is available; organizations that already decided keep their setting. [skills-org]
 - **CHG-013** `documented` 2026-10-06: on Pro and Max, new Cowork tasks and newly created scheduled tasks run in the cloud, while scheduled tasks already running on the user's computer stay there, and Settings > General no longer offers the "Only on your computer" option. [cw-web]
+- **CHG-094** `documented` 2026-10-07: Haiku 5.5 released, with a 1M-token context window and prices tiered by prompt length. [api-haiku55]
 
 ## Sources
 
 [analytics]: https://support.claude.com/en/articles/12883420-view-usage-analytics-for-team-and-enterprise-plans
 [api-deprec]: https://platform.claude.com/docs/en/about-claude/model-deprecations
+[api-haiku55]: https://platform.claude.com/docs/en/models/haiku-5-5/overview
 [api-rn]: https://platform.claude.com/docs/en/release-notes/overview
 [art]: https://support.claude.com/en/articles/17153992-what-are-artifacts-and-how-do-i-use-them
 [audit]: https://support.claude.com/en/articles/9970975-access-audit-logs

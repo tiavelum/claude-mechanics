@@ -4,11 +4,12 @@ Prefix: MOD · Scope: Claude's models in the Claude app, Claude Code and the API
 
 ## Lineup and tiers
 
-- **MOD-001** `documented` The models overview compares four current models: Fable 5.1, Opus 5.5, Sonnet 5.5 and Haiku 4.5. [api-models]
+- **MOD-001** `documented` The models overview compares four current models: Fable 5.1, Opus 5.5, Sonnet 5.5 and Haiku 5.5. [api-models]
 - **MOD-002** `documented` The models overview and the guide on optimizing for cost and intelligence both give Sonnet 5.5 as the current Sonnet model; the guide lists the current models, from lowest to highest cost and capability, as Haiku 5.5, Sonnet 5.5, Opus 5.5 and Fable 5.1. [api-models] [api-cost]
 - **MOD-003** `documented` Fable 5.1 was released on 2026-09-01, together with Claude Mythos 5.1. [api-fable51] [rn]
 - **MOD-004** `documented` Opus 5.5 was released on 2026-09-22 as the first model of the Claude 5.5 family. [api-opus55] [news-opus55]
 - **MOD-005** `documented` Sonnet 5.5 was released on 2026-09-28 as the second model of the Claude 5.5 family. [api-sonnet55] [rn]
+- **MOD-406** `documented` Haiku 5.5 was released on 2026-10-07. [api-haiku55]
 - **MOD-006** `documented` Haiku 4.5 was released on 2025-10-15. [api-haiku45]
 - **MOD-007** `documented` The announcement of Opus 5.5, which the release notes place on 2026-09-22, said that Sonnet 5.5 and Haiku 5.5 were to be released in the weeks after it. [news-opus55] [rn]
 - **MOD-008** `documented` Fable 5.1 and Mythos 5.1 are one and the same model, differing only in how strict their safeguards are: Fable 5.1 is the generally available version, and Mythos 5.1 loosens the safeguards for vetted people and organizations whose work the cybersecurity and life-sciences restrictions of Fable 5.1 affect. [news-fable51]
@@ -31,7 +32,7 @@ Prefix: MOD · Scope: Claude's models in the Claude app, Claude Code and the API
 
 - **MOD-020** `documented` The documentation advises starting most workloads on Opus 5.5. [api-models] [api-choose]
 - **MOD-021** `documented` The documentation advises using Fable 5.1 for demanding reasoning and for agentic work with a long horizon, and also when one's evaluations on Opus 5.5 still come up short at higher effort; the model selection guide names `xhigh` and `max` as that effort. [api-models] [api-choose]
-- **MOD-022** `documented` In the one-line descriptions of the models overview, Fable 5.1 is for demanding reasoning and for agentic work with a long horizon, Opus 5.5 for agentic coding and knowledge work that runs for a long time, Sonnet 5.5 the model that best combines speed with intelligence, and Haiku 4.5 the fastest one, with intelligence close to the frontier. [api-models]
+- **MOD-022** `documented` In the one-line descriptions of the models overview, Fable 5.1 is for demanding reasoning and for agentic work with a long horizon, Opus 5.5 for agentic coding and knowledge work that runs for a long time, Sonnet 5.5 the model that best combines speed with intelligence, and Haiku 5.5 for high-volume, latency-sensitive tasks such as classification, extraction and routing. [api-models]
 - **MOD-023** `documented` The model selection matrix sends a reader who needs the highest capability on offer to Fable 5.1; its example uses are agent sessions lasting hours, deep research in many steps, and analysis that ends in a finished document, spreadsheet or slide deck. [api-choose]
 - **MOD-024** `documented` The matrix sends complex agentic coding and enterprise work to Opus 5.5; its example uses are coding agents that work on their own for several hours, refactoring at large scale, complex systems engineering, workflows that lean heavily on vision, and computer use. [api-choose]
 - **MOD-025** `documented` The matrix assigns everyday coding, agent and enterprise workloads that need both speed and capability to Sonnet 5.5, and the lowest latency and price to Haiku 4.5, with real-time applications, high-volume processing, cost-sensitive deployments and sub-agent tasks as example uses for Haiku 4.5. [api-choose]
@@ -44,7 +45,7 @@ Prefix: MOD · Scope: Claude's models in the Claude app, Claude Code and the API
 
 ## Identifiers and lifecycle
 
-- **MOD-040** `documented` On the Claude API, the model ID is `claude-fable-5-1` for Fable 5.1, `claude-opus-5-5` for Opus 5.5, `claude-sonnet-5-5` for Sonnet 5.5 and `claude-haiku-4-5-20251001` for Haiku 4.5. [api-models]
+- **MOD-040** `documented` On the Claude API, the model ID is `claude-fable-5-1` for Fable 5.1, `claude-opus-5-5` for Opus 5.5, `claude-sonnet-5-5` for Sonnet 5.5 and `claude-haiku-5-5` for Haiku 5.5; Haiku 4.5 is `claude-haiku-4-5-20251001`. [api-models] [api-haiku55] [api-deprec]
 - **MOD-041** `documented` From the Claude 4.6 generation on, model IDs carry no date; such an ID is one fixed snapshot, not a pointer to the latest version, and an updated model ships under a new ID. [api-ids]
 - **MOD-042** `documented` Before the 4.6 generation, a model ID ends in a snapshot date, and on the Claude API a dateless alias such as `claude-sonnet-4-5` resolves to that minor version's newest dated snapshot. [api-ids]
 - **MOD-043** `documented` `claude-haiku-4-5` is an alias; the snapshot behind it is `claude-haiku-4-5-20251001`. [api-haiku45]
@@ -56,6 +57,7 @@ Prefix: MOD · Scope: Claude's models in the Claude app, Claude Code and the API
 - **MOD-057** `documented` The deprecations page lists Opus 5.5 as Active, with no deprecation date and a retirement no earlier than 2027-09-22. [api-deprec] [api-models]
 - **MOD-058** `documented` The deprecations page lists Sonnet 5.5 as Active, with no deprecation date and a retirement no earlier than 2027-09-28. [api-deprec] [api-models]
 - **MOD-059** `documented` When the page was read on 2026-10-06, the deprecations page listed Haiku 4.5 as Active, with no deprecation date and a retirement no earlier than 2026-10-15. [api-deprec] [api-models]
+- **MOD-409** `documented` When the page was read on 2026-10-08, the deprecations page listed Haiku 5.5 as Active, with no deprecation date and a retirement no earlier than 2027-10-07, and Haiku 4.5 still as Active with a retirement no earlier than 2026-10-15. [api-deprec]
 - **MOD-049** `documented` The retirement dates are a commitment that Anthropic makes for the platforms it operates itself (the Claude API, Microsoft Foundry, Claude Platform on AWS); the two platforms that partners operate, Google Cloud and Amazon Bedrock, decide their retirement dates themselves. [api-models] [api-deprec]
 - **MOD-050** `inferred` Haiku 4.5, which the deprecations page still listed as Active without a deprecation date on 2026-10-06, is not due for retirement on the Anthropic-operated platforms before 2026-12-05, because a retirement needs at least 60 days' notice. Basis: MOD-047, MOD-049, MOD-059.
 - **MOD-051** `documented` The deprecations page lists these older models as Active: Fable 5, Mythos 5, Opus 5, Opus 4.8, Opus 4.7, Opus 4.6, Opus 4.5, Sonnet 5 and Sonnet 4.6. [api-deprec]
@@ -71,16 +73,18 @@ Prefix: MOD · Scope: Claude's models in the Claude app, Claude Code and the API
 
 ## Specifications
 
-- **MOD-060** `documented` On the API, the context window is 1M tokens for Fable 5.1, Opus 5.5 and Sonnet 5.5 and 200K tokens for Haiku 4.5. [api-models]
+- **MOD-060** `documented` On the API, the context window is 1M tokens for Fable 5.1, Opus 5.5, Sonnet 5.5 and Haiku 5.5. [api-models]
 - **MOD-061** `documented` The API documentation also gives a 1M-token window to Mythos 5.1, Fable 5, Mythos 5, Opus 5, Opus 4.8, Opus 4.7, Opus 4.6, Sonnet 5, Sonnet 4.6 and Mythos Preview, and a 200K-token window to the other models, Sonnet 4.5 among them. [api-ctx]
 - **MOD-062** `documented` On the API, a model that has a 1M-token window offers the full window by default, without a beta header. [api-ctx]
-- **MOD-063** `documented` The maximum output on the synchronous Messages API is 128K tokens for Fable 5.1, Opus 5.5 and Sonnet 5.5 and 64K tokens for Haiku 4.5. [api-models]
+- **MOD-063** `documented` The maximum output on the synchronous Messages API is 128K tokens for Fable 5.1, Opus 5.5, Sonnet 5.5 and Haiku 5.5. [api-models]
 - **MOD-064** `documented` On the Message Batches API, the beta header `output-300k-2026-03-24` raises the output limit to 300K tokens for Opus 5.5, Opus 5, Opus 4.8, Opus 4.7, Opus 4.6, Sonnet 5.5, Sonnet 5 and Sonnet 4.6; the Fable and Mythos models are not among them. [api-models] [api-thinking]
-- **MOD-065** `documented` The reliable knowledge cutoff is June 2026 for Fable 5.1, Opus 5.5 and Sonnet 5.5 and February 2025 for Haiku 4.5. [api-models]
-- **MOD-066** `documented` The models overview separates two cutoffs: the reliable knowledge cutoff, the date up to which a model's knowledge is at its fullest and most dependable, and the training data cutoff, which covers a wider range of data and is June 2026 for the three newer models and July 2025 for Haiku 4.5. [api-models]
+- **MOD-065** `documented` The reliable knowledge cutoff is June 2026 for Fable 5.1, Opus 5.5, Sonnet 5.5 and Haiku 5.5. [api-models]
+- **MOD-066** `documented` The models overview separates two cutoffs: the reliable knowledge cutoff, the date up to which a model's knowledge is at its fullest and most dependable, and the training data cutoff, which covers a wider range of data and is June 2026 for the four current models. [api-models] [api-haiku55]
 - **MOD-067** `documented` The help center gives the month up to which each model was trained and calls it the knowledge cutoff: June 2026 for Sonnet 5.5, Opus 5.5 and Fable 5.1, May 2026 for Opus 5, January 2026 for Sonnet 5, Fable 5, Opus 4.8 and Opus 4.7, August 2025 for Sonnet 4.6 and Opus 4.6, and July 2025 for Haiku 4.5. [training-data]
-- **MOD-068** `documented` The models overview rates latency within the current lineup as Slower for Fable 5.1, Moderate for Opus 5.5, Fast for Sonnet 5.5 and Fastest for Haiku 4.5. [api-models]
+- **MOD-068** `documented` The models overview rates latency within the current lineup as Slower for Fable 5.1, Moderate for Opus 5.5, Fast for Sonnet 5.5 and Fastest for Haiku 5.5. [api-models]
 - **MOD-069** `documented` Each of the current models takes text and images as input, answers in text and can use tools. [api-models]
+- **MOD-407** `documented` Haiku 5.5 is priced by prompt length: $0.10 input and $0.50 output per million tokens for prompts up to 100,000 tokens, and $0.50 and $2.50 above that, with tiered cache prices and half price on the Batch API. [api-haiku55]
+- **MOD-408** `documented` On Haiku 5.5, thinking is adaptive and on by default, effort defaults to `medium`, non-default `temperature`, `top_p` or `top_k` return a 400 error, and its thinking blocks work only in the account that produced them or a linked one. [api-haiku55]
 - **MOD-070** `documented` On the tokenizer in use since Opus 4.7, 1M tokens hold roughly 555,000 words; on the models before it, 1M tokens held about 750,000 words. [api-models]
 - **MOD-071** `documented` Opus 4.7 and later models use a newer tokenizer that turns a given text into roughly 30% more tokens than the tokenizer of Sonnet 4.6 and earlier models does; Fable 5.1 has the tokenizer of Fable 5. [api-pricing] [api-fable51-new]
 - **MOD-072** `documented` Non-default values of `temperature`, `top_p` or `top_k` return a 400 error on Fable 5.1 and Fable 5, on Mythos 5.1, Mythos 5 and Mythos Preview, on Opus 5.5, Opus 5, Opus 4.8 and Opus 4.7 and on Sonnet 5.5 and Sonnet 5, whether or not thinking is used. [api-thinking] [api-deprec]
@@ -143,7 +147,7 @@ Prefix: MOD · Scope: Claude's models in the Claude app, Claude Code and the API
 - **MOD-151** `documented` Effort affects all tokens of a response, that is text, tool calls and thinking, and it has its effect with thinking on or off. [api-effort]
 - **MOD-152** `documented` There are five effort levels: `low`, `medium`, `high`, `xhigh` and `max`. [api-effort]
 - **MOD-153** `documented` Effort steers behaviour and does not set a fixed number of tokens; the hard limit on total output, thinking included, remains `max_tokens`. [api-effort]
-- **MOD-154** `documented` On the API, Opus 5.5 defaults to `medium` effort, and every other model with an effort setting defaults to `high`. [api-effort] [api-models]
+- **MOD-154** `documented` On the API, Opus 5.5 and Haiku 5.5 default to `medium` effort, and Fable 5.1 and Sonnet 5.5 to `high`. [api-models] [api-haiku55]
 - **MOD-155** `documented` A request that names the model's default effort level behaves exactly like a request without the effort parameter. [api-effort]
 - **MOD-156** `documented` `xhigh` exists on Fable 5.1 and Fable 5, on Mythos 5.1 and Mythos 5, on Opus 5.5, Opus 5, Opus 4.8 and Opus 4.7 and on Sonnet 5.5 and Sonnet 5; `max` exists on those models and also on Mythos Preview, Opus 4.6 and Sonnet 4.6, which have no `xhigh`. [api-effort]
 - **MOD-157** `documented` `max` sets no limit on how many tokens Claude spends, and the effort table lists `xhigh` for long-running agentic and coding tasks of more than 30 minutes with token budgets in the millions. [api-effort]
@@ -350,6 +354,7 @@ Prefix: MOD · Scope: Claude's models in the Claude app, Claude Code and the API
 [api-fable51-new]: https://platform.claude.com/docs/en/models/fable-5-1/whats-new-fable-5-1
 [api-fast]: https://platform.claude.com/docs/en/build-with-claude/fast-mode
 [api-haiku45]: https://platform.claude.com/docs/en/models/haiku-4-5/overview
+[api-haiku55]: https://platform.claude.com/docs/en/models/haiku-5-5/overview
 [api-ids]: https://platform.claude.com/docs/en/about-claude/models/model-ids-and-versions
 [api-models]: https://platform.claude.com/docs/en/models/overview
 [api-mythos51]: https://platform.claude.com/docs/en/models/mythos-5-1/overview
