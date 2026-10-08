@@ -59,6 +59,7 @@ Prefix: CHG · Scope: dated changes to the mechanisms in this knowledge base, as
 - **CHG-067** `documented` 2026-07-09: Settings > Time and focus introduced, with optional break reminders and quiet hours, in beta on Free, Pro and Max. [rn] [focus]
 - **CHG-008** `documented` 2026-07-10: memory redesigned from a summary updated every 24 hours into individual entries saved while chatting. [rn] [mem]
 - **CHG-068** `documented` 2026-07-24: Opus 5 released. [rn]
+- **CHG-084** `documented` 2026-08-03: Claude in Slack switched over to Claude Tag, which runs in Slack channels under its own identity. [tag-help]
 - **CHG-069** `documented` 2026-08-05: Opus 4.1 retired on the Anthropic-operated platforms. [api-deprec]
 - **CHG-070** `documented` 2026-08-06: the biology classifier of Fable 5 and Fable 5.1 updated on Claude, the Claude apps and the Claude Platform, with Microsoft Foundry, Google Cloud Vertex AI, Amazon Bedrock and Claude Platform on AWS still to follow. [switch-fable]
 - **CHG-015** `documented` 2026-08-19: cut-off for Cowork live artifacts; artifacts made in Cowork before this date keep working but cannot be edited in place. [art]
@@ -112,3 +113,4 @@ Prefix: CHG · Scope: dated changes to the mechanisms in this knowledge base, as
 [sp-opus55]: https://platform.claude.com/docs/en/release-notes/system-prompts/claude-opus-5-5
 [sp-sonnet55]: https://platform.claude.com/docs/en/release-notes/system-prompts/claude-sonnet-5-5
 [switch-fable]: https://support.claude.com/en/articles/15363606-why-claude-switched-models-in-your-conversation-with-fable-5-or-fable-5-1
+[tag-help]: https://support.claude.com/en/articles/15594475-what-is-claude-tag

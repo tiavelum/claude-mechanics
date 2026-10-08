@@ -1,6 +1,6 @@
 # Claude mechanics
 
-A dated, sourced snapshot of how Claude works behind the scenes, for people and Claude sessions that need to look it up: sessions, memory, chat search, projects, instructions, context, settings, extensions, models, built-in tools, data handling and retention, in the Claude app, in Claude Code and in the API and Agent SDK. Each fact is one short statement labelled as documented, observed, inferred or conflicting.
+A dated, sourced snapshot of how Claude works behind the scenes, for people and Claude sessions to look up: sessions, memory, chat search, projects, instructions, context, settings, extensions, models, built-in tools, data handling and retention, across the Claude app, Claude Code, the API and Agent SDK, and other Claude products. Each fact is one short statement labelled as documented, observed, inferred or conflicting.
 
 ## What it is for
 
@@ -45,6 +45,7 @@ Contributing:
 | [15-data-and-retention.md](15-data-and-retention.md) | DAT | Model training, retention and deletion, location data, feedback |
 | [16-claude-code-permissions-and-automation.md](16-claude-code-permissions-and-automation.md) | CCA | Agentic loop, permissions and hooks, checkpoints, subagents, skills, scheduled work, prompt caching, costs |
 | [17-api-and-agent-sdk.md](17-api-and-agent-sdk.md) | API | Requests, context management, prompt caching, tools, the memory tool, Agent SDK |
+| [18-other-products.md](18-other-products.md) | PRD | Claude Tag, Claude for Microsoft 365, Claude Design, Claude Science and Claude Security: sessions, sharing, controls, data, plans |
 | [conventions.md](conventions.md) | | Statement format, labels, snapshots and releases |
 | [.claude/skills/revise-snapshot/](.claude/skills/revise-snapshot/SKILL.md) | | Skill and scripts for re-checking and publishing a snapshot |
 | [.github/workflows/check-statements.yml](.github/workflows/check-statements.yml) | | Runs the statement check and the linter on every pull request |
