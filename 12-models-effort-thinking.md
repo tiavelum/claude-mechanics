@@ -24,7 +24,8 @@ Prefix: MOD · Scope: Claude's models in the Claude app, Claude Code and the API
 - **MOD-016** `documented` Sonnet 4.6 was released on 2026-02-17. [rn]
 - **MOD-017** `documented` Opus 4.7 was released on 2026-04-16. [rn]
 - **MOD-018** `documented` Opus 4.8 was released on 2026-05-28. [rn]
-- **MOD-019** `documented` Sonnet 5 was released on 2026-06-30, and Opus 5 on 2026-07-24. [rn]
+- **MOD-019** `documented` Sonnet 5 was released on 2026-06-30. [rn]
+- **MOD-401** `documented` Opus 5 was released on 2026-07-24. [rn]
 
 ## Which model for what
 
@@ -61,7 +62,11 @@ Prefix: MOD · Scope: Claude's models in the Claude app, Claude Code and the API
 - **MOD-052** `documented` The models overview calls Fable 5, Opus 5, Opus 4.8, Opus 4.7, Opus 4.6, Opus 4.5, Sonnet 5 and Sonnet 4.6 legacy models that are still available, while the status table of the deprecations page shows no model in the Legacy state. [api-models] [api-deprec]
 - **MOD-053** `documented` Sonnet 4.5 was deprecated on 2026-09-30 and is to be retired on 2026-11-30, with Sonnet 5.5 as the recommended replacement. [api-deprec]
 - **MOD-054** `documented` Mythos Preview has been deprecated since 2026-06-09, with a retirement date still to be announced. [api-deprec]
-- **MOD-055** `documented` The models retired on the Anthropic-operated platforms in 2026 are Opus 3 (2026-01-05), Sonnet 3.7 and Haiku 3.5 (2026-02-19), Haiku 3 (2026-04-20), Opus 4 and Sonnet 4 (2026-06-15) and Opus 4.1 (2026-08-05). [api-deprec]
+- **MOD-055** `documented` Opus 3 was retired on the Anthropic-operated platforms on 2026-01-05. [api-deprec]
+- **MOD-402** `documented` Sonnet 3.7 and Haiku 3.5 were retired on the Anthropic-operated platforms on 2026-02-19. [api-deprec]
+- **MOD-403** `documented` Haiku 3 was retired on the Anthropic-operated platforms on 2026-04-20. [api-deprec]
+- **MOD-404** `documented` Opus 4 and Sonnet 4 were retired on the Anthropic-operated platforms on 2026-06-15. [api-deprec]
+- **MOD-405** `documented` Opus 4.1 was retired on the Anthropic-operated platforms on 2026-08-05. [api-deprec]
 - **MOD-056** `documented` The release notes of 2026-01-16 report that Opus 4 and Opus 4.1 were removed from the Claude app's model selector and from Claude Code; on the API the two models were retired on 2026-06-15 and 2026-08-05. [rn] [api-deprec]
 
 ## Specifications

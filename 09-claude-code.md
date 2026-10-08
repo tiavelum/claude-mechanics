@@ -236,6 +236,7 @@ Prefix: CC · Scope: memory, instruction files, settings, sessions and their env
 - **CC-204** `documented` In the desktop app, Claude can list the user's other Code tab sessions, read what each one has been doing and pass messages between them. [cc-desk]
 - **CC-205** `documented` That desktop surface shows Claude only sessions the desktop app runs itself, local, SSH and WSL Code tab sessions, and not cloud sessions or sessions started from the terminal or the VS Code extension. [cc-desk]
 - **CC-206** `documented` A message between desktop sessions appears in the receiving session as a card with the sending session's title; a session busy with a task reads it once its current work is done. [cc-desk]
+- **CC-266** `observed` In a Claude Code cloud session in the desktop app's Code tab, the `/tasks` side panel named a running agent's model but not its effort. (session 2026-10-07, Claude Code 2.1.292 in the desktop app's Code tab, cloud session)
 
 ## Cloud sessions
 

@@ -84,6 +84,7 @@ Prefix: WRK · Scope: working with a session in the Claude app once it runs: ste
 - **WRK-073** `documented` A run of a scheduled task can ask the user for approval: the Claude Desktop release notes mention approval prompts in scheduled runs, with an "Allow for all scheduled runs" choice. [rn-desk]
 - **WRK-074** `documented` In Claude Desktop, when a run of a scheduled task fails because the model was out of reach altogether, the task is started again automatically after 5 minutes, then after 15, then after 30. [rn-desk]
 - **WRK-075** `documented` The safety article points out that scheduled tasks run while the user is away and cannot be watched in real time, and advises starting with low-risk tasks, not scheduling tasks that use sensitive files or take actions that are hard to undo, such as sending messages or making purchases, reviewing the results after each run, and pausing or deleting tasks that are no longer needed. [cw-safe]
+- **WRK-129** `observed` A one-time message that a session scheduled for itself with `send_later` was recorded as a scheduled task bound to the session, to the claude.ai project and to the device "Claude Desktop (macOS)", and the session could delete it before it fired. (session 2026-10-08, Claude app, in a project, Opus 5.5)
 
 ## Managing chats
 
