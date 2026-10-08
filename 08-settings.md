@@ -75,6 +75,8 @@ Prefix: SET · Scope: account, project, per-chat and organization settings in th
 - **SET-101** `documented` An audit log export covers the past 180 days, and each record gives the time, the actor, the event and its details, the entity, the IP address, the device ID, the user agent and the client platform. [audit]
 - **SET-102** `documented` Audit logs record sign-ins and sign-outs, changes to projects and their knowledge documents, the creation, renaming and deletion of chats, file uploads, invitations and member removals, and changes to SSO, just-in-time provisioning, domain verification and data exports; chats and projects appear only by identifier, without titles or content. [audit]
 - **SET-103** `documented` An Enterprise organization that uses customer-managed encryption keys cannot export audit logs; audit log events are also available through the Compliance API. [audit]
+- **SET-104** `documented` The Activity Feed of the Compliance API, for Enterprise and Console organizations, returns per-event activity records within a minute of the event and keeps them for 6 years; recording begins when the Compliance API is first enabled for the organization and earlier activity is not backfilled. [compliance-feed]
+- **SET-105** `documented` The Compliance API documentation calls the audit log export significantly narrower than the Activity Feed, with a capped lookback window. [compliance]
 
 ## What Claude is told about settings
 
@@ -86,6 +88,8 @@ Prefix: SET · Scope: account, project, per-chat and organization settings in th
 
 [audit]: https://support.claude.com/en/articles/9970975-access-audit-logs
 [claim]: https://support.claude.com/en/articles/14625619-claim-and-migrate-accounts-on-your-domain
+[compliance]: https://platform.claude.com/docs/en/manage-claude/compliance-api
+[compliance-feed]: https://platform.claude.com/docs/en/manage-claude/compliance-activity-feed
 [conn]: https://claude.com/docs/connectors/getting-started
 [cw-org]: https://support.claude.com/en/articles/13455879-use-claude-cowork-on-team-and-enterprise-plans
 [cw-web]: https://support.claude.com/en/articles/15520349-use-claude-cowork-on-web-desktop-and-mobile
