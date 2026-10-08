@@ -43,7 +43,7 @@ Contributing:
 | [13-steering-scheduling-sharing.md](13-steering-scheduling-sharing.md) | WRK | Steering a running session, approvals, notifications, scheduled tasks, managing and sharing chats |
 | [14-built-in-tools.md](14-built-in-tools.md) | TOOL | Web search, Research, code execution and file creation, browsers, computer use |
 | [15-data-and-retention.md](15-data-and-retention.md) | DAT | Model training, retention and deletion, location data, feedback |
-| [16-claude-code-permissions-and-automation.md](16-claude-code-permissions-and-automation.md) | CCA | Agentic loop, permissions and hooks, checkpoints, subagents, skills, scheduled work, prompt caching, costs |
+| [16-claude-code-permissions-and-automation.md](16-claude-code-permissions-and-automation.md) | CCA | Agentic loop, permissions and hooks, checkpoints, subagents, skills, scheduled work, print mode and CI, prompt caching, costs |
 | [17-api-and-agent-sdk.md](17-api-and-agent-sdk.md) | API | Requests, context management, prompt caching, tools, the memory tool, Agent SDK |
 | [18-other-products.md](18-other-products.md) | PRD | Claude Tag, Claude for Microsoft 365, Claude Design, Claude Science and Claude Security: sessions, sharing, controls, data, plans |
 | [conventions.md](conventions.md) | | Statement format, labels, snapshots and releases |

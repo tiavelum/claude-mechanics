@@ -1,6 +1,6 @@
 # 16 Claude Code: permissions and automation
 
-Prefix: CCA · Scope: how Claude Code acts: the agentic loop and steering, permissions and hooks, checkpoints, how subagents, skills, plugins and MCP servers are defined and run, scheduled work, prompt caching and costs · Last checked: 2026-10-06
+Prefix: CCA · Scope: how Claude Code acts: the agentic loop and steering, permissions and hooks, checkpoints, how subagents, skills, plugins and MCP servers are defined and run, scheduled work, runs without a person at the terminal and in CI, prompt caching and costs · Last checked: 2026-10-06
 
 ## The agentic loop
 
@@ -152,14 +152,54 @@ Prefix: CCA · Scope: how Claude Code acts: the agentic loop and steering, permi
 - **CCA-230** `documented` From v2.1.234, when a session limit stops Claude mid-task in an interactive session signed in with a subscription, Claude Code waits in the open session and continues the task after the reset, re-arming the wait at most twice in a row; it does not offer the wait in background sessions or `-p` runs, and does not start it on its own for a reset more than 24 hours away. [cc-int]
 - **CCA-231** `documented` A scheduled task fires on its interval even while the session is idle, sending the full context each time, which adds to usage. [cc-costs]
 
+## Runs without a person at the terminal
+
+- **CCA-240** `documented` `-p`, or `--print`, runs Claude Code non-interactively: it takes the prompt from the command line and from stdin, prints the result and exits, with exit code 0 on success and a non-zero code on failure; the documentation presents this as the Agent SDK used through the CLI. [cc-headless]
+- **CCA-241** `documented` Print mode has three output formats: `text`, the default; `json`, with the result, the session ID and metadata; and `stream-json`, one JSON event per line; `--json-schema` together with `json` adds output that matches the given schema in a `structured_output` field. [cc-headless]
+- **CCA-242** `documented` Stdin piped into a `-p` run is capped at 10 MB; above the cap Claude Code exits with an error. [cc-headless]
+- **CCA-243** `documented` `--max-turns` and `--max-budget-usd` work in print mode only: the first ends the run with an error after the given number of agentic turns, with no limit by default, and the second stops it once Claude Code's client-side cost estimate, subagents included, reaches the given dollar amount. [cc-cli]
+- **CCA-244** `documented` Once a `-p` run has returned its final result, a background Bash task that Claude started there is terminated about five seconds later, while a background subagent or workflow keeps the run open until it completes, by default for at most 10 minutes of continuous idle waiting, after which Claude Code stops it and drops its partial result. [cc-headless]
+- **CCA-245** `documented` A `-p` run stopped with SIGTERM exits with code 143: the turn in progress stays unfinished and records no result, running Bash commands are killed, and only `SessionEnd` hooks still run; SIGINT ends the turn instead. [cc-headless]
+- **CCA-246** `documented` Without `--bare`, a `-p` run loads the same context an interactive session would, including what is configured in the working directory and in `~/.claude`: CLAUDE.md, auto memory, hooks, skills, custom commands, subagents, plugins and MCP servers. [cc-headless]
+- **CCA-247** `documented` `--bare` skips the discovery of hooks, skills, custom commands, subagents, installed plugins, MCP servers, auto memory and CLAUDE.md, leaves Claude the Bash, file read and file edit tools, connects only MCP servers given on the command line, sends no system reminders and runs no background tasks; the documentation recommends it for scripted calls and says it will become the default for `-p`. [cc-headless]
+- **CCA-248** `documented` In bare mode Claude Code reads neither OAuth credentials, the system keychain nor `CLAUDE_CODE_OAUTH_TOKEN`, so a run against the Anthropic API needs `ANTHROPIC_API_KEY` or an `apiKeyHelper` passed in `--settings` and cannot use a subscription login. [cc-headless] [cc-auth]
+- **CCA-249** `documented` A `-p` run shows no workspace trust dialog: in a folder that was never trusted it still runs the hooks, the `env` block and the helper commands of the project's settings files and honours the `allowed-tools` of project skills, but it does not apply the `permissions.allow` rules and `additionalDirectories` of `.claude/settings.json`. [cc-headless] [cc-perm]
+- **CCA-250** `documented` Where nothing sets a permission mode, a `-p` run or an Agent SDK session starts in Manual (`default`) if it fetches feature flags; if it does not, as on a third-party provider or with telemetry off, it starts in auto from v2.1.285 on and in Manual in earlier versions. [cc-modes]
+- **CCA-251** `documented` In a `-p` run with no permission host, that is neither a `--permission-prompt-tool` nor an Agent SDK callback, every call that would prompt is denied; `--permission-prompts none`, from v2.1.259 on, also tells Claude not to retry such calls, removes the tools that need a person's answer, such as `AskUserQuestion`, and keeps the run from waiting on a host where there is one. [cc-headless] [cc-cli]
+- **CCA-252** `documented` In auto mode, a `-p` run without a `--permission-prompt-tool` is not stopped by repeated blocks from the classifier: the blocked action does not run, and Claude carries on. [cc-modes]
+- **CCA-253** `documented` In a `-p` run, skills and custom commands named in the prompt work, built-in commands that exist only in the terminal interface, such as `/login`, do not, and a few commands, such as `/model` and `/effort`, take their value as an argument. [cc-headless]
+- **CCA-254** `documented` A `-p` run is saved as a session that a later run can continue with `--continue` or with `--resume` and its session ID, unless `--no-session-persistence` was set; an interactive `claude --continue` skips sessions created with `-p` or the Agent SDK. [cc-headless] [cc-cli]
+- **CCA-255** `documented` With `--output-format json`, the result of a `-p` run includes `total_cost_usd` and a cost breakdown per model, both client-side estimates that can differ from the bill. [cc-headless]
+- **CCA-256** `documented` `claude setup-token` creates a one-year OAuth token for CI and scripts, tied to a Pro, Max, Team or Enterprise subscription and supplied as `CLAUDE_CODE_OAUTH_TOKEN`; it can only make model requests, so it neither establishes Remote Control sessions nor fetches claude.ai connectors. [cc-auth]
+- **CCA-257** `documented` In `-p` mode a set `ANTHROPIC_API_KEY` is always used, without the one-time approval an interactive session asks for, and it ranks above `CLAUDE_CODE_OAUTH_TOKEN` and the subscription login from `/login`. [cc-auth]
+- **CCA-258** `documented` For a Team or Enterprise member without billing access, `/usage-credits` in a `-p` run sends no request to the organization's admins and points to an interactive session instead. [cc-costs]
+
+## Claude Code in CI
+
+- **CCA-270** `documented` Claude Code GitHub Actions is the action `anthropics/claude-code-action`, built on the Agent SDK, which runs Claude Code in a repository's GitHub workflows on GitHub-hosted runners; it is separate from Code Review and from cloud sessions. [cc-gha]
+- **CCA-271** `documented` The action is set up either with `/install-github-app` in Claude Code, which works for github.com repositories only, or by installing the Claude GitHub App, adding a repository secret and copying a workflow file by hand; both ways need admin access to the repository. [cc-gha]
+- **CCA-272** `documented` The action authenticates with a Claude Console API key (`ANTHROPIC_API_KEY`), with a subscription OAuth token from `claude setup-token` (`CLAUDE_CODE_OAUTH_TOKEN`), through workload identity federation with a Console service account, or with Amazon Bedrock, Google Cloud's Agent Platform or Microsoft Foundry through OIDC. [cc-gha]
+- **CCA-273** `documented` A run of the action uses GitHub Actions minutes and tokens: with an API key the tokens are billed as API usage, with an OAuth token they draw on the Claude subscription of the person who created the token, which is why the documentation advises an API key for a secret shared across repositories. [cc-gha]
+- **CCA-274** `documented` Without a `prompt` input the action runs in interactive mode and answers the trigger phrase, `@claude` by default, in comments, reviews or a new issue, reporting in a comment; with a `prompt` input it runs in automation mode on any GitHub event, cron schedules included, and writes its results to the run log unless the prompt has it post them. [cc-gha]
+- **CCA-275** `documented` Before Claude starts, the action checks that the triggering user has write access on issue and pull request events, unless the user is listed in `allowed_non_write_users`, and rejects bot actors not listed in `allowed_bots`; GitHub attributes a scheduled run to a repository user. [cc-gha]
+- **CCA-276** `documented` In automation mode with a plain-text prompt, Claude has no shell or GitHub API access until the workflow grants tools with `--allowedTools` in `claude_args` or a `permissions.allow` rule in the `settings` input; a skill given as the prompt can use the tools its `allowed-tools` field grants. [cc-gha]
+- **CCA-277** `documented` The Claude GitHub App serves the action, Code Review and auto-fix in cloud sessions with one permission set, which includes write access to contents, issues, pull requests, actions, checks, discussions, repository hooks and workflows and is granted whole on installation; a custom app limited to contents, issues and pull requests serves the action alone. [cc-gha]
+- **CCA-278** `documented` The action reads the repository's `CLAUDE.md` on every run, and its `claude_args` input passes any Claude Code CLI flag, such as `--max-turns` or `--model`; without `--model` it uses Claude Code's default model. [cc-gha]
+- **CCA-279** `documented` Claude Code for GitLab CI/CD is in beta and maintained by GitLab; a job runs `claude -p` on the project's own GitLab runners against the Claude API, Amazon Bedrock or Google Cloud's Agent Platform. [cc-gitlab]
+
 ## Sources
 
+[cc-auth]: https://code.claude.com/docs/en/authentication
 [cc-cache]: https://code.claude.com/docs/en/prompt-caching
 [cc-check]: https://code.claude.com/docs/en/checkpointing
+[cc-cli]: https://code.claude.com/docs/en/cli-reference
 [cc-costs]: https://code.claude.com/docs/en/costs
 [cc-ctx]: https://code.claude.com/docs/en/context-window
 [cc-desk-sched]: https://code.claude.com/docs/en/desktop-scheduled-tasks
 [cc-ext]: https://code.claude.com/docs/en/features-overview
+[cc-gha]: https://code.claude.com/docs/en/github-actions
+[cc-gitlab]: https://code.claude.com/docs/en/gitlab-ci-cd
+[cc-headless]: https://code.claude.com/docs/en/headless
 [cc-hooks-guide]: https://code.claude.com/docs/en/hooks-guide
 [cc-how]: https://code.claude.com/docs/en/how-claude-code-works
 [cc-int]: https://code.claude.com/docs/en/interactive-mode
