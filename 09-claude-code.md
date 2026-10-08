@@ -1,6 +1,6 @@
 # 09 Claude Code
 
-Prefix: CC · Scope: memory, instruction files, settings, sessions and their environments (worktrees, cloud environments, Remote Control), and context in Claude Code (terminal, desktop Code tab, IDE, cloud sessions), and how it relates to the Claude app · Last checked: 2026-10-07
+Prefix: CC · Scope: memory, instruction files, settings, sessions and their environments (worktrees, cloud environments, Remote Control), and context and voice dictation in Claude Code (terminal, desktop Code tab, IDE, cloud sessions), and how it relates to the Claude app · Last checked: 2026-10-07
 
 ## Memory model
 
@@ -192,6 +192,14 @@ Prefix: CC · Scope: memory, instruction files, settings, sessions and their env
 - **CC-134** `documented` A style switched mid-session applies from the next message; before v2.1.251 it applied only after `/clear` or in a new session. [cc-styles]
 - **CC-135** `documented` Output styles affect the main conversation and forks, but no other subagent, since those run their own system prompt. [cc-styles]
 
+## Voice dictation
+
+- **CC-261** `documented` Voice dictation in Claude Code, turned on with `/voice` and kept across sessions in the `voice` setting, transcribes speech live into the prompt of the CLI or the VS Code extension, by default while Space is held, or in tap mode from one tap to the next. [cc-voice]
+- **CC-262** `documented` Dictation streams the recorded audio to Anthropic's servers for transcription, with no local processing, and works only with a claude.ai sign-in: not with an API key, `ANTHROPIC_AUTH_TOKEN`, an `apiKeyHelper`, Amazon Bedrock, Google Cloud's Agent Platform or Microsoft Foundry. [cc-voice]
+- **CC-263** `documented` Transcription uses no Claude messages or tokens and does not count toward the limits shown in `/usage`. [cc-voice]
+- **CC-264** `documented` Dictation needs a microphone on the machine running Claude Code, so it does not work in cloud sessions, SSH sessions or VS Code Remote sessions; an organization policy can turn it off. [cc-voice]
+- **CC-265** `documented` Dictation follows the `language` setting that also sets Claude's response language, defaults to English and supports 20 languages; the project name and the git branch are added as recognition hints. [cc-voice]
+
 ## Relationship to the Claude app
 
 - **CC-110** `documented` A cloud session runs Claude Code on cloud infrastructure instead of the user's machine, keeps running after the laptop is closed and can be started from claude.ai/code, the Claude mobile app, the desktop app, the terminal with `claude --cloud`, or a routine. [cc-web]
@@ -313,6 +321,7 @@ Prefix: CC · Scope: memory, instruction files, settings, sessions and their env
 [cc-styles]: https://code.claude.com/docs/en/output-styles
 [cc-sub]: https://code.claude.com/docs/en/sub-agents
 [cc-teams]: https://code.claude.com/docs/en/agent-teams
+[cc-voice]: https://code.claude.com/docs/en/voice-dictation
 [cc-web]: https://code.claude.com/docs/en/claude-code-on-the-web
 [cc-wt]: https://code.claude.com/docs/en/worktrees
 [ctx]: https://support.claude.com/en/articles/8606394-how-large-is-the-context-window-on-paid-claude-plans

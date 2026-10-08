@@ -1,6 +1,6 @@
 # 14 Built-in tools
 
-Prefix: TOOL · Scope: tools built into the Claude app: web search, Research, code execution and file creation, the browsers and computer use · Last checked: 2026-10-07
+Prefix: TOOL · Scope: tools built into the Claude app: web search, Research, code execution and file creation, the browsers, computer use, inline visuals and voice · Last checked: 2026-10-07
 
 ## Web search
 
@@ -37,6 +37,13 @@ Prefix: TOOL · Scope: tools built into the Claude app: web search, Research, co
 - **TOOL-035** `documented` In the new Claude experience, files that Claude creates are shown beside the conversation. [one]
 - **TOOL-036** `documented` The file creation article sets a maximum of 30 MB per file for code execution and file creation, for uploads and downloads alike. [files]
 - **TOOL-037** `documented` The file creation article says Claude can work through a PDF larger than 30 MB in its computing environment without loading it into the context window. [files]
+
+## Inline visuals and cards
+
+- **TOOL-157** `documented` Custom visuals, in beta, are diagrams, charts and interactive visuals that Claude builds in HTML inside the conversation, on the web and in Claude Desktop, in chat and in Cowork; nothing has to be switched on, Claude decides when a visual helps, and they do not render in Claude for iOS or Android. [visuals]
+- **TOOL-158** `documented` A custom visual is ephemeral by default and, unlike an artifact, is not saved separately once the conversation moves on; it can be copied as an image, downloaded as an .svg or .html file, or saved as an artifact. [visuals]
+- **TOOL-159** `documented` In chat, a click inside a custom visual can send a follow-up prompt, which Cowork does not offer yet; recipients of a shared chat who are signed in see its custom visuals on the web and in Claude Desktop. [visuals]
+- **TOOL-160** `documented` Besides custom visuals, Claude can show weather, powered by Google Maps, and recipe cards with adjustable servings and units, both only with web search on and shown visually only on the web and in Claude Desktop, sports scores as text, and clickable multiple-choice, multi-select and ranking inputs when it needs more information. [vis-content]
 - **TOOL-156** `observed` The session had tools that render content inline in the chat rather than as files: a Visualizer for SVG and HTML widgets, and cards for charts, places and maps, itineraries, recipes, product comparisons, quizzes, translations, weather, step-by-step guides and message drafts. (session 2026-10-08, claude.ai, in a project)
 
 ## Network access for code execution
@@ -146,6 +153,18 @@ Prefix: TOOL · Scope: tools built into the Claude app: web search, Research, co
 - **TOOL-151** `documented` The documentation advises keeping banking, healthcare, government and other sensitive apps out of computer use's reach, closing files and apps with sensitive content beforehand, and starting with simple tasks and specific prompts. [cu]
 - **TOOL-152** `documented` The documentation strongly advises against using computer use for financial accounts or investments, legal documents or contracts, medical information, or apps that hold other people's personal information. [cu]
 
+## Voice
+
+- **TOOL-170** `documented` Voice mode, in beta, is a spoken conversation in which Claude answers aloud, on iOS, Android, Claude Desktop and the web and on every plan from Free to Enterprise; it is hands-free by default, with Claude answering at natural pauses, or push-to-talk. [voice]
+- **TOOL-171** `documented` Voice mode starts on the model last used in text chat, moved to that model's latest generation; the model can be changed, but Claude Fable is not available in voice mode. [voice]
+- **TOOL-172** `documented` The user can move between text and voice within one conversation without losing context, and voice conversations count toward the plan's usage limits. [voice]
+- **TOOL-173** `documented` In voice mode Claude can search the web and use connected tools such as Gmail, Google Calendar, Google Docs and Slack; the voice mode article allows one connected tool on Free and more on paid plans. [voice]
+- **TOOL-174** `documented` Text transcripts of voice conversations are saved in the chat history. [voice]
+- **TOOL-175** `documented` Voice mode offers a small preset set of voices, chosen on the web and in Claude Desktop under Settings > General > Voice settings, and its language is set apart from the app's display language; languages other than English are in beta. [voice]
+- **TOOL-176** `documented` Voice mode works in any conversation of the new Claude experience, while Cowork and Claude Code offer dictation only. [voice]
+- **TOOL-177** `documented` To turn voice mode off for an Enterprise organization, its owner has to contact Support; the voice mode article names no admin setting for it. [voice]
+- **TOOL-178** `documented` Dictation in Claude for iOS and Android, on every plan, turns speech into a text prompt to which Claude replies in text; it supports twelve languages, those other than English in beta. [dict]
+
 ## Sources
 
 [browser]: https://support.claude.com/en/articles/16607400-use-the-built-in-browser-in-claude-cowork
@@ -154,7 +173,11 @@ Prefix: TOOL · Scope: tools built into the Claude app: web search, Research, co
 [cu]: https://support.claude.com/en/articles/14128542-let-claude-use-your-computer-in-cowork
 [cw-org]: https://support.claude.com/en/articles/13455879-use-claude-cowork-on-team-and-enterprise-plans
 [cw-web]: https://support.claude.com/en/articles/15520349-use-claude-cowork-on-web-desktop-and-mobile
+[dict]: https://support.claude.com/en/articles/10065434-use-dictation-on-claude-mobile
 [files]: https://support.claude.com/en/articles/12111783-create-and-edit-files-with-claude
 [one]: https://support.claude.com/en/articles/16761823-claude-cowork-and-chat-are-one-claude
 [research]: https://support.claude.com/en/articles/11088861-use-research-on-claude
+[vis-content]: https://support.claude.com/en/articles/13641943-visual-and-interactive-content
+[visuals]: https://support.claude.com/en/articles/13979539-custom-visuals-in-chat-and-cowork
+[voice]: https://support.claude.com/en/articles/11101966-use-voice-mode
 [web]: https://support.claude.com/en/articles/10684626-enable-and-use-web-search

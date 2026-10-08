@@ -5,15 +5,17 @@ Prefix: MOD · Scope: Claude's models in the Claude app, Claude Code and the API
 ## Lineup and tiers
 
 - **MOD-001** `documented` The models overview compares four current models: Fable 5.1, Opus 5.5, Sonnet 5.5 and Haiku 4.5. [api-models]
-- **MOD-002** `conflicting` The models overview lists Sonnet 5.5 as the current Sonnet model and Sonnet 5 among the legacy models, while the guide on optimizing for cost and intelligence names Haiku 4.5, Sonnet 5, Opus 5.5 and Fable 5.1 as the current models, in ascending order of cost and capability. [api-models] [api-cost]
+- **MOD-002** `documented` The models overview and the guide on optimizing for cost and intelligence both give Sonnet 5.5 as the current Sonnet model; the guide lists the current models, from lowest to highest cost and capability, as Haiku 5.5, Sonnet 5.5, Opus 5.5 and Fable 5.1. [api-models] [api-cost]
 - **MOD-003** `documented` Fable 5.1 was released on 2026-09-01, together with Claude Mythos 5.1. [api-fable51] [rn]
 - **MOD-004** `documented` Opus 5.5 was released on 2026-09-22 as the first model of the Claude 5.5 family. [api-opus55] [news-opus55]
 - **MOD-005** `documented` Sonnet 5.5 was released on 2026-09-28 as the second model of the Claude 5.5 family. [api-sonnet55] [rn]
 - **MOD-006** `documented` Haiku 4.5 was released on 2025-10-15. [api-haiku45]
 - **MOD-007** `documented` The announcement of Opus 5.5, which the release notes place on 2026-09-22, said that Sonnet 5.5 and Haiku 5.5 were to be released in the weeks after it. [news-opus55] [rn]
 - **MOD-008** `documented` Fable 5.1 and Mythos 5.1 are one and the same model, differing only in how strict their safeguards are: Fable 5.1 is the generally available version, and Mythos 5.1 loosens the safeguards for vetted people and organizations whose work the cybersecurity and life-sciences restrictions of Fable 5.1 affect. [news-fable51]
-- **MOD-009** `documented` According to the platform documentation, Mythos 5.1 is available by invitation only, to customers approved under Project Glasswing, and has the specifications and pricing of Fable 5.1. [api-fable51] [api-fable51-new]
+- **MOD-009** `documented` According to the platform documentation, Mythos 5.1 is available only to organizations verified through one of Anthropic's verification programs, such as the Cyber Verification Program, and is requested by applying to the program for the use case or through an Anthropic, AWS or Google Cloud account team; it has the specifications and pricing of Fable 5.1. [api-fable51] [api-fable51-new] [api-mythos51]
 - **MOD-010** `documented` The Fable 5.1 announcement names two trusted access programs as the way to Mythos 5.1, the Cyber Verification Program and the Life Sciences Verification Program, and says that at the time of the announcement only a set of US organizations had access. [news-fable51]
+- **MOD-399** `documented` Every tier of the Cyber Verification Program includes Mythos 5.1, together with Opus 5.5 and Sonnet 5.5; organizations already in Project Glasswing need not reapply and move to the program's Specialized Access tier, which requires an in-depth review in collaboration with the US government. [cvp]
+- **MOD-400** `documented` Through the Cyber Verification Program, Mythos 5.1 is available on Pro only with usage credits, and on Max it shares with Fable an allowance of up to 50% of the weekly usage limit. [cvp]
 - **MOD-011** `documented` The model selection guide describes Fable 5.1 as the most capable model that Anthropic makes available to every customer. [api-choose]
 - **MOD-012** `documented` The release notes introduce Fable 5, launched on 2026-06-09, as a "Mythos-class" model made safe for general use, and the Fable product page calls Fable 5.1 a "Mythos-level" model. [rn] [fable-page]
 - **MOD-013** `documented` On 2026-06-12 Anthropic switched off Fable 5 and Mythos 5 for every customer in order to follow an export control directive of the US government that suspended foreign nationals' access to the two models; its statement of that day said that access to its other models would not be affected. [news-fable-access] [rn]
@@ -345,6 +347,7 @@ Prefix: MOD · Scope: Claude's models in the Claude app, Claude Code and the API
 [api-haiku45]: https://platform.claude.com/docs/en/models/haiku-4-5/overview
 [api-ids]: https://platform.claude.com/docs/en/about-claude/models/model-ids-and-versions
 [api-models]: https://platform.claude.com/docs/en/models/overview
+[api-mythos51]: https://platform.claude.com/docs/en/models/mythos-5-1/overview
 [api-opus55]: https://platform.claude.com/docs/en/models/opus-5-5/overview
 [api-opus55-new]: https://platform.claude.com/docs/en/models/opus-5-5/whats-new-opus-5-5
 [api-preserved]: https://platform.claude.com/docs/en/build-with-claude/preserved-thinking
@@ -356,6 +359,7 @@ Prefix: MOD · Scope: Claude's models in the Claude app, Claude Code and the API
 [api-thinking]: https://platform.claude.com/docs/en/build-with-claude/thinking
 [cc-model]: https://code.claude.com/docs/en/model-config
 [cc-model-help]: https://support.claude.com/en/articles/11940350-claude-code-model-configuration
+[cvp]: https://support.claude.com/en/articles/14604842-cyber-verification-program
 [fable-page]: https://www.anthropic.com/claude/fable
 [fable-plan]: https://support.claude.com/en/articles/15424964-claude-fable-models-on-your-plan
 [model-menu]: https://support.claude.com/en/articles/8664678-change-the-model-effort-and-thinking-settings

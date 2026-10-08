@@ -90,6 +90,7 @@ Prefix: PRD · Scope: Claude products outside the Claude app and Claude Code (Cl
 ## Claude Security
 
 - **PRD-074** `documented` Claude Security scans an organization's codebases for vulnerabilities, verifies each finding in several stages and suggests patches for human review, at claude.ai/security; it is in public beta on the Enterprise plan. [sec-help] [cc-sec]
+- **PRD-083** `documented` Claude Security was previously called Claude Code Security, under which name it was tested in a limited research preview; its public beta was announced on 2026-04-30. [sec-beta]
 - **PRD-075** `documented` Claude Security runs its scans on Claude Mythos 5 without giving users direct access to the model, and reaches only repositories on GitHub.com and GitHub Enterprise Server, through the user's connected GitHub account and the Claude GitHub App; an Enterprise Server instance must accept inbound traffic from Anthropic's published IP ranges. [sec-help]
 - **PRD-076** `documented` An organization owner turns Claude Security on under Organization settings > Claude Security with "Turn on for your organization"; the help center names no other admin control. [sec-help]
 - **PRD-077** `documented` A Claude Security finding carries a severity judged by its exploitability in that codebase, which cannot be configured, and a status of Open, Dismissed or Resolved; findings can be copied, downloaded as CSV or Markdown, or sent to other systems through webhooks per project, and results vary between runs. [sec-help]
@@ -119,6 +120,7 @@ Prefix: PRD · Scope: Claude products outside the Claude app and Claude Code (Cl
 [sci-admin]: https://claude.com/docs/claude-science/admin-controls
 [sci-core]: https://claude.com/docs/claude-science/core-concepts
 [sci-data]: https://claude.com/docs/claude-science/how-claude-science-works-with-your-data
+[sec-beta]: https://claude.com/resources/articles/claude-security-public-beta
 [sec-help]: https://support.claude.com/en/articles/14661296-use-claude-security
 [tag]: https://claude.com/docs/claude-tag
 [tag-cc]: https://claude.com/docs/claude-tag/concepts/for-claude-code-users

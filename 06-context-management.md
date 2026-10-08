@@ -62,7 +62,19 @@ Prefix: CTX · Scope: context window, long conversations, files, usage and what 
 - **CTX-054** `documented` A limit reset, given occasionally to eligible plans, sets either the five-hour session limit or the weekly limit back to full at once; it cannot be undone, and weekly limits still reset at their usual time. [reset]
 - **CTX-055** `documented` A limit reset is used from Settings > Usage, in a browser or in Claude Desktop, or from the message shown at a limit, but not in Claude Mobile or Claude Code; because limits are shared across the account, the reset applies there too. [reset]
 - **CTX-057** `documented` On Team and seat-based Enterprise plans, usage credits let members on any seat type carry on with Claude, Cowork and Claude Code once their seat's included usage is used up. [team] [credits-org]
+- **CTX-063** `documented` On Team and seat-based Enterprise plans, Owners and Primary Owners set a monthly cap on the organization's total usage-credit spend and limits per member under Organization settings > Usage; seat-based Enterprise adds limits per seat tier, Standard or Premium, and Enterprise limits per group, and a member's limit stays subject to the organization and seat limits. [credits-org]
+- **CTX-064** `documented` A member who reaches a spend limit cannot go on using Claude, Cowork or Claude Code on usage credits until the next billing period or until the limit changes; limits are checked before each request, so one request can overshoot a limit. [credits-org]
+- **CTX-065** `documented` Usage credits are prepaid on Team, with optional auto-reload, and billed monthly by consumption on seat-based Enterprise, in both cases at standard API rates; usage-based Enterprise bills all usage at API rates from the first token. [credits-org]
+- **CTX-066** `documented` On seat-based Enterprise, a member who reaches the included usage can send a "Request usage credits" request to be moved to a Premium seat or given usage credits; roles whose Billing permission is "Can manage" review such requests, and Owners can turn requests off. [credits-org]
 - **CTX-058** `documented` With Research, usage credits come into play only after the plan's included limits are exceeded, and Research can use tokens faster because it runs several searches. [credits]
+
+## Usage analytics (Team and Enterprise)
+
+- **CTX-070** `documented` Usage analytics are available on Team to Owners and Primary Owners and on Enterprise also to Admins, who see everything except spend. [analytics]
+- **CTX-071** `documented` Usage analytics cover active members and seats, adoption, skills, connectors, results such as pull requests and designs, and spend, with separate views for chat, Claude Code, Claude Design and Cowork; on seat-based Enterprise, spend appears only with usage credits on and covers only usage beyond the seats. [analytics]
+- **CTX-072** `documented` The spend report is a CSV export with one row per person and model, giving requests, tokens and net and gross spend, for periods reaching back at most 90 days; its data is refreshed daily, one day behind. [analytics]
+- **CTX-073** `documented` On usage-based Enterprise, members see their own usage by product, model and skill and where they stand against spend limits in Settings > Usage while the organization's "Member analytics" toggle is on, which it is by default since 2026-07-11. [analytics]
+- **CTX-074** `documented` The Enterprise Analytics API returns the same metrics programmatically, including costs at discounted and at list prices; only the Primary Owner can enable it and create a key with the `read:analytics` scope. [analytics]
 
 ## Files and uploads
 
@@ -82,6 +94,7 @@ Prefix: CTX · Scope: context window, long conversations, files, usage and what 
 
 ## Sources
 
+[analytics]: https://support.claude.com/en/articles/12883420-view-usage-analytics-for-team-and-enterprise-plans
 [api-ctx]: https://platform.claude.com/docs/en/build-with-claude/context-windows
 [api-vision]: https://platform.claude.com/docs/en/build-with-claude/vision
 [cc-proj]: https://code.claude.com/docs/en/claude-projects
