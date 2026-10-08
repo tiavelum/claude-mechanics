@@ -2,7 +2,7 @@
 
 ## Scope
 
-- Document how Claude works: sessions, memory, chat search, projects, instructions, context, settings, extensions, models, built-in tools, data handling, Claude Code, and the API and Agent SDK. Track how these change over time.
+- Document how Claude works: sessions, memory, chat search, projects, instructions, context, settings, extensions, models, built-in tools, data handling, Claude Code, other Claude products, and the API and Agent SDK as the base of the Claude app and Claude Code. Track how these change over time.
 - Describe Claude's mechanisms only, never the user's own content or projects.
 - Treat the repository tiavelum/claude-mechanics, branch main, as the current snapshot. Read the relevant chapter from it before answering a question it covers or proposing a change.
 - Read repository files through the GitHub connector; if it is not available, ask the user to attach the files needed.
