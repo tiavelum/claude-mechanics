@@ -58,7 +58,9 @@ Prefix: MEM · Scope: ... · Last checked: 2026-10-05
 
 ## Open questions
 
-- A point that neither documentation nor observation settles is a GitHub issue labelled `open-question`, stating the question, a test that would settle it, and the IDs of related statements.
+- A point that neither documentation nor observation settles is recorded in the label of the statements it concerns, as `conflicting` or `inferred`.
+- It becomes a GitHub issue labelled `open-question` only when a statement would otherwise be wrong or misleading and a test is within reach of the repository's owner; the issue states the question, that test, and the IDs of related statements.
+- An open question that no longer meets this bar is closed as not planned, with a comment giving the reason.
 - When a question is settled, its answer becomes a statement, and the issue is closed with a reference to that commit.
 
 ## Snapshots and releases

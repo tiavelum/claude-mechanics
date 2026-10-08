@@ -32,7 +32,7 @@ Follow conventions.md throughout. The scripts are in `scripts/` next to this fil
 ## 4. Settle what follows
 
 1. Re-check every `inferred` and scenario statement whose basis changed.
-2. Re-check each open issue labelled `open-question`; settle the ones the new evidence answers, and open new issues for points that remain unsettled.
+2. Re-check each open issue labelled `open-question`; settle the ones the new evidence answers, and open a new issue for a point that remains unsettled only as conventions.md allows.
 3. Add dated changes found on the release notes page or elsewhere to `11-timeline.md`.
 4. Update *Last checked* in every chapter header.
 5. Run `scripts/check-statements.py` until it reports no problems.
