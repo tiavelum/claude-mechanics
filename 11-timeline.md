@@ -54,6 +54,7 @@ Prefix: CHG · Scope: dated changes to the mechanisms in this knowledge base, as
 - **CHG-086** `documented` 2026-06-17: Claude Design began sharing usage limits with the rest of Claude, Claude Code included, gained a rebuilt design system import and a place in the sidebar of Claude Desktop. [design-blog]
 - **CHG-038** `documented` 2026-06-25: Team and Enterprise admins can require members to verify their device (Trusted Devices) before they view or steer local Claude Code sessions remotely. [rn]
 - **CHG-064** `documented` 2026-06-30: Sonnet 5 released. [rn]
+- **CHG-087** `documented` 2026-06-30: Claude Science launched publicly, in beta, as a desktop workbench for scientists on macOS and Linux for Pro, Max, Team and Enterprise. [sci-news] [sci-log]
 - **CHG-065** `documented` 2026-07-01: access to Fable 5 and Mythos 5 restored. [rn]
 - **CHG-066** `documented` 2026-07-01: model entitlements released in beta for Enterprise, letting admins decide which models and which effort settings their users can use. [rn]
 - **CHG-007** `documented` 2026-07-07: Cowork available on web and mobile, rolling out over several weeks starting with Max; sessions run remotely (in beta) and are saved to the account, and scheduled tasks run even when no device is online; chat and Cowork came to share one home, where projects and artifacts are kept in a single place for both. [rn]
@@ -71,6 +72,7 @@ Prefix: CHG · Scope: dated changes to the mechanisms in this knowledge base, as
 - **CHG-073** `documented` 2026-09-01: Fable 5.1 and Mythos 5.1 released. [rn]
 - **CHG-010** `documented` 2026-09-09: end of the option in Settings > Memory to export legacy memory. [mem]
 - **CHG-074** `documented` 2026-09-10: the built-in browser for Cowork became on by default on Enterprise, except where an owner had turned it off and in organizations with HIPAA enabled, where it stays off until an owner turns it on. [cw-org]
+- **CHG-088** `documented` 2026-09-10: Claude Science became available on Windows. [sci-log]
 - **CHG-075** `documented` 2026-09-14: compaction on demand added to the Messages API on the Claude API, in beta under the header `compact-2026-09-04`. [api-rn]
 - **CHG-011** `documented` 2026-09-16: chat and Cowork merged into one Claude, rolling out gradually, starting with Pro and Max on web, desktop and mobile; Cowork's global instructions were folded into Instructions for Claude in Settings > General. [rn] [blog-cw] [one]
 - **CHG-016** `documented` 2026-09-16: cut-off for legacy artifacts; artifacts made in a chat before this date keep working and can still be published and shared, but no new ones can be made. [art]
@@ -113,6 +115,8 @@ Prefix: CHG · Scope: dated changes to the mechanisms in this knowledge base, as
 [one]: https://support.claude.com/en/articles/16761823-claude-cowork-and-chat-are-one-claude
 [promo]: https://support.claude.com/en/articles/17274727-artifact-usage-promotion
 [rn]: https://support.claude.com/en/articles/12138966-release-notes
+[sci-log]: https://claude.com/docs/claude-science/changelog
+[sci-news]: https://www.anthropic.com/news/claude-science-ai-workbench
 [skills-org]: https://support.claude.com/en/articles/13119606-provision-and-manage-skills-for-your-organization
 [sp-opus55]: https://platform.claude.com/docs/en/release-notes/system-prompts/claude-opus-5-5
 [sp-sonnet55]: https://platform.claude.com/docs/en/release-notes/system-prompts/claude-sonnet-5-5

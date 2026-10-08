@@ -65,6 +65,28 @@ Prefix: PRD · Scope: Claude products outside the Claude app and Claude Code (Cl
 - **PRD-053** `documented` A design can be exported as a .zip, PDF, PPTX or standalone HTML, to Google Slides from claude.ai/design only, sent to partner tools, or handed to Claude Code on the user's machine or on the web. [design]
 - **PRD-054** `documented` Claude Design draws on the same usage limits as the rest of Claude, Claude Code included, with no allowance of its own, and stops when they are reached unless usage credits are on. [design] [design-blog]
 
+## Claude Science
+
+- **PRD-055** `documented` Claude Science is a desktop application, installed separately from Claude Desktop and in beta on macOS, Windows and Linux, that pairs Claude with an analysis environment on the user's own computer; it can also run on a Linux server the organization controls, next to its data, while inference runs on Anthropic's service. [sci] [sci-data]
+- **PRD-056** `documented` In Claude Science, Claude writes and runs Python, R or shell code in a sandbox of the operating system that reads and writes only the session's workspace and the folders granted to it, with a network that denies by default all but package managers, the databases behind Featured connectors and hosts the user approved; heavier jobs can run on an SSH host or the user's own Modal account. [sci] [sci-core]
+- **PRD-057** `documented` Claude Science asks on a permission card for each new folder, kind of code run, network host, connector tool, saved credential and remote job, and most grants can be given once, for the conversation, for the project or globally; standing grants are listed and revoked in Settings > Permissions. [sci-core]
+- **PRD-058** `documented` A Claude Science project groups sessions and their artifacts and has custom instructions that Claude reads at the start of every session; such projects are folders on the computer, and Claude Science does not use the projects of claude.ai. [sci-core] [sci-admin]
+- **PRD-059** `documented` Claude Science keeps conversation history, project files, artifacts, memory, settings and stored credentials in a local folder that Anthropic neither hosts nor syncs, so they do not follow the user to another computer; sign-in tokens and stored credentials are encrypted there. [sci-data] [sci-core]
+- **PRD-060** `documented` Claude Science has its own memory of short facts, kept in a local database on the computer and separate from claude.ai memory, with a toggle per session; facts it recalls are sent to Anthropic as part of the session, and the claude.ai setting Capabilities > Memory does not control it. [sci-core] [sci-admin]
+- **PRD-061** `documented` From the Claude account, Claude Science takes the organization instructions, which are added to its requests, the organization's skills and the member's own claude.ai skills, the connectors added for the organization in claude.ai, and the organization's plugins set to be installed by default or required. [sci-admin]
+- **PRD-062** `documented` Claude Science comes with Featured connectors and skills, and members can add custom connectors, as an MCP server URL or a local command, and custom skills; a skill a member publishes from the app is stored with that member's claude.ai skills. [sci] [sci-admin] [sci-data]
+- **PRD-063** `documented` Claude Science is included in Pro, Max, Team and Enterprise and not in Free; on Team and Enterprise it is off until an Owner or Primary Owner turns it on under Organization settings > Claude Science, and its usage counts toward the same limits as Claude Code and Cowork. [sci] [sci-admin]
+- **PRD-064** `documented` Near a usage limit, Claude Science asks whether to keep going; without usage credits a session pauses and resumes after a reset less than 8 hours away, but stops after 8 hours for a later reset, and with usage credits on it asks by default before drawing on them. [sci]
+- **PRD-065** `documented` The organization settings of Claude Science govern Featured and custom connectors and skills, access to work saved under another sign-in, the sandbox network allowlist, a package mirror, SSH hosts, Modal, scientific model endpoints and memory; custom connectors, Modal and earlier saved work default to on for Team and off for Enterprise, and HIPAA-enabled organizations start stricter. [sci-admin]
+- **PRD-066** `documented` Changes to Claude Science's organization settings reach running apps within a few minutes and bind only version 0.1.41 or later, the minimum enforced for Team and Enterprise; an app that cannot reach claude.ai for 72 hours pauses memory, custom connectors, SSH hosts, Modal and model endpoints, and turning a control off deletes nothing on the computer. [sci-admin]
+- **PRD-067** `documented` On Enterprise, seven of Claude Science's controls also exist as capabilities in custom roles, which can only narrow what the organization setting allows; the network allowlist an admin manages holds at most 600 domains and replaces each member's own list. [sci-admin]
+- **PRD-068** `documented` Claude Science sends Anthropic each request to Claude with the conversation so far, including files Claude read, code output, connector results and recalled memory, as well as web search queries, dictation audio, feedback when sent, published skills, and telemetry without conversation or file content. [sci-data]
+- **PRD-069** `documented` For Team and Enterprise, Claude Science's model-call logs follow Anthropic's commercial retention policy, requests to Covered Models are kept for 30 days, and the Commercial Terms bar training on customer content unless a member sends feedback or the organization allows it. [sci-data]
+- **PRD-070** `documented` On Enterprise with the Compliance API on, the organization gets read-only transcripts of Claude Science sessions, in beta and kept for its retention period or 6 years by default, and its settings changes in the Activity Feed; Claude Science writes nothing to the audit log, and the organization's data export leaves out its conversations and files. [sci-data] [sci-admin]
+- **PRD-071** `documented` Zero data retention, Enterprise Frontier Safeguards, coverage under Anthropic's Business Associate Agreement and inference through a third-party cloud are not available for Claude Science, while customer-managed encryption keys cover the content Anthropic stores from it. [sci-data]
+- **PRD-072** `documented` Removing a member ends their access to Claude Science but leaves their data on the computer, and deleting local data deletes nothing that Anthropic holds. [sci-admin]
+- **PRD-073** `documented` Claude Science follows the organization's Models page, so a model turned off for the organization or a custom role leaves the members' model picker within a few minutes. [sci-admin]
+
 ## Sources
 
 [cc-tag]: https://code.claude.com/docs/en/claude-tag
@@ -80,6 +102,10 @@ Prefix: PRD · Scope: Claude products outside the Claude app and Claude Code (Cl
 [m365-ol-help]: https://support.claude.com/en/articles/14855664-use-claude-for-outlook
 [m365-store]: https://claude.com/docs/office-agents/data-storage
 [m365-xl]: https://claude.com/docs/office-agents/excel
+[sci]: https://claude.com/docs/claude-science/overview
+[sci-admin]: https://claude.com/docs/claude-science/admin-controls
+[sci-core]: https://claude.com/docs/claude-science/core-concepts
+[sci-data]: https://claude.com/docs/claude-science/how-claude-science-works-with-your-data
 [tag]: https://claude.com/docs/claude-tag
 [tag-cc]: https://claude.com/docs/claude-tag/concepts/for-claude-code-users
 [tag-cust]: https://claude.com/docs/claude-tag/admins/customize
