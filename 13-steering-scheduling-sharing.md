@@ -97,6 +97,8 @@ Prefix: WRK · Scope: working with a session in the Claude app once it runs: ste
 - **WRK-087** `documented` Deleting a session also deletes the copies of local files that Claude fetched for it, in line with Anthropic's data retention practices. [cw-web]
 - **WRK-088** `documented` In Claude Desktop, the command palette (Cmd+K on a Mac, Ctrl+K under Windows or Linux) can archive or delete whatever is open at the moment, be it a chat, a task, a project or a coding session. [rn-desk]
 - **WRK-126** `observed` The session had a tool that ends the conversation permanently; its instructions allowed it only after repeated failed redirection and an explicit warning, or on the user's confirmed request, and never when the user may be at risk of harm. (session 2026-10-08, claude.ai, in a project)
+- **WRK-127** `documented` Anthropic gave Claude Opus 4 and 4.1 the ability to end a conversation in its consumer chat interfaces, for rare, extreme cases of persistently harmful or abusive behaviour, as a last resort once repeated redirection has failed, or when the user asks; Claude is directed not to use it when a user may be at imminent risk of harming themselves or others. [end-conv]
+- **WRK-128** `documented` In a conversation that Claude has ended, the user can send no further messages, but can edit and retry earlier messages to branch it and can start a new chat at once; the account's other conversations are unaffected. [end-conv]
 
 ## Sharing chats
 
@@ -140,6 +142,7 @@ Prefix: WRK · Scope: working with a session in the Claude app once it runs: ste
 [del-org]: https://privacy.claude.com/en/articles/11117329-how-can-i-delete-or-rename-a-conversation
 [dispatch]: https://support.claude.com/en/articles/13947068-assign-tasks-from-anywhere-in-claude-cowork
 [dispatch-guide]: https://claude.com/docs/cowork/guide/dispatch
+[end-conv]: https://www.anthropic.com/research/end-subset-conversations
 [one]: https://support.claude.com/en/articles/16761823-claude-cowork-and-chat-are-one-claude
 [rn-desk]: https://claude.com/docs/cowork/changelog
 [share]: https://support.claude.com/en/articles/10593882-share-and-unshare-chats

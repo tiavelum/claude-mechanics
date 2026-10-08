@@ -145,6 +145,10 @@ Prefix: DAT · Scope: what happens to conversation data: model training, retenti
 - **DAT-149** `documented` Claude Code's session surveys are turned off with `CLAUDE_CODE_DISABLE_FEEDBACK_SURVEY=1`, and also when one of `DISABLE_TELEMETRY`, `CLAUDE_CODE_DISABLE_NONESSENTIAL_TRAFFIC` or `DO_NOT_TRACK` is set; the setting `feedbackSurveyRate` controls how often they appear. [cc-data]
 - **DAT-150** `documented` An organization that blocks nonessential traffic but collects survey responses with its own OpenTelemetry collector can bring the survey back with `CLAUDE_CODE_ENABLE_FEEDBACK_SURVEY_FOR_OTEL=1`, after which the ratings go only to that collector, and the transcript question and all other feedback traffic to Anthropic stay off. [cc-data]
 
+## Dictation audio
+
+- **DAT-183** `documented` For dictation in the Claude mobile apps on consumer plans, Anthropic deletes the audio once it is converted to text and does not use the voice to train models; the resulting text is kept like other chat content and may be used for training where the user allows it. [dict-privacy] [dict]
+
 ## Location data
 
 - **DAT-160** `documented` When a feature benefits from location data, for example web search asked for local results, Claude may use the IP address to work out a coarse location at city or region level; this holds for consumer accounts and for members of Team and Enterprise organizations. [loc] [loc-org]
@@ -167,6 +171,8 @@ Prefix: DAT · Scope: what happens to conversation data: model training, retenti
 [covered-ret]: https://support.claude.com/en/articles/15425996-data-retention-practices-for-covered-models
 [cw-org]: https://support.claude.com/en/articles/13455879-use-claude-cowork-on-team-and-enterprise-plans
 [del]: https://support.claude.com/en/articles/8230524-delete-or-rename-a-conversation
+[dict]: https://support.claude.com/en/articles/10065434-use-dictation-on-claude-mobile
+[dict-privacy]: https://privacy.claude.com/en/articles/10067979-what-personal-data-is-collected-when-using-dictation-on-the-claude-mobile-apps
 [fb-org]: https://support.claude.com/en/articles/10504844-manage-user-feedback-settings-on-team-and-enterprise-plans
 [loc]: https://privacy.claude.com/en/articles/11186740-does-claude-use-my-location
 [loc-org]: https://privacy.claude.com/en/articles/11186730-does-claude-use-my-team-members-location

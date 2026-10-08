@@ -36,12 +36,12 @@ Contributing:
 | [06-context-management.md](06-context-management.md) | CTX | Context windows, long chats, usage, spend limits and usage analytics, uploads, what each plan includes |
 | [07-skills-connectors-artifacts.md](07-skills-connectors-artifacts.md) | EXT | Extensions that outlive a session, and how an organization controls them |
 | [08-settings.md](08-settings.md) | SET | Account, project, per-chat and organization settings, identity and access, audit logs |
-| [09-claude-code.md](09-claude-code.md) | CC | CLAUDE.md, auto memory, settings, sessions and their environments, compaction |
+| [09-claude-code.md](09-claude-code.md) | CC | CLAUDE.md, auto memory, settings, sessions and their environments, compaction, voice dictation |
 | [10-scenarios.md](10-scenarios.md) | SCN | What sessions share in common setups |
 | [11-timeline.md](11-timeline.md) | CHG | Dated changes |
 | [12-models-effort-thinking.md](12-models-effort-thinking.md) | MOD | Model lineup, identifiers, specifications, thinking, effort, choosing a model, safeguards, pricing |
 | [13-steering-scheduling-sharing.md](13-steering-scheduling-sharing.md) | WRK | Steering a running session, approvals, notifications, scheduled tasks, managing and sharing chats |
-| [14-built-in-tools.md](14-built-in-tools.md) | TOOL | Web search, Research, code execution and file creation, browsers, computer use |
+| [14-built-in-tools.md](14-built-in-tools.md) | TOOL | Web search, Research, code execution and file creation, inline visuals, browsers, computer use, voice |
 | [15-data-and-retention.md](15-data-and-retention.md) | DAT | Model training, retention and deletion, location data, feedback |
 | [16-claude-code-permissions-and-automation.md](16-claude-code-permissions-and-automation.md) | CCA | Agentic loop, permissions and hooks, checkpoints, subagents, skills, scheduled work, print mode and CI, prompt caching, costs |
 | [17-api-and-agent-sdk.md](17-api-and-agent-sdk.md) | API | Requests, context management, prompt caching, tools, the memory tool, Agent SDK |

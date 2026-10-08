@@ -6,6 +6,7 @@ Prefix: CHG · Scope: dated changes to the mechanisms in this knowledge base, as
 - **CHG-090** `documented` 2025-07-15: Enterprise audit logs began recording the start and completion of data exports. [audit]
 - **CHG-018** `documented` 2025-08-01: project permissions and sharing enabled for Team and Enterprise. [rn]
 - **CHG-001** `documented` 2025-08-11: chat search released for Max, Team and Enterprise. [rn]
+- **CHG-092** `documented` 2025-08-15: Claude Opus 4 and 4.1 gained the ability to end a conversation in Anthropic's consumer chat interfaces, described as an ongoing experiment. [end-conv]
 - **CHG-019** `documented` 2025-08-20: extra usage introduced for Team and Enterprise, letting users buy more usage to keep using Claude and Claude Code after reaching their usage limit. [rn]
 - **CHG-023** `documented` 2025-08-20: premium seats introduced for Team and Enterprise, with more usage and access to Claude Code. [rn]
 - **CHG-042** `documented` 2025-08-28: Anthropic announced updated Consumer Terms and a Privacy Policy under which users of Free, Pro and Max, including Claude Code used from such accounts, choose whether their chats and coding sessions may be used to train models. [news-terms]
@@ -113,6 +114,7 @@ Prefix: CHG · Scope: dated changes to the mechanisms in this knowledge base, as
 [cw-web]: https://support.claude.com/en/articles/15520349-use-claude-cowork-on-web-desktop-and-mobile
 [design-blog]: https://claude.com/blog/claude-design-stays-on-brand-for-daily-work
 [design-news]: https://www.anthropic.com/news/claude-design-anthropic-labs
+[end-conv]: https://www.anthropic.com/research/end-subset-conversations
 [focus]: https://support.claude.com/en/articles/15672868-set-break-reminders-and-quiet-hours
 [mem]: https://support.claude.com/en/articles/11817273-use-claude-s-chat-search-and-memory-to-build-on-previous-context
 [news-limits]: https://www.anthropic.com/news/higher-limits-spacex
