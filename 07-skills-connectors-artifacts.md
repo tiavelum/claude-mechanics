@@ -74,6 +74,8 @@ Prefix: EXT · Scope: extensions that persist beyond a single session in the Cla
 - **EXT-055** `documented` Deleting an artifact removes access for everyone invited to it. [pub]
 - **EXT-023** `observed` A published artifact was a hosted page with its own URL, private to the owner until shared, and could be updated in place from a later session by its URL. (session 2026-10-05, claude.ai, outside projects)
 - **EXT-056** `observed` The session's instructions mapped kinds of output to artifact types, such as Slides for decks, Docs for documents and Sheets for tables, and said that the list of types varies by account and can be empty. (session 2026-10-06, claude.ai, outside projects)
+- **EXT-077** `observed` The session's instructions listed artifact types beyond Slides, Docs and Sheets: Design, Whiteboard, Tasks, Design System, Motion and Watercolor, each opening in an editor of its own. (session 2026-10-08, claude.ai, in a project)
+- **EXT-078** `observed` The Artifact tool's description said a published page can declare runtime capabilities, such as reading connected data, keeping state shared across viewers, knowing who is viewing, asking Claude a question and storing files people add, and can keep a small shared database that Claude reads and writes as the user. (session 2026-10-08, claude.ai, in a project)
 - **EXT-024** `inferred` Artifacts and connected documents are a way to carry exact content across sessions, unlike memory, which keeps only a distillate. Basis: EXT-021, MEM-102.
 
 ## Sources

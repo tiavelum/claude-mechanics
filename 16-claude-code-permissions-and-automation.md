@@ -147,6 +147,10 @@ Prefix: CCA · Scope: how Claude Code acts: the agentic loop and steering, permi
 - **CCA-225** `documented` The messages "You've hit your session limit" and "You've hit your weekly limit" concern a subscription plan's usage window, which all models share, so changing the model with `/model` does not help; after the message about an Opus limit or a Sonnet limit, by contrast, work can continue on a model from a different family. [cc-costs]
 - **CCA-226** `documented` The requests a subagent makes are its own, separate from those of the main conversation, yet they draw on the same usage limits. [cc-sub] [cc-costs]
 - **CCA-227** `documented` A cloud session draws on the same rate limits as the account's other use of Claude and Claude Code; the cloud VM itself is not charged for separately. [cc-web]
+- **CCA-228** `documented` For Pro and Max subscribers, the status line script receives the share used of the five-hour and seven-day limits, from 0 to 100, and the time each resets, in `rate_limits.five_hour` and `rate_limits.seven_day`; the fields appear only after the session's first API response, and a window is dropped once its reset time passes. [cc-status]
+- **CCA-229** `documented` On Pro, Max, Team and Enterprise plans, `/usage` shows plan usage bars and a breakdown of recent usage by skills, subagents, plugins, MCP servers and scheduled tasks, computed approximately from session history on that machine, so use on other devices or on claude.ai is not included. [cc-costs]
+- **CCA-230** `documented` From v2.1.234, when a session limit stops Claude mid-task in an interactive session signed in with a subscription, Claude Code waits in the open session and continues the task after the reset, re-arming the wait at most twice in a row; it does not offer the wait in background sessions or `-p` runs, and does not start it on its own for a reset more than 24 hours away. [cc-int]
+- **CCA-231** `documented` A scheduled task fires on its interval even while the session is idle, sending the full context each time, which adds to usage. [cc-costs]
 
 ## Sources
 
@@ -167,5 +171,6 @@ Prefix: CCA · Scope: how Claude Code acts: the agentic loop and steering, permi
 [cc-routines]: https://code.claude.com/docs/en/routines
 [cc-sched]: https://code.claude.com/docs/en/scheduled-tasks
 [cc-skills]: https://code.claude.com/docs/en/skills
+[cc-status]: https://code.claude.com/docs/en/statusline
 [cc-sub]: https://code.claude.com/docs/en/sub-agents
 [cc-web]: https://code.claude.com/docs/en/claude-code-on-the-web

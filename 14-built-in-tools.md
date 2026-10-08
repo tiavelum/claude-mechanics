@@ -37,6 +37,7 @@ Prefix: TOOL · Scope: tools built into the Claude app: web search, Research, co
 - **TOOL-035** `documented` In the new Claude experience, files that Claude creates are shown beside the conversation. [one]
 - **TOOL-036** `documented` The file creation article sets a maximum of 30 MB per file for code execution and file creation, for uploads and downloads alike. [files]
 - **TOOL-037** `documented` The file creation article says Claude can work through a PDF larger than 30 MB in its computing environment without loading it into the context window. [files]
+- **TOOL-156** `observed` The session had tools that render content inline in the chat rather than as files: a Visualizer for SVG and HTML widgets, and cards for charts, places and maps, itineraries, recipes, product comparisons, quizzes, translations, weather, step-by-step guides and message drafts. (session 2026-10-08, claude.ai, in a project)
 
 ## Network access for code execution
 
