@@ -198,8 +198,8 @@ Prefix: MOD · Scope: Claude's models in the Claude app, Claude Code and the API
 - **MOD-229** `documented` Claude Code receives an organization's model restrictions as part of the account's entitlements at authentication, and the server applies the same restrictions independently whenever a session is created; the `/model` picker does not list a restricted model. [cc-model]
 - **MOD-230** `documented` In Claude Code the organization default only sets where a user starts and restricts nothing: it is outranked by the `--model` flag, by `ANTHROPIC_MODEL` and by any `model` value from managed settings, from `--settings` or from user, project or local settings, including one saved with `/model`; an admin can configure the default to override only the values from user, project and local settings. [cc-model]
 - **MOD-231** `documented` A `model` value in Claude Code's managed settings takes precedence over the organization default in the Claude Code CLI and IDE. [org-default] [cc-model]
-- **MOD-232** `conflicting` The Claude Code documentation gives v2.1.196 as the first Claude Code version that supports the organization default model, while the help center says CLI versions earlier than 2.1.199 do not pick up the organization default. [cc-model] [org-default]
-- **MOD-233** `conflicting` The Claude Code documentation says organization model restrictions, which hide a restricted model from the picker, require Claude Code v2.1.187 or later and effort limits v2.1.195 or later, while the help center gives CLI version 2.1.199 or later and says that on earlier versions the picker still offers models and effort levels that have been disabled. [cc-model] [org-models]
+- **MOD-232** `conflicting` The Claude Code documentation gives v2.1.196 as the first Claude Code version that supports the organization default model, which is the version whose changelog entry adds it, while the help center says CLI versions earlier than 2.1.199 do not pick up the organization default and that in 2.1.196 to 2.1.198 setting a specific default makes the other enabled models disappear from the picker. [cc-model] [cc-changelog] [org-default]
+- **MOD-233** `conflicting` The Claude Code documentation says organization model restrictions require Claude Code v2.1.187 or later, the version whose changelog entry adds them, and effort limits v2.1.195 or later, which the changelog does not mention, while the help center gives CLI version 2.1.199 or later and says that on earlier versions the picker still offers disabled models and effort levels, and requests that use them are rejected. [cc-model] [cc-changelog] [org-models]
 
 ## Model and effort in Claude Code
 
@@ -211,7 +211,7 @@ Prefix: MOD · Scope: Claude's models in the Claude app, Claude Code and the API
 - **MOD-245** `documented` In versions of Claude Code older than v2.1.280, `default` stood for Sonnet 5 on Pro plans and Team Standard seats, and, from v2.1.219, for Opus 5 on Max plans, Team Premium seats, Enterprise plans and the Anthropic API; from v2.1.154 until v2.1.219 it stood for Opus 4.8 on Max plans, Team Premium seats, pay-as-you-go Enterprise plans and the Anthropic API. [cc-model]
 - **MOD-246** `documented` In Claude Code, no plan and no provider has a Fable model as its default; a Fable model has to be selected explicitly, for example with `/model fable`. [cc-model]
 - **MOD-247** `documented` According to the help center, Fable 5 requires Claude Code version 2.1.170 or later. [fable-plan]
-- **MOD-248** `conflicting` The help center says Fable 5.1 requires Claude Code version 2.1.255 or later, while the Claude Code documentation says v2.1.257 or later. [fable-plan] [cc-model]
+- **MOD-248** `conflicting` The help center says Fable 5.1 requires Claude Code version 2.1.255 or later, while the Claude Code documentation says v2.1.257 or later, which is the version whose changelog entry adds Fable 5.1. [fable-plan] [cc-model] [cc-changelog]
 - **MOD-249** `documented` The model is chosen, in order of priority, by `/model` during a session, the `--model` flag at startup, the environment variable `ANTHROPIC_MODEL`, the `model` field of a settings file and, as the default for new sessions, `ANTHROPIC_DEFAULT_MODEL`. [cc-model]
 - **MOD-250** `documented` `/model` makes the chosen model the default of future sessions: it writes the `model` field into the user settings; pressing `s` in the picker switches the model for the current session only, and `--model` and `ANTHROPIC_MODEL` apply only to the session launched with them. [cc-model]
 - **MOD-251** `documented` `opusplan` assigns plan mode to `opus` and the execution that follows to `sonnet`. [cc-model]
@@ -362,6 +362,7 @@ Prefix: MOD · Scope: Claude's models in the Claude app, Claude Code and the API
 [api-rn]: https://platform.claude.com/docs/en/release-notes/overview
 [api-sonnet55]: https://platform.claude.com/docs/en/models/sonnet-5-5/overview
 [api-thinking]: https://platform.claude.com/docs/en/build-with-claude/thinking
+[cc-changelog]: https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md
 [cc-model]: https://code.claude.com/docs/en/model-config
 [cc-model-help]: https://support.claude.com/en/articles/11940350-claude-code-model-configuration
 [cvp]: https://support.claude.com/en/articles/14604842-cyber-verification-program
