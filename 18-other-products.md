@@ -87,8 +87,21 @@ Prefix: PRD · Scope: Claude products outside the Claude app and Claude Code (Cl
 - **PRD-072** `documented` Removing a member ends their access to Claude Science but leaves their data on the computer, and deleting local data deletes nothing that Anthropic holds. [sci-admin]
 - **PRD-073** `documented` Claude Science follows the organization's Models page, so a model turned off for the organization or a custom role leaves the members' model picker within a few minutes. [sci-admin]
 
+## Claude Security
+
+- **PRD-074** `documented` Claude Security scans an organization's codebases for vulnerabilities, verifies each finding in several stages and suggests patches for human review, at claude.ai/security; it is in public beta on the Enterprise plan. [sec-help] [cc-sec]
+- **PRD-075** `documented` Claude Security runs its scans on Claude Mythos 5 without giving users direct access to the model, and reaches only repositories on GitHub.com and GitHub Enterprise Server, through the user's connected GitHub account and the Claude GitHub App; an Enterprise Server instance must accept inbound traffic from Anthropic's published IP ranges. [sec-help]
+- **PRD-076** `documented` An organization owner turns Claude Security on under Organization settings > Claude Security with "Turn on for your organization"; the help center names no other admin control. [sec-help]
+- **PRD-077** `documented` A Claude Security finding carries a severity judged by its exploitability in that codebase, which cannot be configured, and a status of Open, Dismissed or Resolved; findings can be copied, downloaded as CSV or Markdown, or sent to other systems through webhooks per project, and results vary between runs. [sec-help]
+- **PRD-078** `documented` A suggested patch from Claude Security opens in Claude Code on the web, where it is carried out with the models available to the account. [sec-help]
+- **PRD-079** `documented` Claude Security scans are charged at direct token cost, with no platform fee on top. [sec-help]
+- **PRD-080** `documented` Claude Security is not covered by Zero Data Retention, and Anthropic may keep its data where the law requires or to address violations of the Usage Policy; the help center gives no standard retention period. [sec-help]
+- **PRD-081** `documented` Claude Security may be used only on code that the user or their company owns or has the rights to scan, which excludes third-party and open-source code outside the company's own codebases. [sec-help]
+- **PRD-082** `documented` Besides the managed product, a Claude Security plugin for Claude Code runs a multi-agent scan locally in a session, on the session's models and counting toward its usage, and reaches repositories the managed product cannot, such as those on GitLab or Bitbucket. [cc-sec] [sec-help]
+
 ## Sources
 
+[cc-sec]: https://code.claude.com/docs/en/claude-security
 [cc-tag]: https://code.claude.com/docs/en/claude-tag
 [design]: https://support.claude.com/en/articles/14604416-get-started-with-claude-design
 [design-admin]: https://support.claude.com/en/articles/14604406-claude-design-admin-guide-for-team-and-enterprise-plans
@@ -106,6 +119,7 @@ Prefix: PRD · Scope: Claude products outside the Claude app and Claude Code (Cl
 [sci-admin]: https://claude.com/docs/claude-science/admin-controls
 [sci-core]: https://claude.com/docs/claude-science/core-concepts
 [sci-data]: https://claude.com/docs/claude-science/how-claude-science-works-with-your-data
+[sec-help]: https://support.claude.com/en/articles/14661296-use-claude-security
 [tag]: https://claude.com/docs/claude-tag
 [tag-cc]: https://claude.com/docs/claude-tag/concepts/for-claude-code-users
 [tag-cust]: https://claude.com/docs/claude-tag/admins/customize

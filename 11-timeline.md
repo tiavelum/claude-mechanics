@@ -28,6 +28,7 @@ Prefix: CHG · Scope: dated changes to the mechanisms in this knowledge base, as
 - **CHG-029** `documented` 2026-02-12: Enterprise plans can be bought on the website without Sales; a self-serve Enterprise plan has a single seat type that includes Claude, Claude Code and Cowork. [rn]
 - **CHG-050** `documented` 2026-02-17: Sonnet 4.6 released. [rn]
 - **CHG-051** `documented` 2026-02-19: Sonnet 3.7 and Haiku 3.5 retired on the Anthropic-operated platforms. [api-deprec]
+- **CHG-089** `documented` 2026-02-20: Claude Code Security opened as a limited research preview for Enterprise and Team, built into Claude Code on the web. [news-sec]
 - **CHG-030** `documented` 2026-02-24: a plugin marketplace and admin controls for plugins in Cowork on Team and Enterprise. [rn]
 - **CHG-031** `documented` 2026-02-25: recurring and on-demand scheduled tasks in Cowork, and a Customize section in Claude Desktop that brings skills, plugins and connectors together. [rn]
 - **CHG-006** `documented` 2026-03-02: memory from chat history opened to all users, including Free. [rn]
@@ -111,6 +112,7 @@ Prefix: CHG · Scope: dated changes to the mechanisms in this knowledge base, as
 [focus]: https://support.claude.com/en/articles/15672868-set-break-reminders-and-quiet-hours
 [mem]: https://support.claude.com/en/articles/11817273-use-claude-s-chat-search-and-memory-to-build-on-previous-context
 [news-limits]: https://www.anthropic.com/news/higher-limits-spacex
+[news-sec]: https://www.anthropic.com/news/claude-code-security
 [news-terms]: https://www.anthropic.com/news/updates-to-our-consumer-terms
 [one]: https://support.claude.com/en/articles/16761823-claude-cowork-and-chat-are-one-claude
 [promo]: https://support.claude.com/en/articles/17274727-artifact-usage-promotion
