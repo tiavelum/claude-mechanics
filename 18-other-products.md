@@ -53,9 +53,25 @@ Prefix: PRD · Scope: Claude products outside the Claude app and Claude Code (Cl
 - **PRD-044** `documented` Claude for Outlook reads the open item through Office.js and the wider mailbox and calendar through Microsoft Graph calls made in the browser, whose token is not sent to Anthropic; it does not request permission to send mail, so drafts and invites land unsent, and it learns the user's tone from the sent folder. [m365-ol]
 - **PRD-045** `documented` For add-ins signed in with Claude accounts, the Enterprise Analytics API reports usage per user and per surface, and Team and Enterprise admins can export spend per seat and surface as CSV from the usage analytics dashboard. [m365-ent]
 
+## Claude Design
+
+- **PRD-046** `documented` Claude Design, a product of Anthropic Labs, makes designs, interactive prototypes, one-pagers and other visual work from a conversation, on a canvas beside the chat that the user refines by chat, inline comments or direct editing of elements. [design] [design-news]
+- **PRD-047** `documented` Claude Design is reached from a conversation, with Output > Design in the message box, from a Design template in the Artifacts tab, and in the standalone experience at claude.ai/design, which keeps its existing projects; in the mobile apps a design can be requested and viewed full screen, while starting from a template, editing the canvas and sharing need the web or desktop. [design]
+- **PRD-048** `documented` Standalone Claude Design has its own place in the sidebar of Claude Desktop and its own organization setting, "Enable for your organization" under Organization settings > Claude Design, separate from the Design template under Organization settings > Artifacts; turning on one does not turn on the other, and on Enterprise custom roles control access to the standalone one. [design-admin] [design-blog]
+- **PRD-049** `documented` Claude Design projects use the organization's design system, imported from a GitHub repository, design files or uploads, or from a local codebase with `/design-sync` in Claude Code, and Claude checks its output against it before showing it; an organization can keep several design systems. [design] [design-admin]
+- **PRD-050** `documented` Any member with access to Claude Design can create and edit design systems, while on Enterprise admins can reserve publishing, setting the default and deleting them to specific users; design systems made at claude.ai/design can move over for use in any chat, Claude Code included. [design] [design-admin]
+- **PRD-051** `documented` A design starts private, and Share sets who can view, comment on or edit it; a project's preview runs in a sandboxed frame on a separate content domain of Anthropic, opened with short-lived signed tokens that are checked against the sharing permissions each time, so removing someone's access takes effect at once. [design] [design-admin]
+- **PRD-052** `documented` Claude Design has no version history yet, saving a state of the project only when the user asks Claude to, and editing by several people at once is basic and may not work reliably. [design]
+- **PRD-053** `documented` A design can be exported as a .zip, PDF, PPTX or standalone HTML, to Google Slides from claude.ai/design only, sent to partner tools, or handed to Claude Code on the user's machine or on the web. [design]
+- **PRD-054** `documented` Claude Design draws on the same usage limits as the rest of Claude, Claude Code included, with no allowance of its own, and stops when they are reached unless usage credits are on. [design] [design-blog]
+
 ## Sources
 
 [cc-tag]: https://code.claude.com/docs/en/claude-tag
+[design]: https://support.claude.com/en/articles/14604416-get-started-with-claude-design
+[design-admin]: https://support.claude.com/en/articles/14604406-claude-design-admin-guide-for-team-and-enterprise-plans
+[design-blog]: https://claude.com/blog/claude-design-stays-on-brand-for-daily-work
+[design-news]: https://www.anthropic.com/news/claude-design-anthropic-labs
 [m365]: https://claude.com/docs/office-agents/overview
 [m365-across]: https://claude.com/docs/office-agents/work-across-apps
 [m365-cs]: https://claude.com/docs/office-agents/connectors-and-skills

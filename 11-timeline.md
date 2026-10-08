@@ -37,6 +37,7 @@ Prefix: CHG · Scope: dated changes to the mechanisms in this knowledge base, as
 - **CHG-034** `documented` 2026-04-09: Cowork generally available on macOS and Windows through Claude Desktop. [rn]
 - **CHG-035** `documented` 2026-04-09: role-based access controls on Enterprise: users are put into groups manually or through SCIM, and each group's custom role decides which Claude capabilities its members can use, for example Cowork for specific teams. [rn]
 - **CHG-053** `documented` 2026-04-16: Opus 4.7 released. [rn]
+- **CHG-085** `documented` 2026-04-17: Anthropic Labs launched Claude Design as a research preview for Pro, Max, Team and Enterprise, powered by Opus 4.7 and off by default on Enterprise. [design-news]
 - **CHG-054** `documented` 2026-04-20: Haiku 3 retired on the Anthropic-operated platforms. [api-deprec]
 - **CHG-055** `documented` 2026-04-30: the 1M-token beta for Sonnet 4.5 and Sonnet 4 ended; the beta header `context-1m-2025-08-07` stopped having an effect, and requests beyond their 200K window return an error. [api-rn]
 - **CHG-021** `documented` 2026-05-06: the five-hour rate limits of Claude Code were doubled on Pro, Max, Team and seat-based Enterprise, and the peak-hours limit reduction on Claude Code removed for Pro and Max. [news-limits]
@@ -50,6 +51,7 @@ Prefix: CHG · Scope: dated changes to the mechanisms in this knowledge base, as
 - **CHG-061** `documented` 2026-06-09: Mythos Preview deprecated, with no retirement date announced yet. [api-deprec]
 - **CHG-062** `documented` 2026-06-12: access to Fable 5 and Mythos 5 suspended. [rn]
 - **CHG-063** `documented` 2026-06-15: Opus 4 and Sonnet 4 retired on the Anthropic-operated platforms. [api-deprec]
+- **CHG-086** `documented` 2026-06-17: Claude Design began sharing usage limits with the rest of Claude, Claude Code included, gained a rebuilt design system import and a place in the sidebar of Claude Desktop. [design-blog]
 - **CHG-038** `documented` 2026-06-25: Team and Enterprise admins can require members to verify their device (Trusted Devices) before they view or steer local Claude Code sessions remotely. [rn]
 - **CHG-064** `documented` 2026-06-30: Sonnet 5 released. [rn]
 - **CHG-065** `documented` 2026-07-01: access to Fable 5 and Mythos 5 restored. [rn]
@@ -102,6 +104,8 @@ Prefix: CHG · Scope: dated changes to the mechanisms in this knowledge base, as
 [covered-ret]: https://support.claude.com/en/articles/15425996-data-retention-practices-for-covered-models
 [cw-org]: https://support.claude.com/en/articles/13455879-use-claude-cowork-on-team-and-enterprise-plans
 [cw-web]: https://support.claude.com/en/articles/15520349-use-claude-cowork-on-web-desktop-and-mobile
+[design-blog]: https://claude.com/blog/claude-design-stays-on-brand-for-daily-work
+[design-news]: https://www.anthropic.com/news/claude-design-anthropic-labs
 [focus]: https://support.claude.com/en/articles/15672868-set-break-reminders-and-quiet-hours
 [mem]: https://support.claude.com/en/articles/11817273-use-claude-s-chat-search-and-memory-to-build-on-previous-context
 [news-limits]: https://www.anthropic.com/news/higher-limits-spacex
