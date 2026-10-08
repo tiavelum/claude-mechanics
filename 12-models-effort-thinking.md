@@ -5,7 +5,7 @@ Prefix: MOD · Scope: Claude's models in the Claude app, Claude Code and the API
 ## Lineup and tiers
 
 - **MOD-001** `documented` The models overview compares four current models: Fable 5.1, Opus 5.5, Sonnet 5.5 and Haiku 4.5. [api-models]
-- **MOD-002** `conflicting` The models overview lists Sonnet 5.5 as the current Sonnet model and Sonnet 5 among the legacy models, while the guide on optimizing for cost and intelligence names Haiku 4.5, Sonnet 5, Opus 5.5 and Fable 5.1 as the current models, in ascending order of cost and capability. [api-models] [api-cost]
+- **MOD-002** `documented` The models overview and the guide on optimizing for cost and intelligence both give Sonnet 5.5 as the current Sonnet model; the guide lists the current models, from lowest to highest cost and capability, as Haiku 5.5, Sonnet 5.5, Opus 5.5 and Fable 5.1. [api-models] [api-cost]
 - **MOD-003** `documented` Fable 5.1 was released on 2026-09-01, together with Claude Mythos 5.1. [api-fable51] [rn]
 - **MOD-004** `documented` Opus 5.5 was released on 2026-09-22 as the first model of the Claude 5.5 family. [api-opus55] [news-opus55]
 - **MOD-005** `documented` Sonnet 5.5 was released on 2026-09-28 as the second model of the Claude 5.5 family. [api-sonnet55] [rn]
