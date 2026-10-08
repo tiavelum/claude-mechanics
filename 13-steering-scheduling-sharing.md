@@ -96,6 +96,7 @@ Prefix: WRK · Scope: working with a session in the Claude app once it runs: ste
 - **WRK-086** `documented` A Cowork task is deleted with "Delete" from the "⋮" next to it, or by selecting tasks in the task list and clicking the trash icon, and it disappears from the task history at once. [cw-start]
 - **WRK-087** `documented` Deleting a session also deletes the copies of local files that Claude fetched for it, in line with Anthropic's data retention practices. [cw-web]
 - **WRK-088** `documented` In Claude Desktop, the command palette (Cmd+K on a Mac, Ctrl+K under Windows or Linux) can archive or delete whatever is open at the moment, be it a chat, a task, a project or a coding session. [rn-desk]
+- **WRK-126** `observed` The session had a tool that ends the conversation permanently; its instructions allowed it only after repeated failed redirection and an explicit warning, or on the user's confirmed request, and never when the user may be at risk of harm. (session 2026-10-08, claude.ai, in a project)
 
 ## Sharing chats
 

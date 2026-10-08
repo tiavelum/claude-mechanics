@@ -28,6 +28,7 @@ Prefix: CHG · Scope: dated changes to the mechanisms in this knowledge base, as
 - **CHG-029** `documented` 2026-02-12: Enterprise plans can be bought on the website without Sales; a self-serve Enterprise plan has a single seat type that includes Claude, Claude Code and Cowork. [rn]
 - **CHG-050** `documented` 2026-02-17: Sonnet 4.6 released. [rn]
 - **CHG-051** `documented` 2026-02-19: Sonnet 3.7 and Haiku 3.5 retired on the Anthropic-operated platforms. [api-deprec]
+- **CHG-089** `documented` 2026-02-20: Claude Code Security opened as a limited research preview for Enterprise and Team, built into Claude Code on the web. [news-sec]
 - **CHG-030** `documented` 2026-02-24: a plugin marketplace and admin controls for plugins in Cowork on Team and Enterprise. [rn]
 - **CHG-031** `documented` 2026-02-25: recurring and on-demand scheduled tasks in Cowork, and a Customize section in Claude Desktop that brings skills, plugins and connectors together. [rn]
 - **CHG-006** `documented` 2026-03-02: memory from chat history opened to all users, including Free. [rn]
@@ -37,6 +38,7 @@ Prefix: CHG · Scope: dated changes to the mechanisms in this knowledge base, as
 - **CHG-034** `documented` 2026-04-09: Cowork generally available on macOS and Windows through Claude Desktop. [rn]
 - **CHG-035** `documented` 2026-04-09: role-based access controls on Enterprise: users are put into groups manually or through SCIM, and each group's custom role decides which Claude capabilities its members can use, for example Cowork for specific teams. [rn]
 - **CHG-053** `documented` 2026-04-16: Opus 4.7 released. [rn]
+- **CHG-085** `documented` 2026-04-17: Anthropic Labs launched Claude Design as a research preview for Pro, Max, Team and Enterprise, powered by Opus 4.7 and off by default on Enterprise. [design-news]
 - **CHG-054** `documented` 2026-04-20: Haiku 3 retired on the Anthropic-operated platforms. [api-deprec]
 - **CHG-055** `documented` 2026-04-30: the 1M-token beta for Sonnet 4.5 and Sonnet 4 ended; the beta header `context-1m-2025-08-07` stopped having an effect, and requests beyond their 200K window return an error. [api-rn]
 - **CHG-021** `documented` 2026-05-06: the five-hour rate limits of Claude Code were doubled on Pro, Max, Team and seat-based Enterprise, and the peak-hours limit reduction on Claude Code removed for Pro and Max. [news-limits]
@@ -50,8 +52,10 @@ Prefix: CHG · Scope: dated changes to the mechanisms in this knowledge base, as
 - **CHG-061** `documented` 2026-06-09: Mythos Preview deprecated, with no retirement date announced yet. [api-deprec]
 - **CHG-062** `documented` 2026-06-12: access to Fable 5 and Mythos 5 suspended. [rn]
 - **CHG-063** `documented` 2026-06-15: Opus 4 and Sonnet 4 retired on the Anthropic-operated platforms. [api-deprec]
+- **CHG-086** `documented` 2026-06-17: Claude Design began sharing usage limits with the rest of Claude, Claude Code included, gained a rebuilt design system import and a place in the sidebar of Claude Desktop. [design-blog]
 - **CHG-038** `documented` 2026-06-25: Team and Enterprise admins can require members to verify their device (Trusted Devices) before they view or steer local Claude Code sessions remotely. [rn]
 - **CHG-064** `documented` 2026-06-30: Sonnet 5 released. [rn]
+- **CHG-087** `documented` 2026-06-30: Claude Science launched publicly, in beta, as a desktop workbench for scientists on macOS and Linux for Pro, Max, Team and Enterprise. [sci-news] [sci-log]
 - **CHG-065** `documented` 2026-07-01: access to Fable 5 and Mythos 5 restored. [rn]
 - **CHG-066** `documented` 2026-07-01: model entitlements released in beta for Enterprise, letting admins decide which models and which effort settings their users can use. [rn]
 - **CHG-007** `documented` 2026-07-07: Cowork available on web and mobile, rolling out over several weeks starting with Max; sessions run remotely (in beta) and are saved to the account, and scheduled tasks run even when no device is online; chat and Cowork came to share one home, where projects and artifacts are kept in a single place for both. [rn]
@@ -59,6 +63,7 @@ Prefix: CHG · Scope: dated changes to the mechanisms in this knowledge base, as
 - **CHG-067** `documented` 2026-07-09: Settings > Time and focus introduced, with optional break reminders and quiet hours, in beta on Free, Pro and Max. [rn] [focus]
 - **CHG-008** `documented` 2026-07-10: memory redesigned from a summary updated every 24 hours into individual entries saved while chatting. [rn] [mem]
 - **CHG-068** `documented` 2026-07-24: Opus 5 released. [rn]
+- **CHG-084** `documented` 2026-08-03: Claude in Slack switched over to Claude Tag, which runs in Slack channels under its own identity. [tag-help]
 - **CHG-069** `documented` 2026-08-05: Opus 4.1 retired on the Anthropic-operated platforms. [api-deprec]
 - **CHG-070** `documented` 2026-08-06: the biology classifier of Fable 5 and Fable 5.1 updated on Claude, the Claude apps and the Claude Platform, with Microsoft Foundry, Google Cloud Vertex AI, Amazon Bedrock and Claude Platform on AWS still to follow. [switch-fable]
 - **CHG-015** `documented` 2026-08-19: cut-off for Cowork live artifacts; artifacts made in Cowork before this date keep working but cannot be edited in place. [art]
@@ -68,6 +73,7 @@ Prefix: CHG · Scope: dated changes to the mechanisms in this knowledge base, as
 - **CHG-073** `documented` 2026-09-01: Fable 5.1 and Mythos 5.1 released. [rn]
 - **CHG-010** `documented` 2026-09-09: end of the option in Settings > Memory to export legacy memory. [mem]
 - **CHG-074** `documented` 2026-09-10: the built-in browser for Cowork became on by default on Enterprise, except where an owner had turned it off and in organizations with HIPAA enabled, where it stays off until an owner turns it on. [cw-org]
+- **CHG-088** `documented` 2026-09-10: Claude Science became available on Windows. [sci-log]
 - **CHG-075** `documented` 2026-09-14: compaction on demand added to the Messages API on the Claude API, in beta under the header `compact-2026-09-04`. [api-rn]
 - **CHG-011** `documented` 2026-09-16: chat and Cowork merged into one Claude, rolling out gradually, starting with Pro and Max on web, desktop and mobile; Cowork's global instructions were folded into Instructions for Claude in Settings > General. [rn] [blog-cw] [one]
 - **CHG-016** `documented` 2026-09-16: cut-off for legacy artifacts; artifacts made in a chat before this date keep working and can still be published and shared, but no new ones can be made. [art]
@@ -101,14 +107,20 @@ Prefix: CHG · Scope: dated changes to the mechanisms in this knowledge base, as
 [covered-ret]: https://support.claude.com/en/articles/15425996-data-retention-practices-for-covered-models
 [cw-org]: https://support.claude.com/en/articles/13455879-use-claude-cowork-on-team-and-enterprise-plans
 [cw-web]: https://support.claude.com/en/articles/15520349-use-claude-cowork-on-web-desktop-and-mobile
+[design-blog]: https://claude.com/blog/claude-design-stays-on-brand-for-daily-work
+[design-news]: https://www.anthropic.com/news/claude-design-anthropic-labs
 [focus]: https://support.claude.com/en/articles/15672868-set-break-reminders-and-quiet-hours
 [mem]: https://support.claude.com/en/articles/11817273-use-claude-s-chat-search-and-memory-to-build-on-previous-context
 [news-limits]: https://www.anthropic.com/news/higher-limits-spacex
+[news-sec]: https://www.anthropic.com/news/claude-code-security
 [news-terms]: https://www.anthropic.com/news/updates-to-our-consumer-terms
 [one]: https://support.claude.com/en/articles/16761823-claude-cowork-and-chat-are-one-claude
 [promo]: https://support.claude.com/en/articles/17274727-artifact-usage-promotion
 [rn]: https://support.claude.com/en/articles/12138966-release-notes
+[sci-log]: https://claude.com/docs/claude-science/changelog
+[sci-news]: https://www.anthropic.com/news/claude-science-ai-workbench
 [skills-org]: https://support.claude.com/en/articles/13119606-provision-and-manage-skills-for-your-organization
 [sp-opus55]: https://platform.claude.com/docs/en/release-notes/system-prompts/claude-opus-5-5
 [sp-sonnet55]: https://platform.claude.com/docs/en/release-notes/system-prompts/claude-sonnet-5-5
 [switch-fable]: https://support.claude.com/en/articles/15363606-why-claude-switched-models-in-your-conversation-with-fable-5-or-fable-5-1
+[tag-help]: https://support.claude.com/en/articles/15594475-what-is-claude-tag
